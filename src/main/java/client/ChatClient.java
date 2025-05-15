@@ -15,6 +15,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.Alert;
 import server.ChatServer;
+import server.Logger;
 
 public class ChatClient extends Application {
     // Cambiar a la IP del servidor cuando se conecte desde otro ordenador
@@ -236,8 +237,9 @@ public class ChatClient extends Application {
                     }
                 }
             } catch (Exception e) {
+                Logger.error("Error procesando mensaje del servidor", e);
                 if (chatController != null) {
-                    chatController.appendMessage(message);
+                    chatController.showError("Error procesando mensaje: " + e.getMessage());
                 }
             }
         });

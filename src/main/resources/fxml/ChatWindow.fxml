@@ -17,7 +17,6 @@
             <HBox spacing="10" alignment="CENTER_LEFT">
                 <TextField fx:id="recipientField" promptText="Destinatario (elige de la lista)" prefWidth="160" styleClass="recipient-field" />
                 <TextField fx:id="messageField" promptText="Escribe un mensaje..." HBox.hgrow="ALWAYS" styleClass="message-field" />
-                <Button fx:id="uploadButton" text="📷" minWidth="40" styleClass="upload-btn" />
                 <Button fx:id="sendButton" text="Enviar" minWidth="80" styleClass="main-btn" />
             </HBox>
             <Button fx:id="clearButton" text="Limpiar chat" styleClass="clear-btn" />

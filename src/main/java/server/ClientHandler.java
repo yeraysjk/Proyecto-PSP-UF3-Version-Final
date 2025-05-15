@@ -150,14 +150,10 @@ public class ClientHandler implements Runnable {
 
     private void handleGeneralMessage(String message) {
         // Guardar el mensaje en la base de datos
-        MessageManager.saveMessage(username, null, message);
+        MessageManager.saveMessage(username, "", message);
         
         // Enviar el mensaje a todos los clientes
-        if (message.startsWith("IMAGE:")) {
-            server.broadcast(username + ": [Imagen]", username);
-        } else {
-            server.broadcast(username + ": " + message, username);
-        }
+        server.broadcast(username + ": " + message, username);
     }
 
     private void handlePrivateMessage(String message) {
