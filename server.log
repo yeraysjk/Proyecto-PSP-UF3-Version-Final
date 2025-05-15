@@ -2390,3 +2390,34 @@
 [2025-05-15 17:10:55] Mensaje guardado en la base de datos: user3 -> Yeray: IMAGE:src/main/resources/images/1747321854904_barra.png
 [2025-05-15 17:11:09] Cliente desconectado: user3
 [2025-05-15 17:11:09] Servidor detenido
+[2025-05-15 17:13:11] Iniciando servidor de chat...
+[2025-05-15 17:13:11] Servidor iniciado en el puerto 5000
+[2025-05-15 17:13:11] Esperando conexiones...
+[2025-05-15 17:13:15] Iniciando servidor de chat...
+[2025-05-15 17:13:15] ERROR: Error iniciando el servidor
+[2025-05-15 17:13:15] Exception: L’adreça ja és en ús (Bind failed)
+[2025-05-15 17:13:15]   at java.base/java.net.PlainSocketImpl.socketBind(Native Method)
+[2025-05-15 17:13:15]   at java.base/java.net.AbstractPlainSocketImpl.bind(AbstractPlainSocketImpl.java:452)
+[2025-05-15 17:13:15]   at java.base/java.net.ServerSocket.bind(ServerSocket.java:395)
+[2025-05-15 17:13:15]   at java.base/java.net.ServerSocket.<init>(ServerSocket.java:257)
+[2025-05-15 17:13:15]   at java.base/java.net.ServerSocket.<init>(ServerSocket.java:149)
+[2025-05-15 17:13:15]   at yeray.priede.projecte_uf3_psp_final/server.ChatServer.start(ChatServer.java:36)
+[2025-05-15 17:13:15]   at yeray.priede.projecte_uf3_psp_final/client.ChatClient.lambda$init$1(ChatClient.java:43)
+[2025-05-15 17:13:15]   at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-15 17:13:15] Servidor detenido
+[2025-05-15 17:13:25] Nueva conexión desde: 127.0.0.1
+[2025-05-15 17:13:25] Procesando mensaje: user3
+[2025-05-15 17:13:25] Autenticando usuario: user3 (usando hash+salt)
+[2025-05-15 17:13:25] Driver PostgreSQL cargado correctamente
+[2025-05-15 17:13:26] Conexión a la base de datos establecida correctamente
+[2025-05-15 17:13:27] Tablas creadas correctamente
+[2025-05-15 17:13:27] Usuario user1 creado o verificado en el sistema
+[2025-05-15 17:13:27] Usuario autenticado correctamente: user3
+[2025-05-15 17:13:27] Cliente conectado: user3
+[2025-05-15 17:13:41] Mensaje guardado en la base de datos: user3 -> Yeray: ola de nuevo
+[2025-05-15 17:13:52] Mensaje guardado en la base de datos: user3 -> Yeray: IMAGE:src/main/resources/images/1747322031983_diseny.png
+[2025-05-15 17:14:12] Mensaje general guardado en la base de datos: user3: ola
+[2025-05-15 17:14:19] Mensaje general guardado en la base de datos: user3: IMAGE:src/main/resources/images/1747322058921_barra.png
+[2025-05-15 17:16:03] Mensaje general guardado en la base de datos: user3: IMAGE:src/main/resources/images/1747322162688_diseny.png
+[2025-05-15 17:17:22] Servidor detenido
+[2025-05-15 17:17:23] Cliente desconectado: user3

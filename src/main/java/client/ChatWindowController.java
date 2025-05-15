@@ -17,17 +17,6 @@ import java.time.format.DateTimeFormatter;
 import javafx.scene.layout.HBox;
 import java.util.HashSet;
 import java.util.Set;
-import java.io.File;
-import java.io.IOException;
-import java.util.Base64;
-import java.nio.file.Files;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
-import javafx.scene.Scene;
-import javafx.scene.control.ScrollPane;
-import javafx.stage.FileChooser;
-import java.io.ByteArrayInputStream;
-import javafx.stage.Modality;
 
 public class ChatWindowController {
     @FXML private ListView<String> userListView;
@@ -38,7 +27,6 @@ public class ChatWindowController {
     @FXML private Button clearButton;
     @FXML private Label statusLabel;
     @FXML private BorderPane mainContainer;
-    @FXML private Button uploadButton;
 
     private ChatClient chatClient;
     private String username;
@@ -49,8 +37,6 @@ public class ChatWindowController {
     private java.util.Timer historyTimer = null;
     private LocalDate lastDateHeader = null;
     private Set<String> mensajeIds = new HashSet<>();
-    private FileChooser fileChooser;
-    private static final int MAX_IMAGE_SIZE = 5 * 1024 * 1024; // 5MB
 
     @FXML
     public void initialize() {
@@ -80,6 +66,7 @@ public class ChatWindowController {
                 stopHistoryTimer();
             }
         });
+
         // Configurar celdas personalizadas para el chat
         chatListView.setCellFactory(new Callback<ListView<MensajeChat>, ListCell<MensajeChat>>() {
             @Override
@@ -103,45 +90,23 @@ public class ChatWindowController {
                             String hora = msg.getHora().format(DateTimeFormatter.ofPattern("HH:mm"));
                             String texto = msg.getTexto();
                             
-                            if (msg.isImagen()) {
-                                // Crear un botón para la imagen
-                                Button imageButton = new Button("📷 Ver imagen");
-                                imageButton.getStyleClass().add("chat-image");
-                                imageButton.setOnAction(e -> showImage(texto));
-                                
-                                Label horaLabel = new Label(hora);
-                                horaLabel.getStyleClass().add("hora-label");
-                                
-                                HBox hbox = new HBox(imageButton, horaLabel);
-                                hbox.setSpacing(4);
-                                
-                                if (msg.isEnviado()) {
-                                    hbox.setStyle("-fx-alignment: CENTER_RIGHT;");
-                                } else {
-                                    hbox.setStyle("-fx-alignment: CENTER_LEFT;");
-                                }
-                                
-                                setGraphic(hbox);
-                                setText(null);
+                            Label bubble = new Label(texto + "  ");
+                            Label horaLabel = new Label(hora);
+                            horaLabel.getStyleClass().add("hora-label");
+                            
+                            if (msg.isEnviado()) {
+                                bubble.getStyleClass().add("bubble-enviado");
+                                setStyle("-fx-alignment: CENTER_RIGHT;");
                             } else {
-                                Label bubble = new Label(texto + "  ");
-                                Label horaLabel = new Label(hora);
-                                horaLabel.getStyleClass().add("hora-label");
-                                
-                                if (msg.isEnviado()) {
-                                    bubble.getStyleClass().add("bubble-enviado");
-                                    setStyle("-fx-alignment: CENTER_RIGHT;");
-                                } else {
-                                    bubble.getStyleClass().add("bubble-recibido");
-                                    setStyle("-fx-alignment: CENTER_LEFT;");
-                                }
-                                
-                                HBox hbox = new HBox(bubble, horaLabel);
-                                hbox.setSpacing(4);
-                                hbox.setStyle(getStyle());
-                                setGraphic(hbox);
-                                setText(null);
+                                bubble.getStyleClass().add("bubble-recibido");
+                                setStyle("-fx-alignment: CENTER_LEFT;");
                             }
+                            
+                            HBox hbox = new HBox(bubble, horaLabel);
+                            hbox.setSpacing(4);
+                            hbox.setStyle(getStyle());
+                            setGraphic(hbox);
+                            setText(null);
                         }
                     }
                 };
@@ -157,25 +122,6 @@ public class ChatWindowController {
         
         // Configurar el campo de destinatario
         recipientField.setPromptText("Todos (dejar vacío para mensaje general)");
-
-        // Configurar el FileChooser
-        fileChooser = new FileChooser();
-        fileChooser.getExtensionFilters().add(
-            new FileChooser.ExtensionFilter("Imágenes", "*.png", "*.jpg", "*.jpeg", "*.gif")
-        );
-        
-        // Configurar el botón de subir
-        uploadButton.setOnAction(e -> handleImageUpload());
-        
-        // Configurar el ListView para manejar clics en imágenes
-        chatListView.setOnMouseClicked(e -> {
-            if (e.getClickCount() == 2) {
-                MensajeChat selectedItem = chatListView.getSelectionModel().getSelectedItem();
-                if (selectedItem != null && selectedItem.isImagen()) {
-                    showImage(selectedItem.getTexto());
-                }
-            }
-        });
     }
 
     public void setChatClient(ChatClient chatClient) {
@@ -238,15 +184,7 @@ public class ChatWindowController {
             String emisor = rest.contains(":") ? rest.split(":")[0] : "";
             boolean enviado = rest.startsWith("Tú");
             
-            MensajeChat msg = new MensajeChat(texto, emisor, enviado, LocalDate.parse(date), LocalTime.parse(hour));
-            
-            // Verificar si es una imagen
-            if (texto.startsWith("IMAGE:")) {
-                msg.setImagen(true);
-                msg.setTexto(texto.substring(6)); // Quitar el prefijo "IMAGE:"
-            }
-            
-            return msg;
+            return new MensajeChat(texto, emisor, enviado, LocalDate.parse(date), LocalTime.parse(hour));
         } catch (Exception e) {
             return null;
         }
@@ -366,94 +304,6 @@ public class ChatWindowController {
             Platform.runLater(() -> {
                 chatListView.scrollTo(mensajes.size() - 1);
             });
-        }
-    }
-
-    private void handleImageUpload() {
-        File file = fileChooser.showOpenDialog(stage);
-        if (file != null) {
-            if (file.length() > MAX_IMAGE_SIZE) {
-                showError("La imagen es demasiado grande. El tamaño máximo es 5MB.");
-                return;
-            }
-            
-            try {
-                // Generar un nombre único para la imagen
-                String imageName = System.currentTimeMillis() + "_" + file.getName();
-                String imagePath = "src/main/resources/images/" + imageName;
-                
-                // Asegurarse de que el directorio existe
-                File imageDir = new File("src/main/resources/images");
-                if (!imageDir.exists()) {
-                    imageDir.mkdirs();
-                }
-                
-                // Copiar la imagen a la carpeta del proyecto
-                Files.copy(file.toPath(), new File(imagePath).toPath(), java.nio.file.StandardCopyOption.REPLACE_EXISTING);
-                
-                // Crear el mensaje con la ruta de la imagen
-                String message = "IMAGE:" + imagePath;
-                String recipient = recipientField.getText().trim();
-                
-                // Si es chat general, enviar a todos
-                if (currentSelectedUser != null && currentSelectedUser.equals("General")) {
-                    recipient = "";
-                }
-                
-                chatClient.sendMessage(message, recipient);
-                
-                // Mostrar la imagen localmente
-                MensajeChat msg = new MensajeChat(imagePath, "Tú", true, LocalDate.now(), LocalTime.now());
-                msg.setImagen(true);
-                appendMessage(msg);
-                
-            } catch (IOException ex) {
-                showError("Error al procesar la imagen: " + ex.getMessage());
-            }
-        }
-    }
-
-    private void showImage(String imagePath) {
-        try {
-            File imageFile = new File(imagePath);
-            if (!imageFile.exists()) {
-                showError("No se puede encontrar la imagen");
-                return;
-            }
-            
-            Platform.runLater(() -> {
-                try {
-                    Image image = new Image(imageFile.toURI().toString());
-                    Stage imageStage = new Stage();
-                    imageStage.initModality(Modality.NONE);
-                    imageStage.initOwner(stage);
-                    
-                    ImageView imageView = new ImageView(image);
-                    imageView.setFitWidth(800);
-                    imageView.setFitHeight(600);
-                    imageView.setPreserveRatio(true);
-                    
-                    ScrollPane scrollPane = new ScrollPane(imageView);
-                    scrollPane.setFitToWidth(true);
-                    scrollPane.setFitToHeight(true);
-                    
-                    Scene scene = new Scene(scrollPane);
-                    imageStage.setTitle("Imagen");
-                    imageStage.setScene(scene);
-                    
-                    // Manejar el cierre de la ventana
-                    imageStage.setOnCloseRequest(event -> {
-                        event.consume();
-                        imageStage.hide();
-                    });
-                    
-                    imageStage.show();
-                } catch (Exception ex) {
-                    showError("Error al mostrar la imagen: " + ex.getMessage());
-                }
-            });
-        } catch (Exception ex) {
-            showError("Error al cargar la imagen: " + ex.getMessage());
         }
     }
 } 
