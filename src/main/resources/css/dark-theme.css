@@ -1,0 +1,95 @@
+/* Tema oscuro moderno para la app de chat */
+.root {
+    -fx-background-color: #181a20;
+    -fx-font-family: 'Segoe UI', 'Arial', sans-serif;
+    -fx-text-fill: #e0e0e0;
+}
+
+.label, .text, .text-field, .password-field, .list-cell, .text-area {
+    -fx-text-fill: #e0e0e0;
+}
+
+.button {
+    -fx-background-color: linear-gradient(to bottom, #23272f, #1a1c22);
+    -fx-text-fill: #00bcd4;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-border-color: #00bcd4;
+    -fx-border-width: 1;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-padding: 8 20 8 20;
+    -fx-effect: dropshadow(gaussian, #00000055, 4, 0.2, 0, 2);
+}
+.button:hover {
+    -fx-background-color: #263238;
+    -fx-text-fill: #fff;
+}
+
+.text-field, .password-field {
+    -fx-background-color: #23272f;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-border-color: #00bcd4;
+    -fx-border-width: 1;
+    -fx-prompt-text-fill: #888;
+    -fx-text-fill: #e0e0e0;
+}
+
+.list-view {
+    -fx-background-color: #23272f;
+    -fx-control-inner-background: #23272f;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-border-color: #00bcd4;
+    -fx-border-width: 1;
+}
+
+.text-area {
+    -fx-background-color: #23272f;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-border-color: #00bcd4;
+    -fx-border-width: 1;
+    -fx-text-fill: #e0e0e0;
+}
+
+.list-cell:selected {
+    -fx-background-color: #00bcd4;
+    -fx-text-fill: #181a20;
+}
+
+#chatArea {
+    -fx-font-size: 15px;
+    -fx-background-color: #23272f;
+    -fx-border-radius: 8;
+    -fx-padding: 10;
+}
+
+#mainContainer {
+    -fx-background-color: #181a20;
+    -fx-background-radius: 12;
+    -fx-padding: 20;
+}
+
+.status-label {
+    -fx-text-fill: #00bcd4;
+    -fx-font-weight: bold;
+}
+
+/* Burbujas de mensajes */
+.bubble-left {
+    -fx-background-color: #23272f;
+    -fx-background-radius: 16 16 16 0;
+    -fx-padding: 8 16 8 16;
+    -fx-text-fill: #e0e0e0;
+    -fx-margin: 4 0 4 8;
+}
+.bubble-right {
+    -fx-background-color: #00bcd4;
+    -fx-background-radius: 16 16 0 16;
+    -fx-padding: 8 16 8 16;
+    -fx-text-fill: #181a20;
+    -fx-margin: 4 8 4 0;
+    -fx-alignment: center-right;
+} 

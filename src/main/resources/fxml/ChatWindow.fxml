@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<BorderPane fx:id="mainContainer" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.ChatWindowController" styleClass="main-bg" stylesheets="chat_style.css">
+
+    <left>
+        <VBox spacing="10" alignment="TOP_CENTER" styleClass="sidebar" prefWidth="200">
+            <Label text="Usuarios" styleClass="sidebar-title" />
+            <ListView fx:id="userListView" prefHeight="400" styleClass="user-list" />
+        </VBox>
+    </left>
+    <center>
+        <VBox spacing="12" alignment="TOP_CENTER" styleClass="center-box">
+            <Label fx:id="statusLabel" styleClass="status-label" />
+            <ListView fx:id="chatListView" prefHeight="340" styleClass="chat-list" />
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <TextField fx:id="recipientField" promptText="Destinatario (elige de la lista)" prefWidth="160" styleClass="recipient-field" />
+                <TextField fx:id="messageField" promptText="Escribe un mensaje..." HBox.hgrow="ALWAYS" styleClass="message-field" />
+                <Button fx:id="sendButton" text="Enviar" minWidth="80" styleClass="main-btn" />
+            </HBox>
+            <Button fx:id="clearButton" text="Limpiar chat" styleClass="clear-btn" />
+        </VBox>
+    </center>
+</BorderPane> 

@@ -1,0 +1,130 @@
+/* Fondo principal oscuro */
+.main-bg {
+    -fx-background-color: #111b21;
+}
+
+/* Panel lateral */
+.sidebar {
+    -fx-background-color: #1f2c34;
+    -fx-padding: 20 10 20 10;
+    -fx-background-radius: 0;
+}
+.sidebar-title {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #e9edef;
+    -fx-padding: 0 0 10 0;
+}
+.user-list {
+    -fx-background-radius: 0;
+    -fx-font-size: 15px;
+    -fx-control-inner-background: #1f2c34;
+    -fx-text-fill: #e9edef;
+    -fx-border-color: #374248;
+    -fx-border-radius: 0;
+}
+
+/* Centro */
+.center-box {
+    -fx-padding: 24 24 24 24;
+    -fx-background-radius: 0;
+    -fx-background-color: #0b141a;
+}
+.status-label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #aebac1;
+    -fx-padding: 0 0 8 0;
+}
+.chat-list {
+    -fx-background-color: transparent;
+    -fx-control-inner-background: #0b141a;
+    -fx-background-radius: 0;
+    -fx-border-color: transparent;
+    -fx-border-radius: 0;
+    -fx-padding: 10;
+}
+
+/* Burbujas de mensajes */
+.label {
+    -fx-font-size: 15px;
+}
+.list-cell {
+    -fx-background-color: transparent;
+    -fx-padding: 6 0 6 0;
+}
+
+/* Burbujas enviadas (estilo WhatsApp - verde) */
+.bubble-enviado {
+    -fx-background-color: #005c4b;
+    -fx-text-fill: #e9edef;
+    -fx-background-radius: 8 8 0 8;
+    -fx-padding: 10 16 10 16;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 2, 0.0, 0, 1);
+    -fx-alignment: center-right;
+}
+
+/* Burbujas recibidas (estilo WhatsApp - gris oscuro) */
+.bubble-recibido {
+    -fx-background-color: #1f2c34;
+    -fx-text-fill: #e9edef;
+    -fx-background-radius: 8 8 8 0;
+    -fx-padding: 10 16 10 16;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 2, 0.0, 0, 1);
+    -fx-alignment: center-left;
+}
+
+/* Hora en la burbuja */
+.hora-label {
+    -fx-font-size: 11px;
+    -fx-text-fill: #aebac1;
+    -fx-padding: 0 0 0 8;
+    -fx-alignment: bottom-right;
+}
+
+/* Encabezado de día */
+.header-dia {
+    -fx-font-size: 13px;
+    -fx-text-fill: #aebac1;
+    -fx-background-color: rgba(30,42,49,0.8);
+    -fx-background-radius: 8;
+    -fx-padding: 4 12 4 12;
+    -fx-alignment: center;
+    -fx-max-width: 200px;
+    -fx-margin: 8 0 8 0;
+}
+
+/* Inputs y botones */
+.recipient-field, .message-field {
+    -fx-background-radius: 8;
+    -fx-font-size: 15px;
+    -fx-border-color: #374248;
+    -fx-border-radius: 8;
+    -fx-padding: 10 12 10 12;
+    -fx-background-color: #1f2c34;
+    -fx-text-fill: #e9edef;
+}
+
+.main-btn {
+    -fx-background-color: #00a884;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8;
+    -fx-font-size: 15px;
+}
+.main-btn:hover {
+    -fx-background-color: #008f73;
+}
+
+.clear-btn {
+    -fx-background-color: #1f2c34;
+    -fx-text-fill: #e9edef;
+    -fx-border-color: #374248;
+    -fx-border-radius: 8;
+    -fx-font-size: 14px;
+    -fx-padding: 8 16 8 16;
+    -fx-background-radius: 8;
+}
+.clear-btn:hover {
+    -fx-background-color: #374248;
+    -fx-text-fill: #e9edef;
+} 

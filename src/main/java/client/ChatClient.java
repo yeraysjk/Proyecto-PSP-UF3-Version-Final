@@ -2,7 +2,6 @@ package client;
 
 import java.io.*;
 import java.net.Socket;
-import java.util.Base64;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import javafx.application.Application;
@@ -26,6 +25,7 @@ public class ChatClient extends Application {
     private BufferedReader in;
     private PrintWriter out;
     private String username;
+    private String password;
     private ExecutorService executorService;
     private ChatWindowController chatController;
     private ObservableList<String> userList = FXCollections.observableArrayList();
@@ -104,6 +104,7 @@ public class ChatClient extends Application {
             
             if (loginController.getUsername() != null) {
                 this.username = loginController.getUsername();
+                this.password = loginController.getPassword();
                 connectToServer();
                 return true;
             }
@@ -113,7 +114,7 @@ public class ChatClient extends Application {
         return false;
     }
 
-    private boolean registerUser(String username, String password) {
+    public boolean registerUser(String username, String password) {
         try (Socket regSocket = new Socket(SERVER_ADDRESS, SERVER_PORT);
              PrintWriter regOut = new PrintWriter(regSocket.getOutputStream(), true);
              BufferedReader regIn = new BufferedReader(new InputStreamReader(regSocket.getInputStream()))) {
@@ -143,8 +144,8 @@ public class ChatClient extends Application {
             out = new PrintWriter(socket.getOutputStream(), true);
             executorService = Executors.newFixedThreadPool(2);
             
-            // Enviar el nombre de usuario al servidor
-            out.println("LOGIN:" + username);
+            // Enviar el nombre de usuario y contraseña al servidor
+            out.println("LOGIN:" + username + ":" + password);
             isConnected = true;
             
             // Solicitar la lista de usuarios tras iniciar sesión
@@ -161,7 +162,6 @@ public class ChatClient extends Application {
     private void showChatWindow() {
         try {
             java.net.URL fxmlUrl = ChatClient.class.getResource("/fxml/ChatWindow.fxml");
-            System.out.println("Ruta FXML encontrada: " + fxmlUrl);
             FXMLLoader chatLoader = new FXMLLoader(fxmlUrl);
             Parent chatRoot = chatLoader.load();
             chatController = chatLoader.getController();
@@ -227,8 +227,6 @@ public class ChatClient extends Application {
                     if (chatController != null) {
                         chatController.setHistorial(historialMsg);
                     }
-                } else if (message.startsWith("FILE:")) {
-                    handleFileMessage(message);
                 } else if (message.startsWith("ERROR:")) {
                     showError(message.substring(6));
                 } else {
@@ -243,16 +241,6 @@ public class ChatClient extends Application {
                 }
             }
         });
-    }
-    
-    private void handleFileMessage(String message) {
-        // Implementación del manejo de archivos
-        String[] parts = message.split(":", 4);
-        if (parts.length >= 4) {
-            String sender = parts[1];
-            String fileName = parts[2];
-            chatController.appendMessage("Archivo recibido de " + sender + ": " + fileName);
-        }
     }
     
     public void sendMessage(String message, String recipient) {
@@ -273,38 +261,6 @@ public class ChatClient extends Application {
         } catch (Exception e) {
             showError("Error al enviar mensaje: " + e.getMessage());
         }
-    }
-    
-    public void sendFile(File file, String recipient) {
-        if (!isConnected) {
-            showError("No estás conectado al servidor");
-            return;
-        }
-        
-        executorService.execute(() -> {
-            try (FileInputStream fis = new FileInputStream(file)) {
-                byte[] buffer = new byte[4096];
-                int bytesRead;
-                
-                String header;
-                if (recipient.isEmpty()) {
-                    header = "FILE:" + file.getName() + ":" + file.length();
-                } else {
-                    header = "PRIVATE_FILE:" + recipient + ":" + file.getName() + ":" + file.length();
-                }
-                out.println(header);
-                
-                while ((bytesRead = fis.read(buffer)) != -1) {
-                    String chunk = Base64.getEncoder().encodeToString(buffer);
-                    out.println(chunk);
-                }
-                
-                out.println("END_FILE");
-                Platform.runLater(() -> chatController.appendMessage("Archivo enviado: " + file.getName()));
-            } catch (IOException e) {
-                Platform.runLater(() -> showError("Error al enviar archivo: " + e.getMessage()));
-            }
-        });
     }
     
     public void disconnect() {
@@ -340,7 +296,6 @@ public class ChatClient extends Application {
                     alert.showAndWait();
                 }
             } catch (Exception e) {
-                System.err.println("Error al mostrar mensaje de error: " + message);
                 e.printStackTrace();
             }
         });

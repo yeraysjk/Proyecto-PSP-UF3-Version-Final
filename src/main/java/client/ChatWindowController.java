@@ -4,12 +4,10 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.layout.VBox;
 import javafx.scene.layout.BorderPane;
-import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import javafx.collections.ObservableList;
 import javafx.collections.FXCollections;
 import javafx.application.Platform;
-import java.io.File;
 import java.util.Optional;
 import javafx.scene.control.ListCell;
 import javafx.util.Callback;
@@ -26,7 +24,6 @@ public class ChatWindowController {
     @FXML private TextField messageField;
     @FXML private TextField recipientField;
     @FXML private Button sendButton;
-    @FXML private Button fileButton;
     @FXML private Button clearButton;
     @FXML private Label statusLabel;
     @FXML private BorderPane mainContainer;
@@ -112,7 +109,6 @@ public class ChatWindowController {
 
         // Configurar los botones
         sendButton.setOnAction(e -> sendMessage());
-        fileButton.setOnAction(e -> sendFile());
         clearButton.setOnAction(e -> clearChat());
 
         // Configurar el campo de mensaje
@@ -157,6 +153,11 @@ public class ChatWindowController {
                 }
                 mensajes.add(msg);
                 mensajeIds.add(id);
+                
+                // Scroll automático hacia el último mensaje
+                Platform.runLater(() -> {
+                    chatListView.scrollTo(mensajes.size() - 1);
+                });
             }
         }
     }
@@ -205,35 +206,6 @@ public class ChatWindowController {
             
             messageField.clear();
             messageField.requestFocus();
-        }
-    }
-
-    private void sendFile() {
-        FileChooser fileChooser = new FileChooser();
-        fileChooser.setTitle("Seleccionar archivo");
-        
-        // Configurar filtros de archivo
-        FileChooser.ExtensionFilter allFilter = new FileChooser.ExtensionFilter("Todos los archivos", "*.*");
-        FileChooser.ExtensionFilter textFilter = new FileChooser.ExtensionFilter("Archivos de texto", "*.txt", "*.doc", "*.docx");
-        FileChooser.ExtensionFilter imageFilter = new FileChooser.ExtensionFilter("Imágenes", "*.png", "*.jpg", "*.jpeg", "*.gif");
-        
-        fileChooser.getExtensionFilters().addAll(allFilter, textFilter, imageFilter);
-        
-        File file = fileChooser.showOpenDialog(stage);
-        if (file != null) {
-            if (file.length() > 10 * 1024 * 1024) { // 10MB
-                showError("El archivo es demasiado grande. Tamaño máximo: 10MB");
-                return;
-            }
-            
-            String recipient = recipientField.getText().trim();
-            chatClient.sendFile(file, recipient);
-            
-            // Mostrar mensaje de envío local
-            String displayMessage = recipient.isEmpty() ? 
-                "Enviando archivo a todos: " + file.getName() :
-                "Enviando archivo a " + recipient + ": " + file.getName();
-            appendMessage(displayMessage);
         }
     }
 
@@ -289,6 +261,13 @@ public class ChatWindowController {
                     mensajeIds.add(id);
                 }
             }
+        }
+        
+        // Scroll automático al final del historial
+        if (!mensajes.isEmpty()) {
+            Platform.runLater(() -> {
+                chatListView.scrollTo(mensajes.size() - 1);
+            });
         }
     }
 } 

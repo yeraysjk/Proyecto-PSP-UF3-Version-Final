@@ -1,0 +1,62 @@
+/* Estilos para el login */
+.login-bg {
+    -fx-background-color: #111b21;
+    -fx-padding: 30;
+}
+
+.login-title {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #e9edef;
+    -fx-padding: 0 0 20 0;
+}
+
+.login-subtitle {
+    -fx-font-size: 14px;
+    -fx-text-fill: #aebac1;
+    -fx-padding: 0 0 10 0;
+}
+
+.login-input {
+    -fx-background-color: #1f2c34;
+    -fx-text-fill: #e9edef;
+    -fx-font-size: 15px;
+    -fx-padding: 12 15 12 15;
+    -fx-background-radius: 8;
+    -fx-border-color: #374248;
+    -fx-border-radius: 8;
+    -fx-prompt-text-fill: #aebac1;
+}
+
+.login-error {
+    -fx-text-fill: #ff6b6b;
+    -fx-font-size: 14px;
+    -fx-padding: 10 0 10 0;
+}
+
+.login-btn {
+    -fx-background-color: #00a884;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8;
+    -fx-padding: 10 16 10 16;
+    -fx-font-size: 14px;
+}
+
+.login-btn:hover {
+    -fx-background-color: #008f73;
+}
+
+.register-btn {
+    -fx-background-color: #1f2c34;
+    -fx-text-fill: #e9edef;
+    -fx-border-color: #374248;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 10 16 10 16;
+    -fx-font-size: 14px;
+}
+
+.register-btn:hover {
+    -fx-background-color: #374248;
+} 

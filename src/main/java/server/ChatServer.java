@@ -13,7 +13,6 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicBoolean;
-import java.util.Base64;
 
 public class ChatServer {
     private static final int PORT = 5000;
@@ -132,34 +131,10 @@ public class ChatServer {
         });
     }
 
-    public void broadcastFile(String sender, String recipient, String fileName, byte[] fileData) {
-        String message = "FILE:" + sender + ":" + fileName + ":" + Base64.getEncoder().encodeToString(fileData);
-        if (recipient == null) {
-            clients.forEach((username, handler) -> {
-                if (!username.equals(sender)) {
-                    handler.sendMessage(message);
-                }
-            });
-        } else {
-            ClientHandler handler = clients.get(recipient);
-            if (handler != null) {
-                handler.sendMessage(message);
-            }
-        }
-    }
-
     public void sendPrivateMessage(String sender, String recipient, String message) {
         ClientHandler handler = clients.get(recipient);
         if (handler != null) {
             handler.sendMessage(sender + " (privado): " + message);
-        }
-    }
-
-    public void sendFile(String sender, String recipient, String fileName, byte[] fileData) {
-        String message = "FILE:" + sender + ":" + fileName + ":" + Base64.getEncoder().encodeToString(fileData);
-        ClientHandler handler = clients.get(recipient);
-        if (handler != null) {
-            handler.sendMessage(message);
         }
     }
 

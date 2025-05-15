@@ -1,0 +1,2146 @@
+[2025-04-24 17:22:45] ERROR: Error iniciando el servidor seguro
+[2025-04-24 17:22:45] Exception: resources\serverkeystore.jks (El sistema no puede encontrar la ruta especificada)
+[2025-04-24 17:22:45]   at java.base/java.io.FileInputStream.open0(Native Method)
+[2025-04-24 17:22:45]   at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+[2025-04-24 17:22:45]   at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+[2025-04-24 17:22:45]   at java.base/java.io.FileInputStream.<init>(FileInputStream.java:112)
+[2025-04-24 17:22:45]   at yeray.priede.projecte_uf3_psp_final/server.SecureServer.getSSLContext(SecureServer.java:58)
+[2025-04-24 17:22:45]   at yeray.priede.projecte_uf3_psp_final/server.SecureServer.start(SecureServer.java:24)
+[2025-04-24 17:22:45]   at yeray.priede.projecte_uf3_psp_final/server.SecureServer.main(SecureServer.java:84)
+[2025-04-24 17:22:45] Servidor seguro detenido
+[2025-04-24 17:22:50] Iniciando servidor de chat...
+[2025-04-24 17:22:51] Servidor iniciado en el puerto 5000
+[2025-04-24 17:22:51] Esperando conexiones...
+[2025-04-24 17:23:58] Iniciando servidor de chat...
+[2025-04-24 17:23:58] Servidor iniciado en el puerto 5000
+[2025-04-24 17:23:58] Esperando conexiones...
+[2025-04-24 17:24:17] Nueva conexión desde: 127.0.0.1
+[2025-04-24 17:24:18] Cliente conectado: user1
+[2025-04-24 17:24:18] ERROR: Error en la conexión con el cliente
+[2025-04-24 17:24:18] Exception: Connection reset
+[2025-04-24 17:24:18]   at java.base/java.net.SocketInputStream.read(SocketInputStream.java:186)
+[2025-04-24 17:24:18]   at java.base/java.net.SocketInputStream.read(SocketInputStream.java:140)
+[2025-04-24 17:24:18]   at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+[2025-04-24 17:24:18]   at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+[2025-04-24 17:24:18]   at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+[2025-04-24 17:24:18]   at java.base/java.io.InputStreamReader.read(InputStreamReader.java:181)
+[2025-04-24 17:24:18]   at java.base/java.io.BufferedReader.fill(BufferedReader.java:161)
+[2025-04-24 17:24:18]   at java.base/java.io.BufferedReader.readLine(BufferedReader.java:326)
+[2025-04-24 17:24:18]   at java.base/java.io.BufferedReader.readLine(BufferedReader.java:392)
+[2025-04-24 17:24:18]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleClient(ClientHandler.java:57)
+[2025-04-24 17:24:18]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.run(ClientHandler.java:30)
+[2025-04-24 17:24:18]   at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+[2025-04-24 17:24:18]   at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+[2025-04-24 17:24:18]   at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-04-24 17:24:18] Cliente desconectado: user1
+[2025-04-24 17:25:02] Iniciando servidor de chat...
+[2025-04-24 17:25:02] Servidor iniciado en el puerto 5000
+[2025-04-24 17:25:02] Esperando conexiones...
+[2025-04-24 17:25:20] Nueva conexión desde: 127.0.0.1
+[2025-04-24 17:25:20] Cliente conectado: user1
+[2025-04-24 17:25:47] ERROR: Error en la conexión con el cliente
+[2025-04-24 17:25:47] Exception: Software caused connection abort: recv failed
+[2025-04-24 17:25:47]   at java.base/java.net.SocketInputStream.socketRead0(Native Method)
+[2025-04-24 17:25:47]   at java.base/java.net.SocketInputStream.socketRead(SocketInputStream.java:115)
+[2025-04-24 17:25:47]   at java.base/java.net.SocketInputStream.read(SocketInputStream.java:168)
+[2025-04-24 17:25:47]   at java.base/java.net.SocketInputStream.read(SocketInputStream.java:140)
+[2025-04-24 17:25:47]   at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+[2025-04-24 17:25:47]   at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+[2025-04-24 17:25:47]   at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+[2025-04-24 17:25:47]   at java.base/java.io.InputStreamReader.read(InputStreamReader.java:181)
+[2025-04-24 17:25:47]   at java.base/java.io.BufferedReader.fill(BufferedReader.java:161)
+[2025-04-24 17:25:47]   at java.base/java.io.BufferedReader.readLine(BufferedReader.java:326)
+[2025-04-24 17:25:47]   at java.base/java.io.BufferedReader.readLine(BufferedReader.java:392)
+[2025-04-24 17:25:47]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleClient(ClientHandler.java:57)
+[2025-04-24 17:25:47]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.run(ClientHandler.java:30)
+[2025-04-24 17:25:47]   at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+[2025-04-24 17:25:47]   at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+[2025-04-24 17:25:47]   at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-04-24 17:25:47] Cliente desconectado: user1
+[2025-04-24 17:27:36] Iniciando servidor de chat...
+[2025-04-24 17:27:36] Servidor iniciado en el puerto 5000
+[2025-04-24 17:27:36] Esperando conexiones...
+[2025-04-24 17:27:43] Nueva conexión desde: 127.0.0.1
+[2025-04-24 17:27:43] Cliente conectado: user1
+[2025-04-24 17:27:59] Cliente desconectado: user1
+[2025-04-24 17:27:59] Servidor detenido
+[2025-04-24 17:27:59] Servidor detenido
+[2025-04-24 17:28:05] Iniciando servidor de chat...
+[2025-04-24 17:28:05] Servidor iniciado en el puerto 5000
+[2025-04-24 17:28:05] Esperando conexiones...
+[2025-04-24 17:28:11] Nueva conexión desde: 127.0.0.1
+[2025-04-24 17:28:12] Cliente conectado: user1
+[2025-04-24 17:29:11] Cliente desconectado: user1
+[2025-04-24 17:29:11] Servidor detenido
+[2025-04-24 17:29:11] Servidor detenido
+[2025-05-08 15:38:26] ERROR: Error iniciando el servidor seguro
+[2025-05-08 15:38:26] Exception: resources\serverkeystore.jks (El sistema no puede encontrar la ruta especificada)
+[2025-05-08 15:38:26]   at java.base/java.io.FileInputStream.open0(Native Method)
+[2025-05-08 15:38:26]   at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+[2025-05-08 15:38:26]   at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+[2025-05-08 15:38:26]   at java.base/java.io.FileInputStream.<init>(FileInputStream.java:112)
+[2025-05-08 15:38:26]   at yeray.priede.projecte_uf3_psp_final/server.SecureServer.getSSLContext(SecureServer.java:58)
+[2025-05-08 15:38:26]   at yeray.priede.projecte_uf3_psp_final/server.SecureServer.start(SecureServer.java:24)
+[2025-05-08 15:38:26]   at yeray.priede.projecte_uf3_psp_final/server.SecureServer.main(SecureServer.java:84)
+[2025-05-08 15:38:26] Servidor seguro detenido
+[2025-05-08 15:38:36] ERROR: Error iniciando el servidor seguro
+[2025-05-08 15:38:36] Exception: resources\serverkeystore.jks (El sistema no puede encontrar la ruta especificada)
+[2025-05-08 15:38:36]   at java.base/java.io.FileInputStream.open0(Native Method)
+[2025-05-08 15:38:36]   at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+[2025-05-08 15:38:36]   at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+[2025-05-08 15:38:36]   at java.base/java.io.FileInputStream.<init>(FileInputStream.java:112)
+[2025-05-08 15:38:36]   at yeray.priede.projecte_uf3_psp_final/server.SecureServer.getSSLContext(SecureServer.java:58)
+[2025-05-08 15:38:36]   at yeray.priede.projecte_uf3_psp_final/server.SecureServer.start(SecureServer.java:24)
+[2025-05-08 15:38:36]   at yeray.priede.projecte_uf3_psp_final/server.SecureServer.main(SecureServer.java:84)
+[2025-05-08 15:38:36] Servidor seguro detenido
+[2025-05-08 15:39:18] ERROR: Error iniciando el servidor seguro
+[2025-05-08 15:39:18] Exception: resources\serverkeystore.jks (El sistema no puede encontrar la ruta especificada)
+[2025-05-08 15:39:18]   at java.base/java.io.FileInputStream.open0(Native Method)
+[2025-05-08 15:39:18]   at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+[2025-05-08 15:39:18]   at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+[2025-05-08 15:39:18]   at java.base/java.io.FileInputStream.<init>(FileInputStream.java:112)
+[2025-05-08 15:39:18]   at yeray.priede.projecte_uf3_psp_final/server.SecureServer.getSSLContext(SecureServer.java:58)
+[2025-05-08 15:39:18]   at yeray.priede.projecte_uf3_psp_final/server.SecureServer.start(SecureServer.java:24)
+[2025-05-08 15:39:18]   at yeray.priede.projecte_uf3_psp_final/server.SecureServer.main(SecureServer.java:84)
+[2025-05-08 15:39:18] Servidor seguro detenido
+[2025-05-08 15:44:41] 🔐 Servidor seguro iniciado en el puerto 12345
+[2025-05-08 15:45:00] Iniciando servidor de chat...
+[2025-05-08 15:45:00] Servidor iniciado en el puerto 5000
+[2025-05-08 15:45:00] Esperando conexiones...
+[2025-05-08 15:45:08] Nueva conexión desde: 127.0.0.1
+[2025-05-08 15:45:08] Cliente conectado: user1
+[2025-05-08 15:49:04] Iniciando servidor de chat...
+[2025-05-08 15:49:04] Servidor iniciado en el puerto 5000
+[2025-05-08 15:49:04] Esperando conexiones...
+[2025-05-08 15:49:10] Nueva conexión desde: 127.0.0.1
+[2025-05-08 15:49:10] Cliente conectado: user1
+[2025-05-08 15:49:10] Driver PostgreSQL cargado correctamente
+[2025-05-08 15:49:11] Conexión a la base de datos establecida correctamente
+[2025-05-08 15:49:11] Tablas creadas correctamente
+[2025-05-08 15:49:32] ERROR: Error en la conexión con el cliente
+[2025-05-08 15:49:32] Exception: Software caused connection abort: recv failed
+[2025-05-08 15:49:32]   at java.base/java.net.SocketInputStream.socketRead0(Native Method)
+[2025-05-08 15:49:32]   at java.base/java.net.SocketInputStream.socketRead(SocketInputStream.java:115)
+[2025-05-08 15:49:32]   at java.base/java.net.SocketInputStream.read(SocketInputStream.java:168)
+[2025-05-08 15:49:32]   at java.base/java.net.SocketInputStream.read(SocketInputStream.java:140)
+[2025-05-08 15:49:32]   at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+[2025-05-08 15:49:32]   at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+[2025-05-08 15:49:32]   at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+[2025-05-08 15:49:32]   at java.base/java.io.InputStreamReader.read(InputStreamReader.java:181)
+[2025-05-08 15:49:32]   at java.base/java.io.BufferedReader.fill(BufferedReader.java:161)
+[2025-05-08 15:49:32]   at java.base/java.io.BufferedReader.readLine(BufferedReader.java:326)
+[2025-05-08 15:49:32]   at java.base/java.io.BufferedReader.readLine(BufferedReader.java:392)
+[2025-05-08 15:49:32]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleClient(ClientHandler.java:57)
+[2025-05-08 15:49:32]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.run(ClientHandler.java:30)
+[2025-05-08 15:49:32]   at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+[2025-05-08 15:49:32]   at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+[2025-05-08 15:49:32]   at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-08 15:49:32] Cliente desconectado: user1
+[2025-05-08 15:49:32] Servidor detenido
+[2025-05-08 15:49:32] Servidor detenido
+[2025-05-08 15:49:36] Iniciando servidor de chat...
+[2025-05-08 15:49:36] Servidor iniciado en el puerto 5000
+[2025-05-08 15:49:36] Esperando conexiones...
+[2025-05-08 15:49:39] Nueva conexión desde: 127.0.0.1
+[2025-05-08 15:49:39] Cliente conectado: 
+[2025-05-08 15:49:39] Driver PostgreSQL cargado correctamente
+[2025-05-08 15:49:40] Conexión a la base de datos establecida correctamente
+[2025-05-08 15:49:40] Tablas creadas correctamente
+[2025-05-08 15:49:42] ERROR: Error en la conexión con el cliente
+[2025-05-08 15:49:42] Exception: Software caused connection abort: recv failed
+[2025-05-08 15:49:42]   at java.base/java.net.SocketInputStream.socketRead0(Native Method)
+[2025-05-08 15:49:42]   at java.base/java.net.SocketInputStream.socketRead(SocketInputStream.java:115)
+[2025-05-08 15:49:42]   at java.base/java.net.SocketInputStream.read(SocketInputStream.java:168)
+[2025-05-08 15:49:42]   at java.base/java.net.SocketInputStream.read(SocketInputStream.java:140)
+[2025-05-08 15:49:42]   at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+[2025-05-08 15:49:42]   at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+[2025-05-08 15:49:42]   at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+[2025-05-08 15:49:42]   at java.base/java.io.InputStreamReader.read(InputStreamReader.java:181)
+[2025-05-08 15:49:42]   at java.base/java.io.BufferedReader.fill(BufferedReader.java:161)
+[2025-05-08 15:49:42]   at java.base/java.io.BufferedReader.readLine(BufferedReader.java:326)
+[2025-05-08 15:49:42]   at java.base/java.io.BufferedReader.readLine(BufferedReader.java:392)
+[2025-05-08 15:49:42]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleClient(ClientHandler.java:57)
+[2025-05-08 15:49:42]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.run(ClientHandler.java:30)
+[2025-05-08 15:49:42]   at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+[2025-05-08 15:49:42]   at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+[2025-05-08 15:49:42]   at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-08 15:49:42] Cliente desconectado: 
+[2025-05-08 15:49:42] Servidor detenido
+[2025-05-08 15:49:42] Servidor detenido
+[2025-05-08 15:51:48] Iniciando servidor de chat...
+[2025-05-08 15:51:48] Servidor iniciado en el puerto 5000
+[2025-05-08 15:51:48] Esperando conexiones...
+[2025-05-08 15:51:55] Nueva conexión desde: 127.0.0.1
+[2025-05-08 15:52:00] Servidor detenido
+[2025-05-08 15:52:00] Servidor detenido
+[2025-05-08 15:52:03] Iniciando servidor de chat...
+[2025-05-08 15:52:03] Servidor iniciado en el puerto 5000
+[2025-05-08 15:52:03] Esperando conexiones...
+[2025-05-08 15:52:09] Iniciando servidor de chat...
+[2025-05-08 15:52:09] Servidor iniciado en el puerto 5000
+[2025-05-08 15:52:09] Esperando conexiones...
+[2025-05-08 15:53:26] Servidor detenido
+[2025-05-08 15:53:26] Servidor detenido
+[2025-05-08 15:56:07] Iniciando servidor de chat...
+[2025-05-08 15:56:07] Servidor iniciado en el puerto 5000
+[2025-05-08 15:56:07] Esperando conexiones...
+[2025-05-08 15:56:18] Nueva conexión desde: 127.0.0.1
+[2025-05-08 15:56:18] Cliente conectado: user1
+[2025-05-08 15:56:18] Driver PostgreSQL cargado correctamente
+[2025-05-08 15:56:19] Conexión a la base de datos establecida correctamente
+[2025-05-08 15:56:19] Tablas creadas correctamente
+[2025-05-08 15:56:19] ERROR: Error en la conexión con el cliente
+[2025-05-08 15:56:19] Exception: Software caused connection abort: recv failed
+[2025-05-08 15:56:19]   at java.base/java.net.SocketInputStream.socketRead0(Native Method)
+[2025-05-08 15:56:19]   at java.base/java.net.SocketInputStream.socketRead(SocketInputStream.java:115)
+[2025-05-08 15:56:19]   at java.base/java.net.SocketInputStream.read(SocketInputStream.java:168)
+[2025-05-08 15:56:19]   at java.base/java.net.SocketInputStream.read(SocketInputStream.java:140)
+[2025-05-08 15:56:19]   at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+[2025-05-08 15:56:19]   at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+[2025-05-08 15:56:19]   at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+[2025-05-08 15:56:19]   at java.base/java.io.InputStreamReader.read(InputStreamReader.java:181)
+[2025-05-08 15:56:19]   at java.base/java.io.BufferedReader.fill(BufferedReader.java:161)
+[2025-05-08 15:56:19]   at java.base/java.io.BufferedReader.readLine(BufferedReader.java:326)
+[2025-05-08 15:56:19]   at java.base/java.io.BufferedReader.readLine(BufferedReader.java:392)
+[2025-05-08 15:56:19]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleClient(ClientHandler.java:58)
+[2025-05-08 15:56:19]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.run(ClientHandler.java:31)
+[2025-05-08 15:56:19]   at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+[2025-05-08 15:56:19]   at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+[2025-05-08 15:56:19]   at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-08 15:56:19] Cliente desconectado: user1
+[2025-05-08 15:56:19] Servidor detenido
+[2025-05-08 15:56:19] Servidor detenido
+[2025-05-08 16:00:12] Iniciando servidor de chat...
+[2025-05-08 16:00:12] Servidor iniciado en el puerto 5000
+[2025-05-08 16:00:12] Esperando conexiones...
+[2025-05-08 16:00:14] Servidor detenido
+[2025-05-08 16:00:14] Servidor detenido
+[2025-05-08 16:03:16] Iniciando servidor de chat...
+[2025-05-08 16:03:16] Servidor iniciado en el puerto 5000
+[2025-05-08 16:03:16] Esperando conexiones...
+[2025-05-08 16:03:17] Servidor detenido
+[2025-05-08 16:03:17] Servidor detenido
+[2025-05-08 16:04:19] Iniciando servidor de chat...
+[2025-05-08 16:04:19] Servidor iniciado en el puerto 5000
+[2025-05-08 16:04:19] Esperando conexiones...
+[2025-05-08 16:04:20] Servidor detenido
+[2025-05-08 16:04:20] Servidor detenido
+[2025-05-08 16:05:43] Iniciando servidor de chat...
+[2025-05-08 16:05:43] Servidor iniciado en el puerto 5000
+[2025-05-08 16:05:43] Esperando conexiones...
+[2025-05-08 16:05:50] Servidor detenido
+[2025-05-08 16:05:50] Servidor detenido
+[2025-05-08 16:05:53] Iniciando servidor de chat...
+[2025-05-08 16:05:53] Servidor iniciado en el puerto 5000
+[2025-05-08 16:05:53] Esperando conexiones...
+[2025-05-08 16:07:32] Servidor detenido
+[2025-05-08 16:07:32] Servidor detenido
+[2025-05-08 16:07:39] Iniciando servidor de chat...
+[2025-05-08 16:07:39] Servidor iniciado en el puerto 5000
+[2025-05-08 16:07:39] Esperando conexiones...
+[2025-05-08 16:10:04] Iniciando servidor de chat...
+[2025-05-08 16:10:04] Servidor iniciado en el puerto 5000
+[2025-05-08 16:10:04] Esperando conexiones...
+[2025-05-08 16:10:22] Servidor detenido
+[2025-05-08 16:10:22] Servidor detenido
+[2025-05-08 16:15:17] Iniciando servidor de chat...
+[2025-05-08 16:15:17] Servidor iniciado en el puerto 5000
+[2025-05-08 16:15:17] Esperando conexiones...
+[2025-05-08 16:19:18] Servidor detenido
+[2025-05-08 16:19:18] Servidor detenido
+[2025-05-08 16:20:50] Iniciando servidor de chat...
+[2025-05-08 16:20:50] Servidor iniciado en el puerto 5000
+[2025-05-08 16:20:50] Esperando conexiones...
+[2025-05-08 16:20:52] Servidor detenido
+[2025-05-08 16:20:52] Servidor detenido
+[2025-05-08 16:24:25] Iniciando servidor de chat...
+[2025-05-08 16:24:25] Servidor iniciado en el puerto 5000
+[2025-05-08 16:24:25] Esperando conexiones...
+[2025-05-08 16:24:27] Servidor detenido
+[2025-05-08 16:24:27] Servidor detenido
+[2025-05-08 16:25:20] Iniciando servidor de chat...
+[2025-05-08 16:25:20] Servidor iniciado en el puerto 5000
+[2025-05-08 16:25:20] Esperando conexiones...
+[2025-05-08 16:25:21] Servidor detenido
+[2025-05-08 16:25:21] Servidor detenido
+[2025-05-08 16:26:30] Iniciando servidor de chat...
+[2025-05-08 16:26:30] Servidor iniciado en el puerto 5000
+[2025-05-08 16:26:30] Esperando conexiones...
+[2025-05-08 16:26:31] Servidor detenido
+[2025-05-08 16:26:31] Servidor detenido
+[2025-05-08 16:28:14] Iniciando servidor de chat...
+[2025-05-08 16:28:14] Servidor iniciado en el puerto 5000
+[2025-05-08 16:28:14] Esperando conexiones...
+[2025-05-08 16:28:16] Servidor detenido
+[2025-05-08 16:28:16] Servidor detenido
+[2025-05-08 16:29:46] Iniciando servidor de chat...
+[2025-05-08 16:29:46] Servidor iniciado en el puerto 5000
+[2025-05-08 16:29:46] Esperando conexiones...
+[2025-05-08 16:29:47] Servidor detenido
+[2025-05-08 16:29:47] Servidor detenido
+[2025-05-08 16:31:39] Iniciando servidor de chat...
+[2025-05-08 16:31:39] Servidor iniciado en el puerto 5000
+[2025-05-08 16:31:39] Esperando conexiones...
+[2025-05-08 16:31:40] Servidor detenido
+[2025-05-08 16:31:40] Servidor detenido
+[2025-05-08 16:34:09] Iniciando servidor de chat...
+[2025-05-08 16:34:09] Servidor iniciado en el puerto 5000
+[2025-05-08 16:34:09] Esperando conexiones...
+[2025-05-08 16:34:10] Servidor detenido
+[2025-05-08 16:34:10] Servidor detenido
+[2025-05-08 16:35:53] Iniciando servidor de chat...
+[2025-05-08 16:35:53] Servidor iniciado en el puerto 5000
+[2025-05-08 16:35:53] Esperando conexiones...
+[2025-05-08 16:35:54] Servidor detenido
+[2025-05-08 16:35:54] Servidor detenido
+[2025-05-08 16:37:27] Iniciando servidor de chat...
+[2025-05-08 16:37:27] Servidor iniciado en el puerto 5000
+[2025-05-08 16:37:27] Esperando conexiones...
+[2025-05-08 16:37:28] Servidor detenido
+[2025-05-08 16:37:28] Servidor detenido
+[2025-05-08 16:37:41] Iniciando servidor de chat...
+[2025-05-08 16:37:41] Servidor iniciado en el puerto 5000
+[2025-05-08 16:37:41] Esperando conexiones...
+[2025-05-08 16:37:42] Servidor detenido
+[2025-05-08 16:37:42] Servidor detenido
+[2025-05-08 16:38:07] Iniciando servidor de chat...
+[2025-05-08 16:38:07] Servidor iniciado en el puerto 5000
+[2025-05-08 16:38:07] Esperando conexiones...
+[2025-05-08 16:38:08] Servidor detenido
+[2025-05-08 16:38:08] Servidor detenido
+[2025-05-08 16:38:15] Iniciando servidor de chat...
+[2025-05-08 16:38:15] Servidor iniciado en el puerto 5000
+[2025-05-08 16:38:15] Esperando conexiones...
+[2025-05-08 16:38:16] Servidor detenido
+[2025-05-08 16:38:16] Servidor detenido
+[2025-05-08 16:38:45] Iniciando servidor de chat...
+[2025-05-08 16:38:45] Servidor iniciado en el puerto 5000
+[2025-05-08 16:38:45] Esperando conexiones...
+[2025-05-08 16:38:46] Servidor detenido
+[2025-05-08 16:38:46] Servidor detenido
+[2025-05-08 16:39:09] Iniciando servidor de chat...
+[2025-05-08 16:39:09] Servidor iniciado en el puerto 5000
+[2025-05-08 16:39:09] Esperando conexiones...
+[2025-05-08 16:39:10] Servidor detenido
+[2025-05-08 16:39:10] Servidor detenido
+[2025-05-08 16:40:16] Iniciando servidor de chat...
+[2025-05-08 16:40:16] Servidor iniciado en el puerto 5000
+[2025-05-08 16:40:16] Esperando conexiones...
+[2025-05-08 16:40:17] Servidor detenido
+[2025-05-08 16:40:17] Servidor detenido
+[2025-05-08 16:42:07] Iniciando servidor de chat...
+[2025-05-08 16:42:07] Servidor iniciado en el puerto 5000
+[2025-05-08 16:42:07] Esperando conexiones...
+[2025-05-08 16:42:08] Servidor detenido
+[2025-05-08 16:42:08] Servidor detenido
+[2025-05-08 16:42:27] Iniciando servidor de chat...
+[2025-05-08 16:42:27] Servidor iniciado en el puerto 5000
+[2025-05-08 16:42:27] Esperando conexiones...
+[2025-05-08 16:42:28] Servidor detenido
+[2025-05-08 16:42:28] Servidor detenido
+[2025-05-08 16:42:49] Iniciando servidor de chat...
+[2025-05-08 16:42:49] Servidor iniciado en el puerto 5000
+[2025-05-08 16:42:49] Esperando conexiones...
+[2025-05-08 16:42:51] Servidor detenido
+[2025-05-08 16:42:51] Servidor detenido
+[2025-05-08 16:45:57] Iniciando servidor de chat...
+[2025-05-08 16:45:57] Servidor iniciado en el puerto 5000
+[2025-05-08 16:45:57] Esperando conexiones...
+[2025-05-08 16:45:58] Servidor detenido
+[2025-05-08 16:45:58] Servidor detenido
+[2025-05-08 16:47:42] Iniciando servidor de chat...
+[2025-05-08 16:47:42] Servidor iniciado en el puerto 5000
+[2025-05-08 16:47:42] Esperando conexiones...
+[2025-05-08 16:47:43] Servidor detenido
+[2025-05-08 16:47:43] Servidor detenido
+[2025-05-08 16:49:16] Iniciando servidor de chat...
+[2025-05-08 16:49:16] Servidor iniciado en el puerto 5000
+[2025-05-08 16:49:16] Esperando conexiones...
+[2025-05-08 16:49:23] Nueva conexión desde: 127.0.0.1
+[2025-05-08 16:49:23] Cliente conectado: user1
+[2025-05-08 16:49:23] Driver PostgreSQL cargado correctamente
+[2025-05-08 16:49:24] Conexión a la base de datos establecida correctamente
+[2025-05-08 16:49:24] Tablas creadas correctamente
+[2025-05-08 16:49:29] Servidor detenido
+[2025-05-08 16:49:29] Servidor detenido
+[2025-05-08 16:49:29] ERROR: Error en la conexión con el cliente
+[2025-05-08 16:49:29] Exception: Software caused connection abort: recv failed
+[2025-05-08 16:49:29]   at java.base/java.net.SocketInputStream.socketRead0(Native Method)
+[2025-05-08 16:49:29]   at java.base/java.net.SocketInputStream.socketRead(SocketInputStream.java:115)
+[2025-05-08 16:49:29]   at java.base/java.net.SocketInputStream.read(SocketInputStream.java:168)
+[2025-05-08 16:49:29]   at java.base/java.net.SocketInputStream.read(SocketInputStream.java:140)
+[2025-05-08 16:49:29]   at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+[2025-05-08 16:49:29]   at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+[2025-05-08 16:49:29]   at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+[2025-05-08 16:49:29]   at java.base/java.io.InputStreamReader.read(InputStreamReader.java:181)
+[2025-05-08 16:49:29]   at java.base/java.io.BufferedReader.fill(BufferedReader.java:161)
+[2025-05-08 16:49:29]   at java.base/java.io.BufferedReader.readLine(BufferedReader.java:326)
+[2025-05-08 16:49:29]   at java.base/java.io.BufferedReader.readLine(BufferedReader.java:392)
+[2025-05-08 16:49:29]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleClient(ClientHandler.java:58)
+[2025-05-08 16:49:29]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.run(ClientHandler.java:31)
+[2025-05-08 16:49:29]   at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+[2025-05-08 16:49:29]   at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+[2025-05-08 16:49:29]   at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-08 16:49:29] Cliente desconectado: user1
+[2025-05-08 16:50:20] Iniciando servidor de chat...
+[2025-05-08 16:50:20] Servidor iniciado en el puerto 5000
+[2025-05-08 16:50:20] Esperando conexiones...
+[2025-05-08 16:50:26] Nueva conexión desde: 127.0.0.1
+[2025-05-08 16:50:26] Cliente conectado: user1
+[2025-05-08 16:50:26] Driver PostgreSQL cargado correctamente
+[2025-05-08 16:50:26] Conexión a la base de datos establecida correctamente
+[2025-05-08 16:50:26] Tablas creadas correctamente
+[2025-05-08 16:50:31] Servidor detenido
+[2025-05-08 16:50:31] Servidor detenido
+[2025-05-08 16:50:31] ERROR: Error en la conexión con el cliente
+[2025-05-08 16:50:31] Exception: Software caused connection abort: recv failed
+[2025-05-08 16:50:31]   at java.base/java.net.SocketInputStream.socketRead0(Native Method)
+[2025-05-08 16:50:31]   at java.base/java.net.SocketInputStream.socketRead(SocketInputStream.java:115)
+[2025-05-08 16:50:31]   at java.base/java.net.SocketInputStream.read(SocketInputStream.java:168)
+[2025-05-08 16:50:31]   at java.base/java.net.SocketInputStream.read(SocketInputStream.java:140)
+[2025-05-08 16:50:31]   at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+[2025-05-08 16:50:31]   at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+[2025-05-08 16:50:31]   at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+[2025-05-08 16:50:31]   at java.base/java.io.InputStreamReader.read(InputStreamReader.java:181)
+[2025-05-08 16:50:31]   at java.base/java.io.BufferedReader.fill(BufferedReader.java:161)
+[2025-05-08 16:50:31]   at java.base/java.io.BufferedReader.readLine(BufferedReader.java:326)
+[2025-05-08 16:50:31]   at java.base/java.io.BufferedReader.readLine(BufferedReader.java:392)
+[2025-05-08 16:50:31]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleClient(ClientHandler.java:58)
+[2025-05-08 16:50:31]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.run(ClientHandler.java:31)
+[2025-05-08 16:50:31]   at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+[2025-05-08 16:50:31]   at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+[2025-05-08 16:50:31]   at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-08 16:50:31] Cliente desconectado: user1
+[2025-05-08 16:50:59] Iniciando servidor de chat...
+[2025-05-08 16:50:59] Servidor iniciado en el puerto 5000
+[2025-05-08 16:50:59] Esperando conexiones...
+[2025-05-08 16:51:06] Servidor detenido
+[2025-05-08 16:51:06] Servidor detenido
+[2025-05-08 16:51:33] Iniciando servidor de chat...
+[2025-05-08 16:51:33] Servidor iniciado en el puerto 5000
+[2025-05-08 16:51:33] Esperando conexiones...
+[2025-05-08 16:51:38] Nueva conexión desde: 127.0.0.1
+[2025-05-08 16:51:38] Cliente conectado: user1
+[2025-05-08 16:51:38] Driver PostgreSQL cargado correctamente
+[2025-05-08 16:51:39] Conexión a la base de datos establecida correctamente
+[2025-05-08 16:51:39] Tablas creadas correctamente
+[2025-05-08 16:51:43] Servidor detenido
+[2025-05-08 16:51:43] Servidor detenido
+[2025-05-08 16:51:43] ERROR: Error en la conexión con el cliente
+[2025-05-08 16:51:43] Exception: Software caused connection abort: recv failed
+[2025-05-08 16:51:43]   at java.base/java.net.SocketInputStream.socketRead0(Native Method)
+[2025-05-08 16:51:43]   at java.base/java.net.SocketInputStream.socketRead(SocketInputStream.java:115)
+[2025-05-08 16:51:43]   at java.base/java.net.SocketInputStream.read(SocketInputStream.java:168)
+[2025-05-08 16:51:43]   at java.base/java.net.SocketInputStream.read(SocketInputStream.java:140)
+[2025-05-08 16:51:43]   at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+[2025-05-08 16:51:43]   at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+[2025-05-08 16:51:43]   at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+[2025-05-08 16:51:43]   at java.base/java.io.InputStreamReader.read(InputStreamReader.java:181)
+[2025-05-08 16:51:43]   at java.base/java.io.BufferedReader.fill(BufferedReader.java:161)
+[2025-05-08 16:51:43]   at java.base/java.io.BufferedReader.readLine(BufferedReader.java:326)
+[2025-05-08 16:51:43]   at java.base/java.io.BufferedReader.readLine(BufferedReader.java:392)
+[2025-05-08 16:51:43]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleClient(ClientHandler.java:58)
+[2025-05-08 16:51:43]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.run(ClientHandler.java:31)
+[2025-05-08 16:51:43]   at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+[2025-05-08 16:51:43]   at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+[2025-05-08 16:51:43]   at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-08 16:51:43] Cliente desconectado: user1
+[2025-05-08 16:52:36] Iniciando servidor de chat...
+[2025-05-08 16:52:36] Servidor iniciado en el puerto 5000
+[2025-05-08 16:52:36] Esperando conexiones...
+[2025-05-08 16:52:42] Nueva conexión desde: 127.0.0.1
+[2025-05-08 16:52:42] Cliente conectado: user1
+[2025-05-08 16:52:42] Driver PostgreSQL cargado correctamente
+[2025-05-08 16:52:42] Conexión a la base de datos establecida correctamente
+[2025-05-08 16:52:42] Tablas creadas correctamente
+[2025-05-08 16:52:47] Servidor detenido
+[2025-05-08 16:52:47] Servidor detenido
+[2025-05-08 16:52:47] ERROR: Error en la conexión con el cliente
+[2025-05-08 16:52:47] Exception: Software caused connection abort: recv failed
+[2025-05-08 16:52:47]   at java.base/java.net.SocketInputStream.socketRead0(Native Method)
+[2025-05-08 16:52:47]   at java.base/java.net.SocketInputStream.socketRead(SocketInputStream.java:115)
+[2025-05-08 16:52:47]   at java.base/java.net.SocketInputStream.read(SocketInputStream.java:168)
+[2025-05-08 16:52:47]   at java.base/java.net.SocketInputStream.read(SocketInputStream.java:140)
+[2025-05-08 16:52:47]   at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+[2025-05-08 16:52:47]   at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+[2025-05-08 16:52:47]   at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+[2025-05-08 16:52:47]   at java.base/java.io.InputStreamReader.read(InputStreamReader.java:181)
+[2025-05-08 16:52:47]   at java.base/java.io.BufferedReader.fill(BufferedReader.java:161)
+[2025-05-08 16:52:47]   at java.base/java.io.BufferedReader.readLine(BufferedReader.java:326)
+[2025-05-08 16:52:47]   at java.base/java.io.BufferedReader.readLine(BufferedReader.java:392)
+[2025-05-08 16:52:47]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleClient(ClientHandler.java:58)
+[2025-05-08 16:52:47]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.run(ClientHandler.java:31)
+[2025-05-08 16:52:47]   at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+[2025-05-08 16:52:47]   at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+[2025-05-08 16:52:47]   at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-08 16:52:47] Cliente desconectado: user1
+[2025-05-08 16:54:42] Iniciando servidor de chat...
+[2025-05-08 16:54:42] Servidor iniciado en el puerto 5000
+[2025-05-08 16:54:42] Esperando conexiones...
+[2025-05-08 16:54:48] Nueva conexión desde: 127.0.0.1
+[2025-05-08 16:54:48] Cliente conectado: user1
+[2025-05-08 16:54:48] Driver PostgreSQL cargado correctamente
+[2025-05-08 16:54:49] Conexión a la base de datos establecida correctamente
+[2025-05-08 16:54:49] Tablas creadas correctamente
+[2025-05-08 16:54:53] Servidor detenido
+[2025-05-08 16:54:53] Servidor detenido
+[2025-05-08 16:54:53] ERROR: Error en la conexión con el cliente
+[2025-05-08 16:54:53] Exception: Software caused connection abort: recv failed
+[2025-05-08 16:54:53]   at java.base/java.net.SocketInputStream.socketRead0(Native Method)
+[2025-05-08 16:54:53]   at java.base/java.net.SocketInputStream.socketRead(SocketInputStream.java:115)
+[2025-05-08 16:54:53]   at java.base/java.net.SocketInputStream.read(SocketInputStream.java:168)
+[2025-05-08 16:54:53]   at java.base/java.net.SocketInputStream.read(SocketInputStream.java:140)
+[2025-05-08 16:54:53]   at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+[2025-05-08 16:54:53]   at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+[2025-05-08 16:54:53]   at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+[2025-05-08 16:54:53]   at java.base/java.io.InputStreamReader.read(InputStreamReader.java:181)
+[2025-05-08 16:54:53]   at java.base/java.io.BufferedReader.fill(BufferedReader.java:161)
+[2025-05-08 16:54:53]   at java.base/java.io.BufferedReader.readLine(BufferedReader.java:326)
+[2025-05-08 16:54:53]   at java.base/java.io.BufferedReader.readLine(BufferedReader.java:392)
+[2025-05-08 16:54:53]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleClient(ClientHandler.java:58)
+[2025-05-08 16:54:53]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.run(ClientHandler.java:31)
+[2025-05-08 16:54:53]   at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+[2025-05-08 16:54:53]   at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+[2025-05-08 16:54:53]   at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-08 16:54:53] Cliente desconectado: user1
+[2025-05-08 16:55:15] Iniciando servidor de chat...
+[2025-05-08 16:55:15] Servidor iniciado en el puerto 5000
+[2025-05-08 16:55:15] Esperando conexiones...
+[2025-05-08 16:55:22] Nueva conexión desde: 127.0.0.1
+[2025-05-08 16:55:22] Servidor detenido
+[2025-05-08 16:55:22] Servidor detenido
+[2025-05-08 16:56:31] Iniciando servidor de chat...
+[2025-05-08 16:56:31] Servidor iniciado en el puerto 5000
+[2025-05-08 16:56:31] Esperando conexiones...
+[2025-05-08 16:56:37] Nueva conexión desde: 127.0.0.1
+[2025-05-08 16:56:37] Cliente conectado: user1
+[2025-05-08 16:56:37] Driver PostgreSQL cargado correctamente
+[2025-05-08 16:56:37] Conexión a la base de datos establecida correctamente
+[2025-05-08 16:56:38] Tablas creadas correctamente
+[2025-05-08 16:56:42] Servidor detenido
+[2025-05-08 16:56:42] Servidor detenido
+[2025-05-08 16:56:42] ERROR: Error en la conexión con el cliente
+[2025-05-08 16:56:42] Exception: Software caused connection abort: recv failed
+[2025-05-08 16:56:42]   at java.base/java.net.SocketInputStream.socketRead0(Native Method)
+[2025-05-08 16:56:42]   at java.base/java.net.SocketInputStream.socketRead(SocketInputStream.java:115)
+[2025-05-08 16:56:42]   at java.base/java.net.SocketInputStream.read(SocketInputStream.java:168)
+[2025-05-08 16:56:42]   at java.base/java.net.SocketInputStream.read(SocketInputStream.java:140)
+[2025-05-08 16:56:42]   at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+[2025-05-08 16:56:42]   at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+[2025-05-08 16:56:42]   at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+[2025-05-08 16:56:42]   at java.base/java.io.InputStreamReader.read(InputStreamReader.java:181)
+[2025-05-08 16:56:42]   at java.base/java.io.BufferedReader.fill(BufferedReader.java:161)
+[2025-05-08 16:56:42]   at java.base/java.io.BufferedReader.readLine(BufferedReader.java:326)
+[2025-05-08 16:56:42]   at java.base/java.io.BufferedReader.readLine(BufferedReader.java:392)
+[2025-05-08 16:56:42]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleClient(ClientHandler.java:58)
+[2025-05-08 16:56:42]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.run(ClientHandler.java:31)
+[2025-05-08 16:56:42]   at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+[2025-05-08 16:56:42]   at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+[2025-05-08 16:56:42]   at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-08 16:56:42] Cliente desconectado: user1
+[2025-05-08 16:58:18] Iniciando servidor de chat...
+[2025-05-08 16:58:18] Servidor iniciado en el puerto 5000
+[2025-05-08 16:58:18] Esperando conexiones...
+[2025-05-08 16:58:25] Nueva conexión desde: 127.0.0.1
+[2025-05-08 16:58:25] Cliente conectado: user1
+[2025-05-08 16:58:25] Driver PostgreSQL cargado correctamente
+[2025-05-08 16:58:26] Conexión a la base de datos establecida correctamente
+[2025-05-08 16:58:26] Tablas creadas correctamente
+[2025-05-08 16:58:42] ERROR: Error en la conexión con el cliente
+[2025-05-08 16:58:42] Exception: Software caused connection abort: recv failed
+[2025-05-08 16:58:42]   at java.base/java.net.SocketInputStream.socketRead0(Native Method)
+[2025-05-08 16:58:42]   at java.base/java.net.SocketInputStream.socketRead(SocketInputStream.java:115)
+[2025-05-08 16:58:42]   at java.base/java.net.SocketInputStream.read(SocketInputStream.java:168)
+[2025-05-08 16:58:42]   at java.base/java.net.SocketInputStream.read(SocketInputStream.java:140)
+[2025-05-08 16:58:42]   at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+[2025-05-08 16:58:42]   at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+[2025-05-08 16:58:42]   at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+[2025-05-08 16:58:42]   at java.base/java.io.InputStreamReader.read(InputStreamReader.java:181)
+[2025-05-08 16:58:42]   at java.base/java.io.BufferedReader.fill(BufferedReader.java:161)
+[2025-05-08 16:58:42]   at java.base/java.io.BufferedReader.readLine(BufferedReader.java:326)
+[2025-05-08 16:58:42]   at java.base/java.io.BufferedReader.readLine(BufferedReader.java:392)
+[2025-05-08 16:58:42]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleClient(ClientHandler.java:58)
+[2025-05-08 16:58:42]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.run(ClientHandler.java:31)
+[2025-05-08 16:58:42]   at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+[2025-05-08 16:58:42]   at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+[2025-05-08 16:58:42]   at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-08 16:58:42] Cliente desconectado: user1
+[2025-05-08 16:58:42] Servidor detenido
+[2025-05-08 16:58:42] Servidor detenido
+[2025-05-08 16:58:45] Iniciando servidor de chat...
+[2025-05-08 16:58:45] Servidor iniciado en el puerto 5000
+[2025-05-08 16:58:45] Esperando conexiones...
+[2025-05-08 16:58:50] Nueva conexión desde: 127.0.0.1
+[2025-05-08 16:58:50] Cliente conectado: user2
+[2025-05-08 16:58:50] Driver PostgreSQL cargado correctamente
+[2025-05-08 16:58:51] Conexión a la base de datos establecida correctamente
+[2025-05-08 16:58:51] Tablas creadas correctamente
+[2025-05-08 16:58:56] ERROR: Error en la conexión con el cliente
+[2025-05-08 16:58:56] Exception: Software caused connection abort: recv failed
+[2025-05-08 16:58:56]   at java.base/java.net.SocketInputStream.socketRead0(Native Method)
+[2025-05-08 16:58:56]   at java.base/java.net.SocketInputStream.socketRead(SocketInputStream.java:115)
+[2025-05-08 16:58:56]   at java.base/java.net.SocketInputStream.read(SocketInputStream.java:168)
+[2025-05-08 16:58:56]   at java.base/java.net.SocketInputStream.read(SocketInputStream.java:140)
+[2025-05-08 16:58:56]   at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+[2025-05-08 16:58:56]   at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+[2025-05-08 16:58:56]   at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+[2025-05-08 16:58:56]   at java.base/java.io.InputStreamReader.read(InputStreamReader.java:181)
+[2025-05-08 16:58:56]   at java.base/java.io.BufferedReader.fill(BufferedReader.java:161)
+[2025-05-08 16:58:56]   at java.base/java.io.BufferedReader.readLine(BufferedReader.java:326)
+[2025-05-08 16:58:56]   at java.base/java.io.BufferedReader.readLine(BufferedReader.java:392)
+[2025-05-08 16:58:56]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleClient(ClientHandler.java:58)
+[2025-05-08 16:58:56]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.run(ClientHandler.java:31)
+[2025-05-08 16:58:56]   at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+[2025-05-08 16:58:56]   at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+[2025-05-08 16:58:56]   at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-08 16:58:56] Cliente desconectado: user2
+[2025-05-08 16:58:56] Servidor detenido
+[2025-05-08 16:58:56] Servidor detenido
+[2025-05-08 16:59:03] Iniciando servidor de chat...
+[2025-05-08 16:59:03] Servidor iniciado en el puerto 5000
+[2025-05-08 16:59:03] Esperando conexiones...
+[2025-05-08 16:59:09] Nueva conexión desde: 127.0.0.1
+[2025-05-08 16:59:09] Cliente conectado: user1
+[2025-05-08 16:59:09] Driver PostgreSQL cargado correctamente
+[2025-05-08 16:59:10] Conexión a la base de datos establecida correctamente
+[2025-05-08 16:59:10] Tablas creadas correctamente
+[2025-05-08 16:59:29] ERROR: Error en la conexión con el cliente
+[2025-05-08 16:59:29] Exception: Software caused connection abort: recv failed
+[2025-05-08 16:59:29]   at java.base/java.net.SocketInputStream.socketRead0(Native Method)
+[2025-05-08 16:59:29]   at java.base/java.net.SocketInputStream.socketRead(SocketInputStream.java:115)
+[2025-05-08 16:59:29]   at java.base/java.net.SocketInputStream.read(SocketInputStream.java:168)
+[2025-05-08 16:59:29]   at java.base/java.net.SocketInputStream.read(SocketInputStream.java:140)
+[2025-05-08 16:59:29]   at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+[2025-05-08 16:59:29]   at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+[2025-05-08 16:59:29]   at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+[2025-05-08 16:59:29]   at java.base/java.io.InputStreamReader.read(InputStreamReader.java:181)
+[2025-05-08 16:59:29]   at java.base/java.io.BufferedReader.fill(BufferedReader.java:161)
+[2025-05-08 16:59:29]   at java.base/java.io.BufferedReader.readLine(BufferedReader.java:326)
+[2025-05-08 16:59:29]   at java.base/java.io.BufferedReader.readLine(BufferedReader.java:392)
+[2025-05-08 16:59:29]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleClient(ClientHandler.java:58)
+[2025-05-08 16:59:29]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.run(ClientHandler.java:31)
+[2025-05-08 16:59:29]   at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+[2025-05-08 16:59:29]   at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+[2025-05-08 16:59:29]   at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-08 16:59:29] Cliente desconectado: user1
+[2025-05-08 16:59:29] Servidor detenido
+[2025-05-08 16:59:29] Servidor detenido
+[2025-05-08 16:59:31] Iniciando servidor de chat...
+[2025-05-08 16:59:31] Servidor iniciado en el puerto 5000
+[2025-05-08 16:59:31] Esperando conexiones...
+[2025-05-08 16:59:36] Nueva conexión desde: 127.0.0.1
+[2025-05-08 16:59:36] Cliente conectado: user2
+[2025-05-08 16:59:36] Driver PostgreSQL cargado correctamente
+[2025-05-08 16:59:37] Conexión a la base de datos establecida correctamente
+[2025-05-08 16:59:37] Tablas creadas correctamente
+[2025-05-08 17:01:20] ERROR: Error en la conexión con el cliente
+[2025-05-08 17:01:20] Exception: Software caused connection abort: recv failed
+[2025-05-08 17:01:20]   at java.base/java.net.SocketInputStream.socketRead0(Native Method)
+[2025-05-08 17:01:20]   at java.base/java.net.SocketInputStream.socketRead(SocketInputStream.java:115)
+[2025-05-08 17:01:20]   at java.base/java.net.SocketInputStream.read(SocketInputStream.java:168)
+[2025-05-08 17:01:20]   at java.base/java.net.SocketInputStream.read(SocketInputStream.java:140)
+[2025-05-08 17:01:20]   at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+[2025-05-08 17:01:20]   at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+[2025-05-08 17:01:20]   at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+[2025-05-08 17:01:20]   at java.base/java.io.InputStreamReader.read(InputStreamReader.java:181)
+[2025-05-08 17:01:20]   at java.base/java.io.BufferedReader.fill(BufferedReader.java:161)
+[2025-05-08 17:01:20]   at java.base/java.io.BufferedReader.readLine(BufferedReader.java:326)
+[2025-05-08 17:01:20]   at java.base/java.io.BufferedReader.readLine(BufferedReader.java:392)
+[2025-05-08 17:01:20]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleClient(ClientHandler.java:58)
+[2025-05-08 17:01:20]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.run(ClientHandler.java:31)
+[2025-05-08 17:01:20]   at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+[2025-05-08 17:01:20]   at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+[2025-05-08 17:01:20]   at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-08 17:01:20] Cliente desconectado: user2
+[2025-05-08 17:01:20] Servidor detenido
+[2025-05-08 17:01:20] Servidor detenido
+[2025-05-08 17:04:15] Iniciando servidor de chat...
+[2025-05-08 17:04:15] Servidor iniciado en el puerto 5000
+[2025-05-08 17:04:15] Esperando conexiones...
+[2025-05-08 17:04:21] Nueva conexión desde: 127.0.0.1
+[2025-05-08 17:04:21] Cliente conectado: user1
+[2025-05-08 17:04:21] Driver PostgreSQL cargado correctamente
+[2025-05-08 17:04:22] Conexión a la base de datos establecida correctamente
+[2025-05-08 17:04:22] Tablas creadas correctamente
+[2025-05-08 17:04:27] ERROR: Error en la conexión con el cliente
+[2025-05-08 17:04:27] Exception: Software caused connection abort: recv failed
+[2025-05-08 17:04:27]   at java.base/java.net.SocketInputStream.socketRead0(Native Method)
+[2025-05-08 17:04:27]   at java.base/java.net.SocketInputStream.socketRead(SocketInputStream.java:115)
+[2025-05-08 17:04:27]   at java.base/java.net.SocketInputStream.read(SocketInputStream.java:168)
+[2025-05-08 17:04:27]   at java.base/java.net.SocketInputStream.read(SocketInputStream.java:140)
+[2025-05-08 17:04:27]   at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+[2025-05-08 17:04:27]   at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+[2025-05-08 17:04:27]   at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+[2025-05-08 17:04:27]   at java.base/java.io.InputStreamReader.read(InputStreamReader.java:181)
+[2025-05-08 17:04:27]   at java.base/java.io.BufferedReader.fill(BufferedReader.java:161)
+[2025-05-08 17:04:27]   at java.base/java.io.BufferedReader.readLine(BufferedReader.java:326)
+[2025-05-08 17:04:27]   at java.base/java.io.BufferedReader.readLine(BufferedReader.java:392)
+[2025-05-08 17:04:27]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleClient(ClientHandler.java:58)
+[2025-05-08 17:04:27]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.run(ClientHandler.java:31)
+[2025-05-08 17:04:27]   at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+[2025-05-08 17:04:27]   at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+[2025-05-08 17:04:27]   at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-08 17:04:27] Cliente desconectado: user1
+[2025-05-08 17:04:27] Servidor detenido
+[2025-05-08 17:04:27] Servidor detenido
+[2025-05-08 17:06:07] Iniciando servidor de chat...
+[2025-05-08 17:06:07] Servidor iniciado en el puerto 5000
+[2025-05-08 17:06:07] Esperando conexiones...
+[2025-05-08 17:06:12] Nueva conexión desde: 127.0.0.1
+[2025-05-08 17:06:12] Cliente conectado: user1
+[2025-05-08 17:06:12] Driver PostgreSQL cargado correctamente
+[2025-05-08 17:06:13] ERROR: Error inicializando la base de datos
+[2025-05-08 17:06:13] Exception: El intento de conexión falló.
+[2025-05-08 17:06:13]   at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:358)
+[2025-05-08 17:06:13]   at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54)
+[2025-05-08 17:06:13]   at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:273)
+[2025-05-08 17:06:13]   at org.postgresql.Driver.makeConnection(Driver.java:446)
+[2025-05-08 17:06:13]   at org.postgresql.Driver.connect(Driver.java:298)
+[2025-05-08 17:06:13]   at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+[2025-05-08 17:06:13]   at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+[2025-05-08 17:06:13]   at yeray.priede.projecte_uf3_psp_final/server.DatabaseConfig.getConnection(DatabaseConfig.java:27)
+[2025-05-08 17:06:13]   at yeray.priede.projecte_uf3_psp_final/server.DatabaseConfig.initDatabase(DatabaseConfig.java:31)
+[2025-05-08 17:06:13]   at yeray.priede.projecte_uf3_psp_final/server.DatabaseConfig.<clinit>(DatabaseConfig.java:18)
+[2025-05-08 17:06:13]   at yeray.priede.projecte_uf3_psp_final/server.ChatServer.getAllRegisteredUsers(ChatServer.java:172)
+[2025-05-08 17:06:13]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleGetUsers(ClientHandler.java:151)
+[2025-05-08 17:06:13]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleMessage(ClientHandler.java:76)
+[2025-05-08 17:06:13]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleClient(ClientHandler.java:59)
+[2025-05-08 17:06:13]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.run(ClientHandler.java:31)
+[2025-05-08 17:06:13]   at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+[2025-05-08 17:06:13]   at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+[2025-05-08 17:06:13]   at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-08 17:06:28] ERROR: Error en la conexión con el cliente
+[2025-05-08 17:06:28] Exception: Software caused connection abort: recv failed
+[2025-05-08 17:06:28]   at java.base/java.net.SocketInputStream.socketRead0(Native Method)
+[2025-05-08 17:06:28]   at java.base/java.net.SocketInputStream.socketRead(SocketInputStream.java:115)
+[2025-05-08 17:06:28]   at java.base/java.net.SocketInputStream.read(SocketInputStream.java:168)
+[2025-05-08 17:06:28]   at java.base/java.net.SocketInputStream.read(SocketInputStream.java:140)
+[2025-05-08 17:06:28]   at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+[2025-05-08 17:06:28]   at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+[2025-05-08 17:06:28]   at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+[2025-05-08 17:06:28]   at java.base/java.io.InputStreamReader.read(InputStreamReader.java:181)
+[2025-05-08 17:06:28]   at java.base/java.io.BufferedReader.fill(BufferedReader.java:161)
+[2025-05-08 17:06:28]   at java.base/java.io.BufferedReader.readLine(BufferedReader.java:326)
+[2025-05-08 17:06:28]   at java.base/java.io.BufferedReader.readLine(BufferedReader.java:392)
+[2025-05-08 17:06:28]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleClient(ClientHandler.java:58)
+[2025-05-08 17:06:28]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.run(ClientHandler.java:31)
+[2025-05-08 17:06:28]   at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+[2025-05-08 17:06:28]   at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+[2025-05-08 17:06:28]   at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-08 17:06:28] Cliente desconectado: user1
+[2025-05-08 17:06:28] Servidor detenido
+[2025-05-08 17:06:28] Servidor detenido
+[2025-05-08 17:07:53] Iniciando servidor de chat...
+[2025-05-08 17:07:53] Servidor iniciado en el puerto 5000
+[2025-05-08 17:07:53] Esperando conexiones...
+[2025-05-08 17:07:59] Nueva conexión desde: 127.0.0.1
+[2025-05-08 17:07:59] Cliente conectado: user1
+[2025-05-08 17:07:59] Driver PostgreSQL cargado correctamente
+[2025-05-08 17:08:00] Conexión a la base de datos establecida correctamente
+[2025-05-08 17:08:00] Tablas creadas correctamente
+[2025-05-08 17:08:00] ERROR: Error inicializando la base de datos
+[2025-05-08 17:08:00] Exception: ERROR: column "password" of relation "usuarios" does not exist
+  Position: 33
+[2025-05-08 17:08:00]   at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2725)
+[2025-05-08 17:08:00]   at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2412)
+[2025-05-08 17:08:00]   at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:371)
+[2025-05-08 17:08:00]   at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:502)
+[2025-05-08 17:08:00]   at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:419)
+[2025-05-08 17:08:00]   at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:194)
+[2025-05-08 17:08:00]   at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:155)
+[2025-05-08 17:08:00]   at yeray.priede.projecte_uf3_psp_final/server.DatabaseConfig.initDatabase(DatabaseConfig.java:79)
+[2025-05-08 17:08:00]   at yeray.priede.projecte_uf3_psp_final/server.DatabaseConfig.<clinit>(DatabaseConfig.java:18)
+[2025-05-08 17:08:00]   at yeray.priede.projecte_uf3_psp_final/server.ChatServer.getAllRegisteredUsers(ChatServer.java:172)
+[2025-05-08 17:08:00]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleGetUsers(ClientHandler.java:151)
+[2025-05-08 17:08:00]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleMessage(ClientHandler.java:76)
+[2025-05-08 17:08:00]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleClient(ClientHandler.java:59)
+[2025-05-08 17:08:00]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.run(ClientHandler.java:31)
+[2025-05-08 17:08:00]   at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+[2025-05-08 17:08:00]   at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+[2025-05-08 17:08:00]   at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-08 17:08:09] ERROR: Error en la conexión con el cliente
+[2025-05-08 17:08:09] Exception: Software caused connection abort: recv failed
+[2025-05-08 17:08:09]   at java.base/java.net.SocketInputStream.socketRead0(Native Method)
+[2025-05-08 17:08:09]   at java.base/java.net.SocketInputStream.socketRead(SocketInputStream.java:115)
+[2025-05-08 17:08:09]   at java.base/java.net.SocketInputStream.read(SocketInputStream.java:168)
+[2025-05-08 17:08:09]   at java.base/java.net.SocketInputStream.read(SocketInputStream.java:140)
+[2025-05-08 17:08:09]   at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+[2025-05-08 17:08:09]   at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+[2025-05-08 17:08:09]   at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+[2025-05-08 17:08:09]   at java.base/java.io.InputStreamReader.read(InputStreamReader.java:181)
+[2025-05-08 17:08:09]   at java.base/java.io.BufferedReader.fill(BufferedReader.java:161)
+[2025-05-08 17:08:09]   at java.base/java.io.BufferedReader.readLine(BufferedReader.java:326)
+[2025-05-08 17:08:09]   at java.base/java.io.BufferedReader.readLine(BufferedReader.java:392)
+[2025-05-08 17:08:09]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleClient(ClientHandler.java:58)
+[2025-05-08 17:08:09]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.run(ClientHandler.java:31)
+[2025-05-08 17:08:09]   at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+[2025-05-08 17:08:09]   at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+[2025-05-08 17:08:09]   at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-08 17:08:09] Cliente desconectado: user1
+[2025-05-08 17:08:09] Servidor detenido
+[2025-05-08 17:08:09] Servidor detenido
+[2025-05-08 17:08:12] Iniciando servidor de chat...
+[2025-05-08 17:08:12] Servidor iniciado en el puerto 5000
+[2025-05-08 17:08:12] Esperando conexiones...
+[2025-05-08 17:08:18] Nueva conexión desde: 127.0.0.1
+[2025-05-08 17:08:18] Cliente conectado: user2
+[2025-05-08 17:08:18] Driver PostgreSQL cargado correctamente
+[2025-05-08 17:08:19] Conexión a la base de datos establecida correctamente
+[2025-05-08 17:08:19] Tablas creadas correctamente
+[2025-05-08 17:08:19] ERROR: Error inicializando la base de datos
+[2025-05-08 17:08:19] Exception: ERROR: column "password" of relation "usuarios" does not exist
+  Position: 33
+[2025-05-08 17:08:19]   at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2725)
+[2025-05-08 17:08:19]   at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2412)
+[2025-05-08 17:08:19]   at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:371)
+[2025-05-08 17:08:19]   at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:502)
+[2025-05-08 17:08:19]   at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:419)
+[2025-05-08 17:08:19]   at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:194)
+[2025-05-08 17:08:19]   at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:155)
+[2025-05-08 17:08:19]   at yeray.priede.projecte_uf3_psp_final/server.DatabaseConfig.initDatabase(DatabaseConfig.java:79)
+[2025-05-08 17:08:19]   at yeray.priede.projecte_uf3_psp_final/server.DatabaseConfig.<clinit>(DatabaseConfig.java:18)
+[2025-05-08 17:08:19]   at yeray.priede.projecte_uf3_psp_final/server.ChatServer.getAllRegisteredUsers(ChatServer.java:172)
+[2025-05-08 17:08:19]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleGetUsers(ClientHandler.java:151)
+[2025-05-08 17:08:19]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleMessage(ClientHandler.java:76)
+[2025-05-08 17:08:19]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleClient(ClientHandler.java:59)
+[2025-05-08 17:08:19]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.run(ClientHandler.java:31)
+[2025-05-08 17:08:19]   at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+[2025-05-08 17:08:19]   at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+[2025-05-08 17:08:19]   at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-08 17:08:22] ERROR: Error en la conexión con el cliente
+[2025-05-08 17:08:22] Exception: Software caused connection abort: recv failed
+[2025-05-08 17:08:22]   at java.base/java.net.SocketInputStream.socketRead0(Native Method)
+[2025-05-08 17:08:22]   at java.base/java.net.SocketInputStream.socketRead(SocketInputStream.java:115)
+[2025-05-08 17:08:22]   at java.base/java.net.SocketInputStream.read(SocketInputStream.java:168)
+[2025-05-08 17:08:22]   at java.base/java.net.SocketInputStream.read(SocketInputStream.java:140)
+[2025-05-08 17:08:22]   at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+[2025-05-08 17:08:22]   at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+[2025-05-08 17:08:22]   at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+[2025-05-08 17:08:22]   at java.base/java.io.InputStreamReader.read(InputStreamReader.java:181)
+[2025-05-08 17:08:22]   at java.base/java.io.BufferedReader.fill(BufferedReader.java:161)
+[2025-05-08 17:08:22]   at java.base/java.io.BufferedReader.readLine(BufferedReader.java:326)
+[2025-05-08 17:08:22]   at java.base/java.io.BufferedReader.readLine(BufferedReader.java:392)
+[2025-05-08 17:08:22]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleClient(ClientHandler.java:58)
+[2025-05-08 17:08:22]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.run(ClientHandler.java:31)
+[2025-05-08 17:08:22]   at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+[2025-05-08 17:08:22]   at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+[2025-05-08 17:08:22]   at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-08 17:08:22] Cliente desconectado: user2
+[2025-05-08 17:08:22] Servidor detenido
+[2025-05-08 17:08:22] Servidor detenido
+[2025-05-08 17:10:25] Iniciando servidor de chat...
+[2025-05-08 17:10:25] Servidor iniciado en el puerto 5000
+[2025-05-08 17:10:25] Esperando conexiones...
+[2025-05-08 17:11:34] Servidor detenido
+[2025-05-08 17:11:34] Servidor detenido
+[2025-05-08 17:12:19] Iniciando servidor de chat...
+[2025-05-08 17:12:19] Servidor iniciado en el puerto 5000
+[2025-05-08 17:12:19] Esperando conexiones...
+[2025-05-08 17:12:26] Nueva conexión desde: 127.0.0.1
+[2025-05-08 17:12:26] Cliente conectado: user1
+[2025-05-08 17:12:26] Driver PostgreSQL cargado correctamente
+[2025-05-08 17:12:26] Conexión a la base de datos establecida correctamente
+[2025-05-08 17:12:27] Tablas creadas correctamente
+[2025-05-08 17:12:27] ERROR: Error inicializando la base de datos
+[2025-05-08 17:12:27] Exception: ERROR: column "password" of relation "usuarios" does not exist
+  Position: 33
+[2025-05-08 17:12:27]   at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2725)
+[2025-05-08 17:12:27]   at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2412)
+[2025-05-08 17:12:27]   at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:371)
+[2025-05-08 17:12:27]   at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:502)
+[2025-05-08 17:12:27]   at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:419)
+[2025-05-08 17:12:27]   at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:194)
+[2025-05-08 17:12:27]   at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:155)
+[2025-05-08 17:12:27]   at yeray.priede.projecte_uf3_psp_final/server.DatabaseConfig.initDatabase(DatabaseConfig.java:79)
+[2025-05-08 17:12:27]   at yeray.priede.projecte_uf3_psp_final/server.DatabaseConfig.<clinit>(DatabaseConfig.java:18)
+[2025-05-08 17:12:27]   at yeray.priede.projecte_uf3_psp_final/server.ChatServer.getAllRegisteredUsers(ChatServer.java:172)
+[2025-05-08 17:12:27]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleGetUsers(ClientHandler.java:151)
+[2025-05-08 17:12:27]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleMessage(ClientHandler.java:76)
+[2025-05-08 17:12:27]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleClient(ClientHandler.java:59)
+[2025-05-08 17:12:27]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.run(ClientHandler.java:31)
+[2025-05-08 17:12:27]   at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+[2025-05-08 17:12:27]   at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+[2025-05-08 17:12:27]   at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-08 17:12:39] ERROR: Error en la conexión con el cliente
+[2025-05-08 17:12:39] Exception: Software caused connection abort: recv failed
+[2025-05-08 17:12:39]   at java.base/java.net.SocketInputStream.socketRead0(Native Method)
+[2025-05-08 17:12:39]   at java.base/java.net.SocketInputStream.socketRead(SocketInputStream.java:115)
+[2025-05-08 17:12:39]   at java.base/java.net.SocketInputStream.read(SocketInputStream.java:168)
+[2025-05-08 17:12:39]   at java.base/java.net.SocketInputStream.read(SocketInputStream.java:140)
+[2025-05-08 17:12:39]   at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+[2025-05-08 17:12:39]   at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+[2025-05-08 17:12:39]   at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+[2025-05-08 17:12:39]   at java.base/java.io.InputStreamReader.read(InputStreamReader.java:181)
+[2025-05-08 17:12:39]   at java.base/java.io.BufferedReader.fill(BufferedReader.java:161)
+[2025-05-08 17:12:39]   at java.base/java.io.BufferedReader.readLine(BufferedReader.java:326)
+[2025-05-08 17:12:39]   at java.base/java.io.BufferedReader.readLine(BufferedReader.java:392)
+[2025-05-08 17:12:39]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleClient(ClientHandler.java:58)
+[2025-05-08 17:12:39]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.run(ClientHandler.java:31)
+[2025-05-08 17:12:39]   at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+[2025-05-08 17:12:39]   at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+[2025-05-08 17:12:39]   at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-08 17:12:39] Cliente desconectado: user1
+[2025-05-08 17:12:39] Servidor detenido
+[2025-05-08 17:12:39] Servidor detenido
+[2025-05-08 17:12:43] Iniciando servidor de chat...
+[2025-05-08 17:12:43] Servidor iniciado en el puerto 5000
+[2025-05-08 17:12:43] Esperando conexiones...
+[2025-05-08 17:12:48] Nueva conexión desde: 127.0.0.1
+[2025-05-08 17:12:48] Cliente conectado: user2
+[2025-05-08 17:12:48] Driver PostgreSQL cargado correctamente
+[2025-05-08 17:12:49] Conexión a la base de datos establecida correctamente
+[2025-05-08 17:12:49] Tablas creadas correctamente
+[2025-05-08 17:12:49] ERROR: Error inicializando la base de datos
+[2025-05-08 17:12:49] Exception: ERROR: column "password" of relation "usuarios" does not exist
+  Position: 33
+[2025-05-08 17:12:49]   at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2725)
+[2025-05-08 17:12:49]   at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2412)
+[2025-05-08 17:12:49]   at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:371)
+[2025-05-08 17:12:49]   at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:502)
+[2025-05-08 17:12:49]   at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:419)
+[2025-05-08 17:12:49]   at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:194)
+[2025-05-08 17:12:49]   at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:155)
+[2025-05-08 17:12:49]   at yeray.priede.projecte_uf3_psp_final/server.DatabaseConfig.initDatabase(DatabaseConfig.java:79)
+[2025-05-08 17:12:49]   at yeray.priede.projecte_uf3_psp_final/server.DatabaseConfig.<clinit>(DatabaseConfig.java:18)
+[2025-05-08 17:12:49]   at yeray.priede.projecte_uf3_psp_final/server.ChatServer.getAllRegisteredUsers(ChatServer.java:172)
+[2025-05-08 17:12:49]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleGetUsers(ClientHandler.java:151)
+[2025-05-08 17:12:49]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleMessage(ClientHandler.java:76)
+[2025-05-08 17:12:49]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleClient(ClientHandler.java:59)
+[2025-05-08 17:12:49]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.run(ClientHandler.java:31)
+[2025-05-08 17:12:49]   at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+[2025-05-08 17:12:49]   at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+[2025-05-08 17:12:49]   at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-08 17:12:51] ERROR: Error en la conexión con el cliente
+[2025-05-08 17:12:51] Exception: Software caused connection abort: recv failed
+[2025-05-08 17:12:51]   at java.base/java.net.SocketInputStream.socketRead0(Native Method)
+[2025-05-08 17:12:51]   at java.base/java.net.SocketInputStream.socketRead(SocketInputStream.java:115)
+[2025-05-08 17:12:51]   at java.base/java.net.SocketInputStream.read(SocketInputStream.java:168)
+[2025-05-08 17:12:51]   at java.base/java.net.SocketInputStream.read(SocketInputStream.java:140)
+[2025-05-08 17:12:51]   at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+[2025-05-08 17:12:51]   at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+[2025-05-08 17:12:51]   at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+[2025-05-08 17:12:51]   at java.base/java.io.InputStreamReader.read(InputStreamReader.java:181)
+[2025-05-08 17:12:51]   at java.base/java.io.BufferedReader.fill(BufferedReader.java:161)
+[2025-05-08 17:12:51]   at java.base/java.io.BufferedReader.readLine(BufferedReader.java:326)
+[2025-05-08 17:12:51]   at java.base/java.io.BufferedReader.readLine(BufferedReader.java:392)
+[2025-05-08 17:12:51]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleClient(ClientHandler.java:58)
+[2025-05-08 17:12:51]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.run(ClientHandler.java:31)
+[2025-05-08 17:12:51]   at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+[2025-05-08 17:12:51]   at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+[2025-05-08 17:12:51]   at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-08 17:12:51] Cliente desconectado: user2
+[2025-05-08 17:12:51] Servidor detenido
+[2025-05-08 17:12:51] Servidor detenido
+[2025-05-08 17:15:51] Iniciando servidor de chat...
+[2025-05-08 17:15:51] Servidor iniciado en el puerto 5000
+[2025-05-08 17:15:51] Esperando conexiones...
+[2025-05-08 17:15:57] Nueva conexión desde: 127.0.0.1
+[2025-05-08 17:15:57] Cliente conectado: user1
+[2025-05-08 17:15:57] Driver PostgreSQL cargado correctamente
+[2025-05-08 17:15:58] Conexión a la base de datos establecida correctamente
+[2025-05-08 17:15:58] Tablas creadas correctamente
+[2025-05-08 17:15:58] ERROR: Error inicializando la base de datos
+[2025-05-08 17:15:58] Exception: ERROR: column "password" of relation "usuarios" does not exist
+  Position: 33
+[2025-05-08 17:15:58]   at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2725)
+[2025-05-08 17:15:58]   at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2412)
+[2025-05-08 17:15:58]   at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:371)
+[2025-05-08 17:15:58]   at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:502)
+[2025-05-08 17:15:58]   at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:419)
+[2025-05-08 17:15:58]   at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:194)
+[2025-05-08 17:15:58]   at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:155)
+[2025-05-08 17:15:58]   at yeray.priede.projecte_uf3_psp_final/server.DatabaseConfig.initDatabase(DatabaseConfig.java:79)
+[2025-05-08 17:15:58]   at yeray.priede.projecte_uf3_psp_final/server.DatabaseConfig.<clinit>(DatabaseConfig.java:18)
+[2025-05-08 17:15:58]   at yeray.priede.projecte_uf3_psp_final/server.ChatServer.getAllRegisteredUsers(ChatServer.java:172)
+[2025-05-08 17:15:58]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleGetUsers(ClientHandler.java:151)
+[2025-05-08 17:15:58]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleMessage(ClientHandler.java:76)
+[2025-05-08 17:15:58]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleClient(ClientHandler.java:59)
+[2025-05-08 17:15:58]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.run(ClientHandler.java:31)
+[2025-05-08 17:15:58]   at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+[2025-05-08 17:15:58]   at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+[2025-05-08 17:15:58]   at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-08 17:19:20] ERROR: Error en la conexión con el cliente
+[2025-05-08 17:19:20] Exception: Software caused connection abort: recv failed
+[2025-05-08 17:19:20]   at java.base/java.net.SocketInputStream.socketRead0(Native Method)
+[2025-05-08 17:19:20]   at java.base/java.net.SocketInputStream.socketRead(SocketInputStream.java:115)
+[2025-05-08 17:19:20]   at java.base/java.net.SocketInputStream.read(SocketInputStream.java:168)
+[2025-05-08 17:19:20]   at java.base/java.net.SocketInputStream.read(SocketInputStream.java:140)
+[2025-05-08 17:19:20]   at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+[2025-05-08 17:19:20]   at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+[2025-05-08 17:19:20]   at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+[2025-05-08 17:19:20]   at java.base/java.io.InputStreamReader.read(InputStreamReader.java:181)
+[2025-05-08 17:19:20]   at java.base/java.io.BufferedReader.fill(BufferedReader.java:161)
+[2025-05-08 17:19:20]   at java.base/java.io.BufferedReader.readLine(BufferedReader.java:326)
+[2025-05-08 17:19:20]   at java.base/java.io.BufferedReader.readLine(BufferedReader.java:392)
+[2025-05-08 17:19:20]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleClient(ClientHandler.java:58)
+[2025-05-08 17:19:20]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.run(ClientHandler.java:31)
+[2025-05-08 17:19:20]   at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+[2025-05-08 17:19:20]   at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+[2025-05-08 17:19:20]   at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-08 17:19:20] Cliente desconectado: user1
+[2025-05-08 17:19:20] Servidor detenido
+[2025-05-08 17:19:20] Servidor detenido
+[2025-05-08 17:19:48] Iniciando servidor de chat...
+[2025-05-08 17:19:48] Servidor iniciado en el puerto 5000
+[2025-05-08 17:19:48] Esperando conexiones...
+[2025-05-08 17:19:54] Nueva conexión desde: 127.0.0.1
+[2025-05-08 17:19:54] Cliente conectado: user1
+[2025-05-08 17:19:54] Driver PostgreSQL cargado correctamente
+[2025-05-08 17:19:55] Conexión a la base de datos establecida correctamente
+[2025-05-08 17:19:55] Tablas nuevas creadas correctamente
+[2025-05-08 17:20:13] ERROR: Error en la conexión con el cliente
+[2025-05-08 17:20:13] Exception: Software caused connection abort: recv failed
+[2025-05-08 17:20:13]   at java.base/java.net.SocketInputStream.socketRead0(Native Method)
+[2025-05-08 17:20:13]   at java.base/java.net.SocketInputStream.socketRead(SocketInputStream.java:115)
+[2025-05-08 17:20:13]   at java.base/java.net.SocketInputStream.read(SocketInputStream.java:168)
+[2025-05-08 17:20:13]   at java.base/java.net.SocketInputStream.read(SocketInputStream.java:140)
+[2025-05-08 17:20:13]   at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+[2025-05-08 17:20:13]   at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+[2025-05-08 17:20:13]   at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+[2025-05-08 17:20:13]   at java.base/java.io.InputStreamReader.read(InputStreamReader.java:181)
+[2025-05-08 17:20:13]   at java.base/java.io.BufferedReader.fill(BufferedReader.java:161)
+[2025-05-08 17:20:13]   at java.base/java.io.BufferedReader.readLine(BufferedReader.java:326)
+[2025-05-08 17:20:13]   at java.base/java.io.BufferedReader.readLine(BufferedReader.java:392)
+[2025-05-08 17:20:13]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleClient(ClientHandler.java:58)
+[2025-05-08 17:20:13]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.run(ClientHandler.java:31)
+[2025-05-08 17:20:13]   at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+[2025-05-08 17:20:13]   at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+[2025-05-08 17:20:13]   at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-08 17:20:13] Cliente desconectado: user1
+[2025-05-08 17:20:13] Servidor detenido
+[2025-05-08 17:20:13] Servidor detenido
+[2025-05-08 17:20:16] Iniciando servidor de chat...
+[2025-05-08 17:20:16] Servidor iniciado en el puerto 5000
+[2025-05-08 17:20:16] Esperando conexiones...
+[2025-05-08 17:20:21] Nueva conexión desde: 127.0.0.1
+[2025-05-08 17:20:21] Cliente conectado: user2
+[2025-05-08 17:20:21] Driver PostgreSQL cargado correctamente
+[2025-05-08 17:20:22] Conexión a la base de datos establecida correctamente
+[2025-05-08 17:20:22] Tablas nuevas creadas correctamente
+[2025-05-08 17:20:29] ERROR: Error en la conexión con el cliente
+[2025-05-08 17:20:29] Exception: Software caused connection abort: recv failed
+[2025-05-08 17:20:29]   at java.base/java.net.SocketInputStream.socketRead0(Native Method)
+[2025-05-08 17:20:29]   at java.base/java.net.SocketInputStream.socketRead(SocketInputStream.java:115)
+[2025-05-08 17:20:29]   at java.base/java.net.SocketInputStream.read(SocketInputStream.java:168)
+[2025-05-08 17:20:29]   at java.base/java.net.SocketInputStream.read(SocketInputStream.java:140)
+[2025-05-08 17:20:29]   at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+[2025-05-08 17:20:29]   at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+[2025-05-08 17:20:29]   at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+[2025-05-08 17:20:29]   at java.base/java.io.InputStreamReader.read(InputStreamReader.java:181)
+[2025-05-08 17:20:29]   at java.base/java.io.BufferedReader.fill(BufferedReader.java:161)
+[2025-05-08 17:20:29]   at java.base/java.io.BufferedReader.readLine(BufferedReader.java:326)
+[2025-05-08 17:20:29]   at java.base/java.io.BufferedReader.readLine(BufferedReader.java:392)
+[2025-05-08 17:20:29]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleClient(ClientHandler.java:58)
+[2025-05-08 17:20:29]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.run(ClientHandler.java:31)
+[2025-05-08 17:20:29]   at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+[2025-05-08 17:20:29]   at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+[2025-05-08 17:20:29]   at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-08 17:20:29] Cliente desconectado: user2
+[2025-05-08 17:20:29] Servidor detenido
+[2025-05-08 17:20:29] Servidor detenido
+[2025-05-08 17:23:30] Iniciando servidor de chat...
+[2025-05-08 17:23:30] Servidor iniciado en el puerto 5000
+[2025-05-08 17:23:30] Esperando conexiones...
+[2025-05-08 17:23:32] Iniciando servidor de chat...
+[2025-05-08 17:23:32] ERROR: Error iniciando el servidor
+[2025-05-08 17:23:32] Exception: Address already in use: NET_Bind
+[2025-05-08 17:23:32]   at java.base/java.net.PlainSocketImpl.bind0(Native Method)
+[2025-05-08 17:23:32]   at java.base/java.net.PlainSocketImpl.socketBind(PlainSocketImpl.java:132)
+[2025-05-08 17:23:32]   at java.base/java.net.AbstractPlainSocketImpl.bind(AbstractPlainSocketImpl.java:452)
+[2025-05-08 17:23:32]   at java.base/java.net.ServerSocket.bind(ServerSocket.java:395)
+[2025-05-08 17:23:32]   at java.base/java.net.ServerSocket.<init>(ServerSocket.java:257)
+[2025-05-08 17:23:32]   at java.base/java.net.ServerSocket.<init>(ServerSocket.java:149)
+[2025-05-08 17:23:32]   at yeray.priede.projecte_uf3_psp_final/server.ChatServer.start(ChatServer.java:37)
+[2025-05-08 17:23:32]   at yeray.priede.projecte_uf3_psp_final/client.ChatClient.lambda$init$1(ChatClient.java:45)
+[2025-05-08 17:23:32]   at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-08 17:23:32] Servidor detenido
+[2025-05-08 17:23:35] Servidor detenido
+[2025-05-08 17:23:38] Nueva conexión desde: 127.0.0.1
+[2025-05-08 17:23:38] Cliente conectado: user1
+[2025-05-08 17:23:38] Driver PostgreSQL cargado correctamente
+[2025-05-08 17:23:39] Conexión a la base de datos establecida correctamente
+[2025-05-08 17:23:39] Tablas nuevas creadas correctamente
+[2025-05-08 17:23:40] ERROR: Error obteniendo historial de mensajes
+[2025-05-08 17:23:40] Exception: ERROR: relation "mensajes_generales" does not exist
+  Position: 55
+[2025-05-08 17:23:40]   at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2725)
+[2025-05-08 17:23:40]   at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2412)
+[2025-05-08 17:23:40]   at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:371)
+[2025-05-08 17:23:40]   at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:502)
+[2025-05-08 17:23:40]   at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:419)
+[2025-05-08 17:23:40]   at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:194)
+[2025-05-08 17:23:40]   at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:137)
+[2025-05-08 17:23:40]   at yeray.priede.projecte_uf3_psp_final/server.MessageManager.getMessageHistory(MessageManager.java:31)
+[2025-05-08 17:23:40]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleClient(ClientHandler.java:58)
+[2025-05-08 17:23:40]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.run(ClientHandler.java:32)
+[2025-05-08 17:23:40]   at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+[2025-05-08 17:23:40]   at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+[2025-05-08 17:23:40]   at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-08 17:25:06] ERROR: Error en la conexión con el cliente
+[2025-05-08 17:25:06] Exception: Software caused connection abort: recv failed
+[2025-05-08 17:25:06]   at java.base/java.net.SocketInputStream.socketRead0(Native Method)
+[2025-05-08 17:25:06]   at java.base/java.net.SocketInputStream.socketRead(SocketInputStream.java:115)
+[2025-05-08 17:25:06]   at java.base/java.net.SocketInputStream.read(SocketInputStream.java:168)
+[2025-05-08 17:25:06]   at java.base/java.net.SocketInputStream.read(SocketInputStream.java:140)
+[2025-05-08 17:25:06]   at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+[2025-05-08 17:25:06]   at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+[2025-05-08 17:25:06]   at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+[2025-05-08 17:25:06]   at java.base/java.io.InputStreamReader.read(InputStreamReader.java:181)
+[2025-05-08 17:25:06]   at java.base/java.io.BufferedReader.fill(BufferedReader.java:161)
+[2025-05-08 17:25:06]   at java.base/java.io.BufferedReader.readLine(BufferedReader.java:326)
+[2025-05-08 17:25:06]   at java.base/java.io.BufferedReader.readLine(BufferedReader.java:392)
+[2025-05-08 17:25:06]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleClient(ClientHandler.java:65)
+[2025-05-08 17:25:06]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.run(ClientHandler.java:32)
+[2025-05-08 17:25:06]   at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+[2025-05-08 17:25:06]   at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+[2025-05-08 17:25:06]   at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-08 17:25:06] Cliente desconectado: user1
+[2025-05-08 17:25:06] Servidor detenido
+[2025-05-08 17:25:06] Servidor detenido
+[2025-05-08 17:27:16] Iniciando servidor de chat...
+[2025-05-08 17:27:16] Servidor iniciado en el puerto 5000
+[2025-05-08 17:27:16] Esperando conexiones...
+[2025-05-08 17:27:21] Nueva conexión desde: 127.0.0.1
+[2025-05-08 17:27:21] Cliente conectado: user1
+[2025-05-08 17:27:21] Driver PostgreSQL cargado correctamente
+[2025-05-08 17:27:21] Conexión a la base de datos establecida correctamente
+[2025-05-08 17:27:22] Tablas nuevas creadas correctamente
+[2025-05-08 17:27:22] ERROR: Error obteniendo historial de mensajes
+[2025-05-08 17:27:22] Exception: ERROR: relation "mensajes_generales" does not exist
+  Position: 55
+[2025-05-08 17:27:22]   at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2725)
+[2025-05-08 17:27:22]   at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2412)
+[2025-05-08 17:27:22]   at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:371)
+[2025-05-08 17:27:22]   at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:502)
+[2025-05-08 17:27:22]   at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:419)
+[2025-05-08 17:27:22]   at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:194)
+[2025-05-08 17:27:22]   at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:137)
+[2025-05-08 17:27:22]   at yeray.priede.projecte_uf3_psp_final/server.MessageManager.getMessageHistory(MessageManager.java:31)
+[2025-05-08 17:27:22]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleClient(ClientHandler.java:58)
+[2025-05-08 17:27:22]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.run(ClientHandler.java:32)
+[2025-05-08 17:27:22]   at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+[2025-05-08 17:27:22]   at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+[2025-05-08 17:27:22]   at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-08 17:28:27] Iniciando servidor de chat...
+[2025-05-08 17:28:27] Servidor iniciado en el puerto 5000
+[2025-05-08 17:28:27] Esperando conexiones...
+[2025-05-08 17:28:32] Nueva conexión desde: 127.0.0.1
+[2025-05-08 17:28:32] Cliente conectado: user1
+[2025-05-08 17:28:33] Driver PostgreSQL cargado correctamente
+[2025-05-08 17:28:33] Conexión a la base de datos establecida correctamente
+[2025-05-08 17:28:33] Tablas nuevas creadas correctamente
+[2025-05-08 17:28:55] Cliente desconectado: user1
+[2025-05-08 17:28:55] Servidor detenido
+[2025-05-08 17:28:55] Servidor detenido
+[2025-05-08 17:29:02] Iniciando servidor de chat...
+[2025-05-08 17:29:02] Servidor iniciado en el puerto 5000
+[2025-05-08 17:29:02] Esperando conexiones...
+[2025-05-08 17:29:08] Nueva conexión desde: 127.0.0.1
+[2025-05-08 17:29:08] Cliente conectado: user2
+[2025-05-08 17:29:08] Driver PostgreSQL cargado correctamente
+[2025-05-08 17:29:09] Conexión a la base de datos establecida correctamente
+[2025-05-08 17:29:09] Tablas nuevas creadas correctamente
+[2025-05-08 17:31:25] Iniciando servidor de chat...
+[2025-05-08 17:31:25] Servidor iniciado en el puerto 5000
+[2025-05-08 17:31:25] Esperando conexiones...
+[2025-05-08 17:31:32] Nueva conexión desde: 127.0.0.1
+[2025-05-08 17:31:32] Cliente conectado: user1
+[2025-05-08 17:31:32] Driver PostgreSQL cargado correctamente
+[2025-05-08 17:31:33] Conexión a la base de datos establecida correctamente
+[2025-05-08 17:31:33] Tablas nuevas creadas correctamente
+[2025-05-08 17:31:39] ERROR: Error en la conexión con el cliente
+[2025-05-08 17:31:39] Exception: Software caused connection abort: recv failed
+[2025-05-08 17:31:39]   at java.base/java.net.SocketInputStream.socketRead0(Native Method)
+[2025-05-08 17:31:39]   at java.base/java.net.SocketInputStream.socketRead(SocketInputStream.java:115)
+[2025-05-08 17:31:39]   at java.base/java.net.SocketInputStream.read(SocketInputStream.java:168)
+[2025-05-08 17:31:39]   at java.base/java.net.SocketInputStream.read(SocketInputStream.java:140)
+[2025-05-08 17:31:39]   at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+[2025-05-08 17:31:39]   at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+[2025-05-08 17:31:39]   at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+[2025-05-08 17:31:39]   at java.base/java.io.InputStreamReader.read(InputStreamReader.java:181)
+[2025-05-08 17:31:39]   at java.base/java.io.BufferedReader.fill(BufferedReader.java:161)
+[2025-05-08 17:31:39]   at java.base/java.io.BufferedReader.readLine(BufferedReader.java:326)
+[2025-05-08 17:31:39]   at java.base/java.io.BufferedReader.readLine(BufferedReader.java:392)
+[2025-05-08 17:31:39]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleClient(ClientHandler.java:65)
+[2025-05-08 17:31:39]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.run(ClientHandler.java:32)
+[2025-05-08 17:31:39]   at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+[2025-05-08 17:31:39]   at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+[2025-05-08 17:31:39]   at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-08 17:31:39] Cliente desconectado: user1
+[2025-05-08 17:31:39] Servidor detenido
+[2025-05-08 17:31:39] Servidor detenido
+[2025-05-08 17:31:43] Iniciando servidor de chat...
+[2025-05-08 17:31:43] Servidor iniciado en el puerto 5000
+[2025-05-08 17:31:43] Esperando conexiones...
+[2025-05-08 17:31:52] Nueva conexión desde: 127.0.0.1
+[2025-05-08 17:31:52] Cliente conectado: user2
+[2025-05-08 17:31:52] Driver PostgreSQL cargado correctamente
+[2025-05-08 17:31:53] Conexión a la base de datos establecida correctamente
+[2025-05-08 17:31:53] Tablas nuevas creadas correctamente
+[2025-05-08 19:30:22] ERROR: Error obteniendo historial privado
+[2025-05-08 19:30:22] Exception: El intento de conexión falló.
+[2025-05-08 19:30:22]   at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:358)
+[2025-05-08 19:30:22]   at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54)
+[2025-05-08 19:30:22]   at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:273)
+[2025-05-08 19:30:22]   at org.postgresql.Driver.makeConnection(Driver.java:446)
+[2025-05-08 19:30:22]   at org.postgresql.Driver.connect(Driver.java:298)
+[2025-05-08 19:30:22]   at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+[2025-05-08 19:30:22]   at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+[2025-05-08 19:30:22]   at yeray.priede.projecte_uf3_psp_final/server.DatabaseConfig.getConnection(DatabaseConfig.java:27)
+[2025-05-08 19:30:22]   at yeray.priede.projecte_uf3_psp_final/server.MessageManager.getPrivateHistory(MessageManager.java:104)
+[2025-05-08 19:30:22]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleMessage(ClientHandler.java:88)
+[2025-05-08 19:30:22]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleClient(ClientHandler.java:66)
+[2025-05-08 19:30:22]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.run(ClientHandler.java:32)
+[2025-05-08 19:30:22]   at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+[2025-05-08 19:30:22]   at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+[2025-05-08 19:30:22]   at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-08 19:30:27] ERROR: Error obteniendo historial privado
+[2025-05-08 19:30:27] Exception: El intento de conexión falló.
+[2025-05-08 19:30:27]   at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:358)
+[2025-05-08 19:30:27]   at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54)
+[2025-05-08 19:30:27]   at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:273)
+[2025-05-08 19:30:27]   at org.postgresql.Driver.makeConnection(Driver.java:446)
+[2025-05-08 19:30:27]   at org.postgresql.Driver.connect(Driver.java:298)
+[2025-05-08 19:30:27]   at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+[2025-05-08 19:30:27]   at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+[2025-05-08 19:30:27]   at yeray.priede.projecte_uf3_psp_final/server.DatabaseConfig.getConnection(DatabaseConfig.java:27)
+[2025-05-08 19:30:27]   at yeray.priede.projecte_uf3_psp_final/server.MessageManager.getPrivateHistory(MessageManager.java:104)
+[2025-05-08 19:30:27]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleMessage(ClientHandler.java:88)
+[2025-05-08 19:30:27]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleClient(ClientHandler.java:66)
+[2025-05-08 19:30:27]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.run(ClientHandler.java:32)
+[2025-05-08 19:30:27]   at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+[2025-05-08 19:30:27]   at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+[2025-05-08 19:30:27]   at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-08 19:30:32] ERROR: Error obteniendo historial privado
+[2025-05-08 19:30:32] Exception: El intento de conexión falló.
+[2025-05-08 19:30:32]   at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:358)
+[2025-05-08 19:30:32]   at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54)
+[2025-05-08 19:30:32]   at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:273)
+[2025-05-08 19:30:32]   at org.postgresql.Driver.makeConnection(Driver.java:446)
+[2025-05-08 19:30:32]   at org.postgresql.Driver.connect(Driver.java:298)
+[2025-05-08 19:30:32]   at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+[2025-05-08 19:30:32]   at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+[2025-05-08 19:30:32]   at yeray.priede.projecte_uf3_psp_final/server.DatabaseConfig.getConnection(DatabaseConfig.java:27)
+[2025-05-08 19:30:32]   at yeray.priede.projecte_uf3_psp_final/server.MessageManager.getPrivateHistory(MessageManager.java:104)
+[2025-05-08 19:30:32]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleMessage(ClientHandler.java:88)
+[2025-05-08 19:30:32]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleClient(ClientHandler.java:66)
+[2025-05-08 19:30:32]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.run(ClientHandler.java:32)
+[2025-05-08 19:30:32]   at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+[2025-05-08 19:30:32]   at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+[2025-05-08 19:30:32]   at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-08 19:30:33] Cliente desconectado: user2
+[2025-05-08 19:30:33] Servidor detenido
+[2025-05-08 19:30:33] Servidor detenido
+[2025-05-15 00:05:58] Iniciando servidor de chat...
+[2025-05-15 00:05:58] Servidor iniciado en el puerto 5000
+[2025-05-15 00:05:58] Esperando conexiones...
+[2025-05-15 00:06:04] Nueva conexión desde: 127.0.0.1
+[2025-05-15 00:06:04] Cliente conectado: user1
+[2025-05-15 00:06:04] Driver PostgreSQL cargado correctamente
+[2025-05-15 00:06:05] Conexión a la base de datos establecida correctamente
+[2025-05-15 00:06:05] Tablas nuevas creadas correctamente
+[2025-05-15 00:06:16] ERROR: Error en la conexión con el cliente
+[2025-05-15 00:06:16] Exception: Software caused connection abort: recv failed
+[2025-05-15 00:06:16]   at java.base/java.net.SocketInputStream.socketRead0(Native Method)
+[2025-05-15 00:06:16]   at java.base/java.net.SocketInputStream.socketRead(SocketInputStream.java:115)
+[2025-05-15 00:06:16]   at java.base/java.net.SocketInputStream.read(SocketInputStream.java:168)
+[2025-05-15 00:06:16]   at java.base/java.net.SocketInputStream.read(SocketInputStream.java:140)
+[2025-05-15 00:06:16]   at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+[2025-05-15 00:06:16]   at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+[2025-05-15 00:06:16]   at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+[2025-05-15 00:06:16]   at java.base/java.io.InputStreamReader.read(InputStreamReader.java:181)
+[2025-05-15 00:06:16]   at java.base/java.io.BufferedReader.fill(BufferedReader.java:161)
+[2025-05-15 00:06:16]   at java.base/java.io.BufferedReader.readLine(BufferedReader.java:326)
+[2025-05-15 00:06:16]   at java.base/java.io.BufferedReader.readLine(BufferedReader.java:392)
+[2025-05-15 00:06:16]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleClient(ClientHandler.java:65)
+[2025-05-15 00:06:16]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.run(ClientHandler.java:32)
+[2025-05-15 00:06:16]   at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+[2025-05-15 00:06:16]   at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+[2025-05-15 00:06:16]   at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-15 00:06:16] Cliente desconectado: user1
+[2025-05-15 00:06:16] Servidor detenido
+[2025-05-15 00:06:16] Servidor detenido
+[2025-05-15 00:06:20] Iniciando servidor de chat...
+[2025-05-15 00:06:20] Servidor iniciado en el puerto 5000
+[2025-05-15 00:06:20] Esperando conexiones...
+[2025-05-15 00:06:26] Nueva conexión desde: 127.0.0.1
+[2025-05-15 00:06:26] Cliente conectado: user2
+[2025-05-15 00:06:26] Driver PostgreSQL cargado correctamente
+[2025-05-15 00:06:27] Conexión a la base de datos establecida correctamente
+[2025-05-15 00:06:27] Tablas nuevas creadas correctamente
+[2025-05-15 00:06:31] ERROR: Error en la conexión con el cliente
+[2025-05-15 00:06:31] Exception: Software caused connection abort: recv failed
+[2025-05-15 00:06:31]   at java.base/java.net.SocketInputStream.socketRead0(Native Method)
+[2025-05-15 00:06:31]   at java.base/java.net.SocketInputStream.socketRead(SocketInputStream.java:115)
+[2025-05-15 00:06:31]   at java.base/java.net.SocketInputStream.read(SocketInputStream.java:168)
+[2025-05-15 00:06:31]   at java.base/java.net.SocketInputStream.read(SocketInputStream.java:140)
+[2025-05-15 00:06:31]   at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+[2025-05-15 00:06:31]   at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+[2025-05-15 00:06:31]   at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+[2025-05-15 00:06:31]   at java.base/java.io.InputStreamReader.read(InputStreamReader.java:181)
+[2025-05-15 00:06:31]   at java.base/java.io.BufferedReader.fill(BufferedReader.java:161)
+[2025-05-15 00:06:31]   at java.base/java.io.BufferedReader.readLine(BufferedReader.java:326)
+[2025-05-15 00:06:31]   at java.base/java.io.BufferedReader.readLine(BufferedReader.java:392)
+[2025-05-15 00:06:31]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleClient(ClientHandler.java:65)
+[2025-05-15 00:06:31]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.run(ClientHandler.java:32)
+[2025-05-15 00:06:31]   at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+[2025-05-15 00:06:31]   at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+[2025-05-15 00:06:31]   at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-15 00:06:31] Cliente desconectado: user2
+[2025-05-15 00:06:31] Servidor detenido
+[2025-05-15 00:06:31] Servidor detenido
+[2025-05-15 00:13:05] Iniciando servidor de chat...
+[2025-05-15 00:13:05] Servidor iniciado en el puerto 5000
+[2025-05-15 00:13:05] Esperando conexiones...
+[2025-05-15 00:13:11] Nueva conexión desde: 127.0.0.1
+[2025-05-15 00:13:11] Cliente conectado: user1
+[2025-05-15 00:13:11] Driver PostgreSQL cargado correctamente
+[2025-05-15 00:13:12] Conexión a la base de datos establecida correctamente
+[2025-05-15 00:13:12] Tablas nuevas creadas correctamente
+[2025-05-15 00:14:19] Iniciando servidor de chat...
+[2025-05-15 00:14:19] Servidor iniciado en el puerto 5000
+[2025-05-15 00:14:19] Esperando conexiones...
+[2025-05-15 00:14:24] Nueva conexión desde: 127.0.0.1
+[2025-05-15 00:14:24] Cliente conectado: user2
+[2025-05-15 00:14:24] Driver PostgreSQL cargado correctamente
+[2025-05-15 00:14:25] Conexión a la base de datos establecida correctamente
+[2025-05-15 00:14:25] Tablas nuevas creadas correctamente
+[2025-05-15 00:14:31] ERROR: Error en la conexión con el cliente
+[2025-05-15 00:14:31] Exception: Software caused connection abort: recv failed
+[2025-05-15 00:14:31]   at java.base/java.net.SocketInputStream.socketRead0(Native Method)
+[2025-05-15 00:14:31]   at java.base/java.net.SocketInputStream.socketRead(SocketInputStream.java:115)
+[2025-05-15 00:14:31]   at java.base/java.net.SocketInputStream.read(SocketInputStream.java:168)
+[2025-05-15 00:14:31]   at java.base/java.net.SocketInputStream.read(SocketInputStream.java:140)
+[2025-05-15 00:14:31]   at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+[2025-05-15 00:14:31]   at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+[2025-05-15 00:14:31]   at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+[2025-05-15 00:14:31]   at java.base/java.io.InputStreamReader.read(InputStreamReader.java:181)
+[2025-05-15 00:14:31]   at java.base/java.io.BufferedReader.fill(BufferedReader.java:161)
+[2025-05-15 00:14:31]   at java.base/java.io.BufferedReader.readLine(BufferedReader.java:326)
+[2025-05-15 00:14:31]   at java.base/java.io.BufferedReader.readLine(BufferedReader.java:392)
+[2025-05-15 00:14:31]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleClient(ClientHandler.java:65)
+[2025-05-15 00:14:31]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.run(ClientHandler.java:32)
+[2025-05-15 00:14:31]   at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+[2025-05-15 00:14:31]   at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+[2025-05-15 00:14:31]   at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-15 00:14:31] Cliente desconectado: user2
+[2025-05-15 00:14:31] Servidor detenido
+[2025-05-15 00:14:31] Servidor detenido
+[2025-05-15 00:19:27] Iniciando servidor de chat...
+[2025-05-15 00:19:27] Servidor iniciado en el puerto 5000
+[2025-05-15 00:19:27] Esperando conexiones...
+[2025-05-15 00:19:33] Nueva conexión desde: 127.0.0.1
+[2025-05-15 00:19:33] Cliente conectado: user1
+[2025-05-15 00:19:33] Driver PostgreSQL cargado correctamente
+[2025-05-15 00:19:34] Conexión a la base de datos establecida correctamente
+[2025-05-15 00:19:34] Tablas nuevas creadas correctamente
+[2025-05-15 00:19:34] Todas las tablas de mensajes han sido limpiadas para las pruebas
+[2025-05-15 00:19:59] ERROR: Error en la conexión con el cliente
+[2025-05-15 00:19:59] Exception: Software caused connection abort: recv failed
+[2025-05-15 00:19:59]   at java.base/java.net.SocketInputStream.socketRead0(Native Method)
+[2025-05-15 00:19:59]   at java.base/java.net.SocketInputStream.socketRead(SocketInputStream.java:115)
+[2025-05-15 00:19:59]   at java.base/java.net.SocketInputStream.read(SocketInputStream.java:168)
+[2025-05-15 00:19:59]   at java.base/java.net.SocketInputStream.read(SocketInputStream.java:140)
+[2025-05-15 00:19:59]   at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+[2025-05-15 00:19:59]   at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+[2025-05-15 00:19:59]   at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+[2025-05-15 00:19:59]   at java.base/java.io.InputStreamReader.read(InputStreamReader.java:181)
+[2025-05-15 00:19:59]   at java.base/java.io.BufferedReader.fill(BufferedReader.java:161)
+[2025-05-15 00:19:59]   at java.base/java.io.BufferedReader.readLine(BufferedReader.java:326)
+[2025-05-15 00:19:59]   at java.base/java.io.BufferedReader.readLine(BufferedReader.java:392)
+[2025-05-15 00:19:59]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleClient(ClientHandler.java:65)
+[2025-05-15 00:19:59]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.run(ClientHandler.java:32)
+[2025-05-15 00:19:59]   at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+[2025-05-15 00:19:59]   at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+[2025-05-15 00:19:59]   at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-15 00:19:59] Cliente desconectado: user1
+[2025-05-15 00:19:59] Servidor detenido
+[2025-05-15 00:19:59] Servidor detenido
+[2025-05-15 00:20:02] Iniciando servidor de chat...
+[2025-05-15 00:20:02] Servidor iniciado en el puerto 5000
+[2025-05-15 00:20:02] Esperando conexiones...
+[2025-05-15 00:20:08] Nueva conexión desde: 127.0.0.1
+[2025-05-15 00:20:08] Cliente conectado: user2
+[2025-05-15 00:20:08] Driver PostgreSQL cargado correctamente
+[2025-05-15 00:20:09] Conexión a la base de datos establecida correctamente
+[2025-05-15 00:20:09] Tablas nuevas creadas correctamente
+[2025-05-15 00:20:09] Todas las tablas de mensajes han sido limpiadas para las pruebas
+[2025-05-15 00:21:43] Iniciando servidor de chat...
+[2025-05-15 00:21:43] Servidor iniciado en el puerto 5000
+[2025-05-15 00:21:43] Esperando conexiones...
+[2025-05-15 00:21:49] Nueva conexión desde: 127.0.0.1
+[2025-05-15 00:21:49] Cliente conectado: user1
+[2025-05-15 00:21:49] Driver PostgreSQL cargado correctamente
+[2025-05-15 00:21:50] Conexión a la base de datos establecida correctamente
+[2025-05-15 00:21:50] Tablas nuevas creadas correctamente
+[2025-05-15 00:22:12] ERROR: Error en la conexión con el cliente
+[2025-05-15 00:22:12] Exception: Software caused connection abort: recv failed
+[2025-05-15 00:22:12]   at java.base/java.net.SocketInputStream.socketRead0(Native Method)
+[2025-05-15 00:22:12]   at java.base/java.net.SocketInputStream.socketRead(SocketInputStream.java:115)
+[2025-05-15 00:22:12]   at java.base/java.net.SocketInputStream.read(SocketInputStream.java:168)
+[2025-05-15 00:22:12]   at java.base/java.net.SocketInputStream.read(SocketInputStream.java:140)
+[2025-05-15 00:22:12]   at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+[2025-05-15 00:22:12]   at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+[2025-05-15 00:22:12]   at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+[2025-05-15 00:22:12]   at java.base/java.io.InputStreamReader.read(InputStreamReader.java:181)
+[2025-05-15 00:22:12]   at java.base/java.io.BufferedReader.fill(BufferedReader.java:161)
+[2025-05-15 00:22:12]   at java.base/java.io.BufferedReader.readLine(BufferedReader.java:326)
+[2025-05-15 00:22:12]   at java.base/java.io.BufferedReader.readLine(BufferedReader.java:392)
+[2025-05-15 00:22:12]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleClient(ClientHandler.java:65)
+[2025-05-15 00:22:12]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.run(ClientHandler.java:32)
+[2025-05-15 00:22:12]   at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+[2025-05-15 00:22:12]   at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+[2025-05-15 00:22:12]   at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-15 00:22:12] Cliente desconectado: user1
+[2025-05-15 00:22:12] Servidor detenido
+[2025-05-15 00:22:12] Servidor detenido
+[2025-05-15 00:22:16] Iniciando servidor de chat...
+[2025-05-15 00:22:16] Servidor iniciado en el puerto 5000
+[2025-05-15 00:22:16] Esperando conexiones...
+[2025-05-15 00:22:22] Nueva conexión desde: 127.0.0.1
+[2025-05-15 00:22:22] Cliente conectado: user2
+[2025-05-15 00:22:22] Driver PostgreSQL cargado correctamente
+[2025-05-15 00:22:23] Conexión a la base de datos establecida correctamente
+[2025-05-15 00:22:23] Tablas nuevas creadas correctamente
+[2025-05-15 00:23:06] ERROR: Error en la conexión con el cliente
+[2025-05-15 00:23:06] Exception: Software caused connection abort: recv failed
+[2025-05-15 00:23:06]   at java.base/java.net.SocketInputStream.socketRead0(Native Method)
+[2025-05-15 00:23:06]   at java.base/java.net.SocketInputStream.socketRead(SocketInputStream.java:115)
+[2025-05-15 00:23:06]   at java.base/java.net.SocketInputStream.read(SocketInputStream.java:168)
+[2025-05-15 00:23:06]   at java.base/java.net.SocketInputStream.read(SocketInputStream.java:140)
+[2025-05-15 00:23:06]   at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+[2025-05-15 00:23:06]   at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+[2025-05-15 00:23:06]   at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+[2025-05-15 00:23:06]   at java.base/java.io.InputStreamReader.read(InputStreamReader.java:181)
+[2025-05-15 00:23:06]   at java.base/java.io.BufferedReader.fill(BufferedReader.java:161)
+[2025-05-15 00:23:06]   at java.base/java.io.BufferedReader.readLine(BufferedReader.java:326)
+[2025-05-15 00:23:06]   at java.base/java.io.BufferedReader.readLine(BufferedReader.java:392)
+[2025-05-15 00:23:06]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleClient(ClientHandler.java:65)
+[2025-05-15 00:23:06]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.run(ClientHandler.java:32)
+[2025-05-15 00:23:06]   at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+[2025-05-15 00:23:06]   at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+[2025-05-15 00:23:06]   at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-15 00:23:06] Cliente desconectado: user2
+[2025-05-15 00:23:06] Servidor detenido
+[2025-05-15 00:23:06] Servidor detenido
+[2025-05-15 00:23:10] Iniciando servidor de chat...
+[2025-05-15 00:23:10] Servidor iniciado en el puerto 5000
+[2025-05-15 00:23:10] Esperando conexiones...
+[2025-05-15 00:23:16] Nueva conexión desde: 127.0.0.1
+[2025-05-15 00:23:16] Cliente conectado: user1
+[2025-05-15 00:23:16] Driver PostgreSQL cargado correctamente
+[2025-05-15 00:23:16] Conexión a la base de datos establecida correctamente
+[2025-05-15 00:23:16] Tablas nuevas creadas correctamente
+[2025-05-15 00:27:06] Iniciando servidor de chat...
+[2025-05-15 00:27:06] Servidor iniciado en el puerto 5000
+[2025-05-15 00:27:06] Esperando conexiones...
+[2025-05-15 00:27:11] Nueva conexión desde: 127.0.0.1
+[2025-05-15 00:27:11] Cliente conectado: user1
+[2025-05-15 00:27:11] Driver PostgreSQL cargado correctamente
+[2025-05-15 00:27:12] Conexión a la base de datos establecida correctamente
+[2025-05-15 00:27:12] Tablas nuevas creadas correctamente
+[2025-05-15 00:29:33] ERROR: Error en la conexión con el cliente
+[2025-05-15 00:29:33] Exception: Software caused connection abort: recv failed
+[2025-05-15 00:29:33]   at java.base/java.net.SocketInputStream.socketRead0(Native Method)
+[2025-05-15 00:29:33]   at java.base/java.net.SocketInputStream.socketRead(SocketInputStream.java:115)
+[2025-05-15 00:29:33]   at java.base/java.net.SocketInputStream.read(SocketInputStream.java:168)
+[2025-05-15 00:29:33]   at java.base/java.net.SocketInputStream.read(SocketInputStream.java:140)
+[2025-05-15 00:29:33]   at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+[2025-05-15 00:29:33]   at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+[2025-05-15 00:29:33]   at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+[2025-05-15 00:29:33]   at java.base/java.io.InputStreamReader.read(InputStreamReader.java:181)
+[2025-05-15 00:29:33]   at java.base/java.io.BufferedReader.fill(BufferedReader.java:161)
+[2025-05-15 00:29:33]   at java.base/java.io.BufferedReader.readLine(BufferedReader.java:326)
+[2025-05-15 00:29:33]   at java.base/java.io.BufferedReader.readLine(BufferedReader.java:392)
+[2025-05-15 00:29:33]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleClient(ClientHandler.java:65)
+[2025-05-15 00:29:33]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.run(ClientHandler.java:32)
+[2025-05-15 00:29:33]   at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+[2025-05-15 00:29:33]   at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+[2025-05-15 00:29:33]   at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-15 00:29:33] Cliente desconectado: user1
+[2025-05-15 00:29:33] Servidor detenido
+[2025-05-15 00:29:33] Servidor detenido
+[2025-05-15 00:30:12] Iniciando servidor de chat...
+[2025-05-15 00:30:12] Servidor iniciado en el puerto 5000
+[2025-05-15 00:30:12] Esperando conexiones...
+[2025-05-15 00:30:18] Nueva conexión desde: 127.0.0.1
+[2025-05-15 00:30:18] Cliente conectado: user1
+[2025-05-15 00:30:18] Driver PostgreSQL cargado correctamente
+[2025-05-15 00:30:18] Conexión a la base de datos establecida correctamente
+[2025-05-15 00:30:19] Tablas nuevas creadas correctamente
+[2025-05-15 00:33:35] Cliente desconectado: user1
+[2025-05-15 00:33:35] Servidor detenido
+[2025-05-15 00:33:35] Servidor detenido
+[2025-05-15 00:35:04] Iniciando servidor de chat...
+[2025-05-15 00:35:04] Servidor iniciado en el puerto 5000
+[2025-05-15 00:35:04] Esperando conexiones...
+[2025-05-15 00:35:09] Nueva conexión desde: 127.0.0.1
+[2025-05-15 00:35:09] Cliente conectado: user1
+[2025-05-15 00:35:09] Driver PostgreSQL cargado correctamente
+[2025-05-15 00:35:10] Conexión a la base de datos establecida correctamente
+[2025-05-15 00:35:10] Tablas nuevas creadas correctamente
+[2025-05-15 00:36:04] ERROR: Error en la conexión con el cliente
+[2025-05-15 00:36:04] Exception: Software caused connection abort: recv failed
+[2025-05-15 00:36:04]   at java.base/java.net.SocketInputStream.socketRead0(Native Method)
+[2025-05-15 00:36:04]   at java.base/java.net.SocketInputStream.socketRead(SocketInputStream.java:115)
+[2025-05-15 00:36:04]   at java.base/java.net.SocketInputStream.read(SocketInputStream.java:168)
+[2025-05-15 00:36:04]   at java.base/java.net.SocketInputStream.read(SocketInputStream.java:140)
+[2025-05-15 00:36:04]   at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+[2025-05-15 00:36:04]   at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+[2025-05-15 00:36:04]   at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+[2025-05-15 00:36:04]   at java.base/java.io.InputStreamReader.read(InputStreamReader.java:181)
+[2025-05-15 00:36:04]   at java.base/java.io.BufferedReader.fill(BufferedReader.java:161)
+[2025-05-15 00:36:04]   at java.base/java.io.BufferedReader.readLine(BufferedReader.java:326)
+[2025-05-15 00:36:04]   at java.base/java.io.BufferedReader.readLine(BufferedReader.java:392)
+[2025-05-15 00:36:04]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleClient(ClientHandler.java:65)
+[2025-05-15 00:36:04]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.run(ClientHandler.java:32)
+[2025-05-15 00:36:04]   at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+[2025-05-15 00:36:04]   at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+[2025-05-15 00:36:04]   at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-15 00:36:04] Cliente desconectado: user1
+[2025-05-15 00:36:04] Servidor detenido
+[2025-05-15 00:36:04] Servidor detenido
+[2025-05-15 00:36:57] Iniciando servidor de chat...
+[2025-05-15 00:36:57] Servidor iniciado en el puerto 5000
+[2025-05-15 00:36:57] Esperando conexiones...
+[2025-05-15 00:37:03] Nueva conexión desde: 127.0.0.1
+[2025-05-15 00:37:03] Cliente conectado: user1
+[2025-05-15 00:37:03] Driver PostgreSQL cargado correctamente
+[2025-05-15 00:37:04] Conexión a la base de datos establecida correctamente
+[2025-05-15 00:37:04] Tablas nuevas creadas correctamente
+[2025-05-15 00:37:48] ERROR: Error en la conexión con el cliente
+[2025-05-15 00:37:48] Exception: Software caused connection abort: recv failed
+[2025-05-15 00:37:48]   at java.base/java.net.SocketInputStream.socketRead0(Native Method)
+[2025-05-15 00:37:48]   at java.base/java.net.SocketInputStream.socketRead(SocketInputStream.java:115)
+[2025-05-15 00:37:48]   at java.base/java.net.SocketInputStream.read(SocketInputStream.java:168)
+[2025-05-15 00:37:48]   at java.base/java.net.SocketInputStream.read(SocketInputStream.java:140)
+[2025-05-15 00:37:48]   at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+[2025-05-15 00:37:48]   at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+[2025-05-15 00:37:48]   at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+[2025-05-15 00:37:48]   at java.base/java.io.InputStreamReader.read(InputStreamReader.java:181)
+[2025-05-15 00:37:48]   at java.base/java.io.BufferedReader.fill(BufferedReader.java:161)
+[2025-05-15 00:37:48]   at java.base/java.io.BufferedReader.readLine(BufferedReader.java:326)
+[2025-05-15 00:37:48]   at java.base/java.io.BufferedReader.readLine(BufferedReader.java:392)
+[2025-05-15 00:37:48]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleClient(ClientHandler.java:65)
+[2025-05-15 00:37:48]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.run(ClientHandler.java:32)
+[2025-05-15 00:37:48]   at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+[2025-05-15 00:37:48]   at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+[2025-05-15 00:37:48]   at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-15 00:37:48] Cliente desconectado: user1
+[2025-05-15 00:37:48] Servidor detenido
+[2025-05-15 00:37:48] Servidor detenido
+[2025-05-15 00:39:04] Iniciando servidor de chat...
+[2025-05-15 00:39:04] Servidor iniciado en el puerto 5000
+[2025-05-15 00:39:04] Esperando conexiones...
+[2025-05-15 00:39:20] Nueva conexión desde: 127.0.0.1
+[2025-05-15 00:39:20] Cliente conectado: user1
+[2025-05-15 00:39:20] Driver PostgreSQL cargado correctamente
+[2025-05-15 00:39:21] Conexión a la base de datos establecida correctamente
+[2025-05-15 00:39:21] Tablas nuevas creadas correctamente
+[2025-05-15 00:39:58] ERROR: Error en la conexión con el cliente
+[2025-05-15 00:39:58] Exception: Software caused connection abort: recv failed
+[2025-05-15 00:39:58]   at java.base/java.net.SocketInputStream.socketRead0(Native Method)
+[2025-05-15 00:39:58]   at java.base/java.net.SocketInputStream.socketRead(SocketInputStream.java:115)
+[2025-05-15 00:39:58]   at java.base/java.net.SocketInputStream.read(SocketInputStream.java:168)
+[2025-05-15 00:39:58]   at java.base/java.net.SocketInputStream.read(SocketInputStream.java:140)
+[2025-05-15 00:39:58]   at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+[2025-05-15 00:39:58]   at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+[2025-05-15 00:39:58]   at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+[2025-05-15 00:39:58]   at java.base/java.io.InputStreamReader.read(InputStreamReader.java:181)
+[2025-05-15 00:39:58]   at java.base/java.io.BufferedReader.fill(BufferedReader.java:161)
+[2025-05-15 00:39:58]   at java.base/java.io.BufferedReader.readLine(BufferedReader.java:326)
+[2025-05-15 00:39:58]   at java.base/java.io.BufferedReader.readLine(BufferedReader.java:392)
+[2025-05-15 00:39:58]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleClient(ClientHandler.java:65)
+[2025-05-15 00:39:58]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.run(ClientHandler.java:32)
+[2025-05-15 00:39:58]   at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+[2025-05-15 00:39:58]   at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+[2025-05-15 00:39:58]   at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-15 00:39:58] Cliente desconectado: user1
+[2025-05-15 00:39:58] Servidor detenido
+[2025-05-15 00:39:58] Servidor detenido
+[2025-05-15 00:42:13] Iniciando servidor de chat...
+[2025-05-15 00:42:13] Servidor iniciado en el puerto 5000
+[2025-05-15 00:42:13] Esperando conexiones...
+[2025-05-15 00:42:19] Nueva conexión desde: 127.0.0.1
+[2025-05-15 00:42:19] Cliente conectado: user1
+[2025-05-15 00:42:19] Driver PostgreSQL cargado correctamente
+[2025-05-15 00:42:20] Conexión a la base de datos establecida correctamente
+[2025-05-15 00:42:20] Tablas nuevas creadas correctamente
+[2025-05-15 00:45:08] ERROR: Error en la conexión con el cliente
+[2025-05-15 00:45:08] Exception: Software caused connection abort: recv failed
+[2025-05-15 00:45:08]   at java.base/java.net.SocketInputStream.socketRead0(Native Method)
+[2025-05-15 00:45:08]   at java.base/java.net.SocketInputStream.socketRead(SocketInputStream.java:115)
+[2025-05-15 00:45:08]   at java.base/java.net.SocketInputStream.read(SocketInputStream.java:168)
+[2025-05-15 00:45:08]   at java.base/java.net.SocketInputStream.read(SocketInputStream.java:140)
+[2025-05-15 00:45:08]   at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+[2025-05-15 00:45:08]   at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+[2025-05-15 00:45:08]   at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+[2025-05-15 00:45:08]   at java.base/java.io.InputStreamReader.read(InputStreamReader.java:181)
+[2025-05-15 00:45:08]   at java.base/java.io.BufferedReader.fill(BufferedReader.java:161)
+[2025-05-15 00:45:08]   at java.base/java.io.BufferedReader.readLine(BufferedReader.java:326)
+[2025-05-15 00:45:08]   at java.base/java.io.BufferedReader.readLine(BufferedReader.java:392)
+[2025-05-15 00:45:08]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleClient(ClientHandler.java:65)
+[2025-05-15 00:45:08]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.run(ClientHandler.java:32)
+[2025-05-15 00:45:08]   at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+[2025-05-15 00:45:08]   at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+[2025-05-15 00:45:08]   at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-15 00:45:08] Cliente desconectado: user1
+[2025-05-15 00:45:08] Servidor detenido
+[2025-05-15 00:45:08] Servidor detenido
+[2025-05-15 00:45:13] Iniciando servidor de chat...
+[2025-05-15 00:45:13] Servidor iniciado en el puerto 5000
+[2025-05-15 00:45:13] Esperando conexiones...
+[2025-05-15 00:45:20] Nueva conexión desde: 127.0.0.1
+[2025-05-15 00:45:20] Cliente conectado: user1
+[2025-05-15 00:45:20] Driver PostgreSQL cargado correctamente
+[2025-05-15 00:45:23] Conexión a la base de datos establecida correctamente
+[2025-05-15 00:45:23] Tablas nuevas creadas correctamente
+[2025-05-15 00:46:25] ERROR: Error en la conexión con el cliente
+[2025-05-15 00:46:25] Exception: Software caused connection abort: recv failed
+[2025-05-15 00:46:25]   at java.base/java.net.SocketInputStream.socketRead0(Native Method)
+[2025-05-15 00:46:25]   at java.base/java.net.SocketInputStream.socketRead(SocketInputStream.java:115)
+[2025-05-15 00:46:25]   at java.base/java.net.SocketInputStream.read(SocketInputStream.java:168)
+[2025-05-15 00:46:25]   at java.base/java.net.SocketInputStream.read(SocketInputStream.java:140)
+[2025-05-15 00:46:25]   at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+[2025-05-15 00:46:25]   at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+[2025-05-15 00:46:25]   at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+[2025-05-15 00:46:25]   at java.base/java.io.InputStreamReader.read(InputStreamReader.java:181)
+[2025-05-15 00:46:25]   at java.base/java.io.BufferedReader.fill(BufferedReader.java:161)
+[2025-05-15 00:46:25]   at java.base/java.io.BufferedReader.readLine(BufferedReader.java:326)
+[2025-05-15 00:46:25]   at java.base/java.io.BufferedReader.readLine(BufferedReader.java:392)
+[2025-05-15 00:46:25]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleClient(ClientHandler.java:67)
+[2025-05-15 00:46:25]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.run(ClientHandler.java:32)
+[2025-05-15 00:46:25]   at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+[2025-05-15 00:46:25]   at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+[2025-05-15 00:46:25]   at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-15 00:46:25] Cliente desconectado: user1
+[2025-05-15 00:46:25] Servidor detenido
+[2025-05-15 00:46:25] Servidor detenido
+[2025-05-15 00:46:29] Iniciando servidor de chat...
+[2025-05-15 00:46:29] Servidor iniciado en el puerto 5000
+[2025-05-15 00:46:29] Esperando conexiones...
+[2025-05-15 00:46:35] Nueva conexión desde: 127.0.0.1
+[2025-05-15 00:46:35] Cliente conectado: user1
+[2025-05-15 00:46:35] Driver PostgreSQL cargado correctamente
+[2025-05-15 00:46:38] Conexión a la base de datos establecida correctamente
+[2025-05-15 00:46:39] Tablas nuevas creadas correctamente
+[2025-05-15 00:46:55] ERROR: Error en la conexión con el cliente
+[2025-05-15 00:46:55] Exception: Software caused connection abort: recv failed
+[2025-05-15 00:46:55]   at java.base/java.net.SocketInputStream.socketRead0(Native Method)
+[2025-05-15 00:46:55]   at java.base/java.net.SocketInputStream.socketRead(SocketInputStream.java:115)
+[2025-05-15 00:46:55]   at java.base/java.net.SocketInputStream.read(SocketInputStream.java:168)
+[2025-05-15 00:46:55]   at java.base/java.net.SocketInputStream.read(SocketInputStream.java:140)
+[2025-05-15 00:46:55]   at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+[2025-05-15 00:46:55]   at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+[2025-05-15 00:46:55]   at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+[2025-05-15 00:46:55]   at java.base/java.io.InputStreamReader.read(InputStreamReader.java:181)
+[2025-05-15 00:46:55]   at java.base/java.io.BufferedReader.fill(BufferedReader.java:161)
+[2025-05-15 00:46:55]   at java.base/java.io.BufferedReader.readLine(BufferedReader.java:326)
+[2025-05-15 00:46:55]   at java.base/java.io.BufferedReader.readLine(BufferedReader.java:392)
+[2025-05-15 00:46:55]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleClient(ClientHandler.java:67)
+[2025-05-15 00:46:55]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.run(ClientHandler.java:32)
+[2025-05-15 00:46:55]   at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+[2025-05-15 00:46:55]   at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+[2025-05-15 00:46:55]   at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-15 00:46:55] Cliente desconectado: user1
+[2025-05-15 00:46:55] Servidor detenido
+[2025-05-15 00:46:55] Servidor detenido
+[2025-05-15 00:46:58] Iniciando servidor de chat...
+[2025-05-15 00:46:58] Servidor iniciado en el puerto 5000
+[2025-05-15 00:46:58] Esperando conexiones...
+[2025-05-15 00:47:05] Nueva conexión desde: 127.0.0.1
+[2025-05-15 00:47:05] Cliente conectado: user2
+[2025-05-15 00:47:05] Driver PostgreSQL cargado correctamente
+[2025-05-15 00:47:08] Conexión a la base de datos establecida correctamente
+[2025-05-15 00:47:08] Tablas nuevas creadas correctamente
+[2025-05-15 00:50:47] Iniciando servidor de chat...
+[2025-05-15 00:50:47] ERROR: Error iniciando el servidor
+[2025-05-15 00:50:47] Exception: Address already in use: NET_Bind
+[2025-05-15 00:50:47]   at java.base/java.net.PlainSocketImpl.bind0(Native Method)
+[2025-05-15 00:50:47]   at java.base/java.net.PlainSocketImpl.socketBind(PlainSocketImpl.java:132)
+[2025-05-15 00:50:47]   at java.base/java.net.AbstractPlainSocketImpl.bind(AbstractPlainSocketImpl.java:452)
+[2025-05-15 00:50:47]   at java.base/java.net.ServerSocket.bind(ServerSocket.java:395)
+[2025-05-15 00:50:47]   at java.base/java.net.ServerSocket.<init>(ServerSocket.java:257)
+[2025-05-15 00:50:47]   at java.base/java.net.ServerSocket.<init>(ServerSocket.java:149)
+[2025-05-15 00:50:47]   at yeray.priede.projecte_uf3_psp_final/server.ChatServer.start(ChatServer.java:37)
+[2025-05-15 00:50:47]   at yeray.priede.projecte_uf3_psp_final/client.ChatClient.lambda$0(ChatClient.java:43)
+[2025-05-15 00:50:47]   at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-15 00:50:47] Servidor detenido
+[2025-05-15 00:51:10] Nueva conexión desde: 127.0.0.1
+[2025-05-15 00:51:10] Cliente conectado: user1
+[2025-05-15 00:57:27] ERROR: Error en la conexión con el cliente
+[2025-05-15 00:57:27] Exception: Software caused connection abort: recv failed
+[2025-05-15 00:57:27]   at java.base/java.net.SocketInputStream.socketRead0(Native Method)
+[2025-05-15 00:57:27]   at java.base/java.net.SocketInputStream.socketRead(SocketInputStream.java:115)
+[2025-05-15 00:57:27]   at java.base/java.net.SocketInputStream.read(SocketInputStream.java:168)
+[2025-05-15 00:57:27]   at java.base/java.net.SocketInputStream.read(SocketInputStream.java:140)
+[2025-05-15 00:57:27]   at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+[2025-05-15 00:57:27]   at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+[2025-05-15 00:57:27]   at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+[2025-05-15 00:57:27]   at java.base/java.io.InputStreamReader.read(InputStreamReader.java:181)
+[2025-05-15 00:57:27]   at java.base/java.io.BufferedReader.fill(BufferedReader.java:161)
+[2025-05-15 00:57:27]   at java.base/java.io.BufferedReader.readLine(BufferedReader.java:326)
+[2025-05-15 00:57:27]   at java.base/java.io.BufferedReader.readLine(BufferedReader.java:392)
+[2025-05-15 00:57:27]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleClient(ClientHandler.java:67)
+[2025-05-15 00:57:27]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.run(ClientHandler.java:32)
+[2025-05-15 00:57:27]   at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+[2025-05-15 00:57:27]   at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+[2025-05-15 00:57:27]   at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-15 00:57:27] Cliente desconectado: user2
+[2025-05-15 00:57:29] ERROR: Error en la conexión con el cliente
+[2025-05-15 00:57:29] Servidor detenido
+[2025-05-15 00:57:29] Exception: Software caused connection abort: recv failed
+[2025-05-15 00:57:29]   at java.base/java.net.SocketInputStream.socketRead0(Native Method)
+[2025-05-15 00:57:29]   at java.base/java.net.SocketInputStream.socketRead(SocketInputStream.java:115)
+[2025-05-15 00:57:29]   at java.base/java.net.SocketInputStream.read(SocketInputStream.java:168)
+[2025-05-15 00:57:29]   at java.base/java.net.SocketInputStream.read(SocketInputStream.java:140)
+[2025-05-15 00:57:29]   at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+[2025-05-15 00:57:29]   at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+[2025-05-15 00:57:29]   at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+[2025-05-15 00:57:29]   at java.base/java.io.InputStreamReader.read(InputStreamReader.java:181)
+[2025-05-15 00:57:29]   at java.base/java.io.BufferedReader.fill(BufferedReader.java:161)
+[2025-05-15 00:57:29]   at java.base/java.io.BufferedReader.readLine(BufferedReader.java:326)
+[2025-05-15 00:57:29]   at java.base/java.io.BufferedReader.readLine(BufferedReader.java:392)
+[2025-05-15 00:57:29]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleClient(ClientHandler.java:67)
+[2025-05-15 00:57:29]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.run(ClientHandler.java:32)
+[2025-05-15 00:57:29]   at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+[2025-05-15 00:57:29]   at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+[2025-05-15 00:57:29]   at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-15 00:57:29] Cliente desconectado: user1
+[2025-05-15 00:57:29] Servidor detenido
+[2025-05-15 00:57:29] Servidor detenido
+[2025-05-15 00:57:38] Iniciando servidor de chat...
+[2025-05-15 00:57:38] Servidor iniciado en el puerto 5000
+[2025-05-15 00:57:38] Esperando conexiones...
+[2025-05-15 00:57:46] Nueva conexión desde: 127.0.0.1
+[2025-05-15 00:57:46] Cliente conectado: user1
+[2025-05-15 00:57:46] Driver PostgreSQL cargado correctamente
+[2025-05-15 00:57:48] Conexión a la base de datos establecida correctamente
+[2025-05-15 00:57:49] Tablas nuevas creadas correctamente
+[2025-05-15 00:59:13] Iniciando servidor de chat...
+[2025-05-15 00:59:13] Servidor iniciado en el puerto 5000
+[2025-05-15 00:59:13] Esperando conexiones...
+[2025-05-15 00:59:37] Nueva conexión desde: 127.0.0.1
+[2025-05-15 00:59:37] Cliente conectado: user1
+[2025-05-15 00:59:37] Driver PostgreSQL cargado correctamente
+[2025-05-15 00:59:38] Conexión a la base de datos establecida correctamente
+[2025-05-15 00:59:39] Tablas nuevas creadas correctamente
+[2025-05-15 01:00:21] ERROR: Error en la conexión con el cliente
+[2025-05-15 01:00:21] Exception: Software caused connection abort: recv failed
+[2025-05-15 01:00:21]   at java.base/java.net.SocketInputStream.socketRead0(Native Method)
+[2025-05-15 01:00:21]   at java.base/java.net.SocketInputStream.socketRead(SocketInputStream.java:115)
+[2025-05-15 01:00:21]   at java.base/java.net.SocketInputStream.read(SocketInputStream.java:168)
+[2025-05-15 01:00:21]   at java.base/java.net.SocketInputStream.read(SocketInputStream.java:140)
+[2025-05-15 01:00:21]   at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+[2025-05-15 01:00:21]   at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+[2025-05-15 01:00:21]   at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+[2025-05-15 01:00:21]   at java.base/java.io.InputStreamReader.read(InputStreamReader.java:181)
+[2025-05-15 01:00:21]   at java.base/java.io.BufferedReader.fill(BufferedReader.java:161)
+[2025-05-15 01:00:21]   at java.base/java.io.BufferedReader.readLine(BufferedReader.java:326)
+[2025-05-15 01:00:21]   at java.base/java.io.BufferedReader.readLine(BufferedReader.java:392)
+[2025-05-15 01:00:21]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleClient(ClientHandler.java:67)
+[2025-05-15 01:00:21]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.run(ClientHandler.java:32)
+[2025-05-15 01:00:21]   at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+[2025-05-15 01:00:21]   at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+[2025-05-15 01:00:21]   at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-15 01:00:21] Cliente desconectado: user1
+[2025-05-15 01:00:21] Servidor detenido
+[2025-05-15 01:00:21] Servidor detenido
+[2025-05-15 01:00:26] Iniciando servidor de chat...
+[2025-05-15 01:00:26] Servidor iniciado en el puerto 5000
+[2025-05-15 01:00:26] Esperando conexiones...
+[2025-05-15 01:01:25] Servidor detenido
+[2025-05-15 01:01:25] Servidor detenido
+[2025-05-15 01:01:36] Iniciando servidor de chat...
+[2025-05-15 01:01:36] Servidor iniciado en el puerto 5000
+[2025-05-15 01:01:36] Esperando conexiones...
+[2025-05-15 01:01:44] Nueva conexión desde: 127.0.0.1
+[2025-05-15 01:01:44] Cliente conectado: user1
+[2025-05-15 01:01:44] Driver PostgreSQL cargado correctamente
+[2025-05-15 01:01:47] Conexión a la base de datos establecida correctamente
+[2025-05-15 01:01:47] Tablas nuevas creadas correctamente
+[2025-05-15 01:03:17] Iniciando servidor de chat...
+[2025-05-15 01:03:17] Servidor iniciado en el puerto 5000
+[2025-05-15 01:03:17] Esperando conexiones...
+[2025-05-15 01:03:27] Nueva conexión desde: 127.0.0.1
+[2025-05-15 01:03:27] Cliente conectado: user1
+[2025-05-15 01:03:27] Driver PostgreSQL cargado correctamente
+[2025-05-15 01:03:31] Conexión a la base de datos establecida correctamente
+[2025-05-15 01:03:31] Tablas nuevas creadas correctamente
+[2025-05-15 01:03:32] ERROR: Error en la conexión con el cliente
+[2025-05-15 01:03:32] Exception: Software caused connection abort: recv failed
+[2025-05-15 01:03:32]   at java.base/java.net.SocketInputStream.socketRead0(Native Method)
+[2025-05-15 01:03:32]   at java.base/java.net.SocketInputStream.socketRead(SocketInputStream.java:115)
+[2025-05-15 01:03:32]   at java.base/java.net.SocketInputStream.read(SocketInputStream.java:168)
+[2025-05-15 01:03:32]   at java.base/java.net.SocketInputStream.read(SocketInputStream.java:140)
+[2025-05-15 01:03:32]   at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+[2025-05-15 01:03:32]   at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+[2025-05-15 01:03:32]   at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+[2025-05-15 01:03:32]   at java.base/java.io.InputStreamReader.read(InputStreamReader.java:181)
+[2025-05-15 01:03:32]   at java.base/java.io.BufferedReader.fill(BufferedReader.java:161)
+[2025-05-15 01:03:32]   at java.base/java.io.BufferedReader.readLine(BufferedReader.java:326)
+[2025-05-15 01:03:32]   at java.base/java.io.BufferedReader.readLine(BufferedReader.java:392)
+[2025-05-15 01:03:32]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleClient(ClientHandler.java:67)
+[2025-05-15 01:03:32]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.run(ClientHandler.java:32)
+[2025-05-15 01:03:32]   at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+[2025-05-15 01:03:32]   at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+[2025-05-15 01:03:32]   at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-15 01:03:32] Cliente desconectado: user1
+[2025-05-15 01:03:32] Servidor detenido
+[2025-05-15 01:03:32] Servidor detenido
+[2025-05-15 14:42:03] Iniciando servidor de chat...
+[2025-05-15 14:42:03] Servidor iniciado en el puerto 5000
+[2025-05-15 14:42:03] Esperando conexiones...
+[2025-05-15 14:42:11] Nueva conexión desde: 127.0.0.1
+[2025-05-15 14:42:11] Cliente conectado: user1
+[2025-05-15 14:42:11] Driver PostgreSQL cargado correctamente
+[2025-05-15 14:42:13] Conexión a la base de datos establecida correctamente
+[2025-05-15 14:42:13] Tablas nuevas creadas correctamente
+[2025-05-15 14:42:36] ERROR: Error en la conexión con el cliente
+[2025-05-15 14:42:36] Exception: Software caused connection abort: recv failed
+[2025-05-15 14:42:36]   at java.base/java.net.SocketInputStream.socketRead0(Native Method)
+[2025-05-15 14:42:36]   at java.base/java.net.SocketInputStream.socketRead(SocketInputStream.java:115)
+[2025-05-15 14:42:36]   at java.base/java.net.SocketInputStream.read(SocketInputStream.java:168)
+[2025-05-15 14:42:36]   at java.base/java.net.SocketInputStream.read(SocketInputStream.java:140)
+[2025-05-15 14:42:36]   at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+[2025-05-15 14:42:36]   at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+[2025-05-15 14:42:36]   at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+[2025-05-15 14:42:36]   at java.base/java.io.InputStreamReader.read(InputStreamReader.java:181)
+[2025-05-15 14:42:36]   at java.base/java.io.BufferedReader.fill(BufferedReader.java:161)
+[2025-05-15 14:42:36]   at java.base/java.io.BufferedReader.readLine(BufferedReader.java:326)
+[2025-05-15 14:42:36]   at java.base/java.io.BufferedReader.readLine(BufferedReader.java:392)
+[2025-05-15 14:42:36]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleClient(ClientHandler.java:67)
+[2025-05-15 14:42:36]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.run(ClientHandler.java:32)
+[2025-05-15 14:42:36]   at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+[2025-05-15 14:42:36]   at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+[2025-05-15 14:42:36]   at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-15 14:42:36] Cliente desconectado: user1
+[2025-05-15 14:42:36] Servidor detenido
+[2025-05-15 14:42:36] Servidor detenido
+[2025-05-15 14:53:08] Iniciando servidor de chat...
+[2025-05-15 14:53:08] Servidor iniciado en el puerto 5000
+[2025-05-15 14:53:08] Esperando conexiones...
+[2025-05-15 14:53:55] Servidor detenido
+[2025-05-15 14:53:55] Servidor detenido
+[2025-05-15 14:56:11] Iniciando servidor de chat...
+[2025-05-15 14:56:11] Servidor iniciado en el puerto 5000
+[2025-05-15 14:56:11] Esperando conexiones...
+[2025-05-15 14:56:25] Nueva conexión desde: 127.0.0.1
+[2025-05-15 14:56:37] Nueva conexión desde: 127.0.0.1
+[2025-05-15 14:56:38] Nueva conexión desde: 127.0.0.1
+[2025-05-15 14:58:39] Iniciando servidor de chat...
+[2025-05-15 14:58:39] Servidor iniciado en el puerto 5000
+[2025-05-15 14:58:39] Esperando conexiones...
+[2025-05-15 14:58:53] Nueva conexión desde: 127.0.0.1
+[2025-05-15 14:58:54] Driver PostgreSQL cargado correctamente
+[2025-05-15 14:58:55] Conexión a la base de datos establecida correctamente
+[2025-05-15 14:58:55] Tablas nuevas creadas correctamente
+[2025-05-15 14:58:55] ERROR: Error inicializando la base de datos
+[2025-05-15 14:58:55] Exception: ERROR: column "password_hash" of relation "usuarios1" does not exist
+  Position: 34
+[2025-05-15 14:58:55]   at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2725)
+[2025-05-15 14:58:55]   at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2412)
+[2025-05-15 14:58:55]   at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:371)
+[2025-05-15 14:58:55]   at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:502)
+[2025-05-15 14:58:55]   at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:419)
+[2025-05-15 14:58:55]   at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:194)
+[2025-05-15 14:58:55]   at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:155)
+[2025-05-15 14:58:55]   at yeray.priede.projecte_uf3_psp_final/server.DatabaseConfig.initDatabase(DatabaseConfig.java:83)
+[2025-05-15 14:58:55]   at yeray.priede.projecte_uf3_psp_final/server.DatabaseConfig.<clinit>(DatabaseConfig.java:18)
+[2025-05-15 14:58:55]   at yeray.priede.projecte_uf3_psp_final/server.UserManager.userExists(UserManager.java:72)
+[2025-05-15 14:58:55]   at yeray.priede.projecte_uf3_psp_final/server.UserManager.registerUser(UserManager.java:17)
+[2025-05-15 14:58:55]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleRegister(ClientHandler.java:138)
+[2025-05-15 14:58:55]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleClient(ClientHandler.java:48)
+[2025-05-15 14:58:55]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.run(ClientHandler.java:33)
+[2025-05-15 14:58:55]   at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+[2025-05-15 14:58:55]   at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+[2025-05-15 14:58:55]   at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-15 14:58:55] ERROR: Error verificando existencia de usuario
+[2025-05-15 14:58:55] Exception: ERROR: relation "usuarios" does not exist
+  Position: 22
+[2025-05-15 14:58:55]   at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2725)
+[2025-05-15 14:58:55]   at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2412)
+[2025-05-15 14:58:55]   at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:371)
+[2025-05-15 14:58:55]   at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:502)
+[2025-05-15 14:58:55]   at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:419)
+[2025-05-15 14:58:55]   at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:194)
+[2025-05-15 14:58:55]   at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:137)
+[2025-05-15 14:58:55]   at yeray.priede.projecte_uf3_psp_final/server.UserManager.userExists(UserManager.java:75)
+[2025-05-15 14:58:55]   at yeray.priede.projecte_uf3_psp_final/server.UserManager.registerUser(UserManager.java:17)
+[2025-05-15 14:58:55]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleRegister(ClientHandler.java:138)
+[2025-05-15 14:58:55]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleClient(ClientHandler.java:48)
+[2025-05-15 14:58:55]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.run(ClientHandler.java:33)
+[2025-05-15 14:58:55]   at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+[2025-05-15 14:58:55]   at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+[2025-05-15 14:58:55]   at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-15 14:58:56] ERROR: Error registrando usuario
+[2025-05-15 14:58:56] Exception: ERROR: relation "usuarios" does not exist
+  Position: 13
+[2025-05-15 14:58:56]   at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2725)
+[2025-05-15 14:58:56]   at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2412)
+[2025-05-15 14:58:56]   at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:371)
+[2025-05-15 14:58:56]   at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:502)
+[2025-05-15 14:58:56]   at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:419)
+[2025-05-15 14:58:56]   at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:194)
+[2025-05-15 14:58:56]   at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:155)
+[2025-05-15 14:58:56]   at yeray.priede.projecte_uf3_psp_final/server.UserManager.registerUser(UserManager.java:33)
+[2025-05-15 14:58:56]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleRegister(ClientHandler.java:138)
+[2025-05-15 14:58:56]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleClient(ClientHandler.java:48)
+[2025-05-15 14:58:56]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.run(ClientHandler.java:33)
+[2025-05-15 14:58:56]   at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+[2025-05-15 14:58:56]   at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+[2025-05-15 14:58:56]   at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-15 14:58:56] Nueva conexión desde: 127.0.0.1
+[2025-05-15 14:58:56] ERROR: Error verificando existencia de usuario
+[2025-05-15 14:58:56] Exception: ERROR: relation "usuarios" does not exist
+  Position: 22
+[2025-05-15 14:58:56]   at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2725)
+[2025-05-15 14:58:56]   at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2412)
+[2025-05-15 14:58:56]   at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:371)
+[2025-05-15 14:58:56]   at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:502)
+[2025-05-15 14:58:56]   at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:419)
+[2025-05-15 14:58:56]   at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:194)
+[2025-05-15 14:58:56]   at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:137)
+[2025-05-15 14:58:56]   at yeray.priede.projecte_uf3_psp_final/server.UserManager.userExists(UserManager.java:75)
+[2025-05-15 14:58:56]   at yeray.priede.projecte_uf3_psp_final/server.UserManager.registerUser(UserManager.java:17)
+[2025-05-15 14:58:56]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleRegister(ClientHandler.java:138)
+[2025-05-15 14:58:56]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleClient(ClientHandler.java:48)
+[2025-05-15 14:58:56]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.run(ClientHandler.java:33)
+[2025-05-15 14:58:56]   at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+[2025-05-15 14:58:56]   at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+[2025-05-15 14:58:56]   at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-15 14:58:56] ERROR: Error registrando usuario
+[2025-05-15 14:58:56] Exception: ERROR: relation "usuarios" does not exist
+  Position: 13
+[2025-05-15 14:58:56]   at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2725)
+[2025-05-15 14:58:56]   at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2412)
+[2025-05-15 14:58:56]   at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:371)
+[2025-05-15 14:58:56]   at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:502)
+[2025-05-15 14:58:56]   at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:419)
+[2025-05-15 14:58:56]   at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:194)
+[2025-05-15 14:58:56]   at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:155)
+[2025-05-15 14:58:56]   at yeray.priede.projecte_uf3_psp_final/server.UserManager.registerUser(UserManager.java:33)
+[2025-05-15 14:58:56]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleRegister(ClientHandler.java:138)
+[2025-05-15 14:58:56]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleClient(ClientHandler.java:48)
+[2025-05-15 14:58:56]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.run(ClientHandler.java:33)
+[2025-05-15 14:58:56]   at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+[2025-05-15 14:58:56]   at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+[2025-05-15 14:58:56]   at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-15 14:59:13] Nueva conexión desde: 127.0.0.1
+[2025-05-15 14:59:14] Cliente desconectado: Yeray
+[2025-05-15 14:59:38] Servidor detenido
+[2025-05-15 14:59:38] Servidor detenido
+[2025-05-15 15:00:49] Iniciando servidor de chat...
+[2025-05-15 15:00:49] Servidor iniciado en el puerto 5000
+[2025-05-15 15:00:49] Esperando conexiones...
+[2025-05-15 15:00:55] Nueva conexión desde: 127.0.0.1
+[2025-05-15 15:00:55] Driver PostgreSQL cargado correctamente
+[2025-05-15 15:00:56] Conexión a la base de datos establecida correctamente
+[2025-05-15 15:00:56] Tablas nuevas creadas correctamente
+[2025-05-15 15:00:57] ERROR: Error inicializando la base de datos
+[2025-05-15 15:00:57] Exception: ERROR: column "password_hash" of relation "usuarios1" does not exist
+  Position: 34
+[2025-05-15 15:00:57]   at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2725)
+[2025-05-15 15:00:57]   at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2412)
+[2025-05-15 15:00:57]   at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:371)
+[2025-05-15 15:00:57]   at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:502)
+[2025-05-15 15:00:57]   at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:419)
+[2025-05-15 15:00:57]   at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:194)
+[2025-05-15 15:00:57]   at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:155)
+[2025-05-15 15:00:57]   at yeray.priede.projecte_uf3_psp_final/server.DatabaseConfig.initDatabase(DatabaseConfig.java:83)
+[2025-05-15 15:00:57]   at yeray.priede.projecte_uf3_psp_final/server.DatabaseConfig.<clinit>(DatabaseConfig.java:18)
+[2025-05-15 15:00:57]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleClient(ClientHandler.java:69)
+[2025-05-15 15:00:57]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.run(ClientHandler.java:33)
+[2025-05-15 15:00:57]   at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+[2025-05-15 15:00:57]   at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+[2025-05-15 15:00:57]   at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-15 15:00:58] Cliente desconectado: user1
+[2025-05-15 15:01:03] Servidor detenido
+[2025-05-15 15:01:03] Servidor detenido
+[2025-05-15 15:05:25] Iniciando servidor de chat...
+[2025-05-15 15:05:25] Servidor iniciado en el puerto 5000
+[2025-05-15 15:05:25] Esperando conexiones...
+[2025-05-15 15:05:36] Nueva conexión desde: 127.0.0.1
+[2025-05-15 15:05:36] Intentando registrar usuario: Yeray
+[2025-05-15 15:05:36] Driver PostgreSQL cargado correctamente
+[2025-05-15 15:05:37] Conexión a la base de datos establecida correctamente
+[2025-05-15 15:05:37] Tablas creadas correctamente
+[2025-05-15 15:05:39] Hash y salt generados para el usuario: Yeray
+[2025-05-15 15:05:40] Usuario registrado correctamente: Yeray
+[2025-05-15 15:05:48] Nueva conexión desde: 127.0.0.1
+[2025-05-15 15:05:48] Procesando mensaje: Yeray
+[2025-05-15 15:05:48] Autenticando usuario: Yeray (usando hash+salt)
+[2025-05-15 15:05:48] Usuario autenticado correctamente: Yeray
+[2025-05-15 15:05:48] Cliente conectado: Yeray
+[2025-05-15 15:05:59] ERROR: Error en la conexión con el cliente
+[2025-05-15 15:05:59] Exception: Software caused connection abort: recv failed
+[2025-05-15 15:05:59]   at java.base/java.net.SocketInputStream.socketRead0(Native Method)
+[2025-05-15 15:05:59]   at java.base/java.net.SocketInputStream.socketRead(SocketInputStream.java:115)
+[2025-05-15 15:05:59]   at java.base/java.net.SocketInputStream.read(SocketInputStream.java:168)
+[2025-05-15 15:05:59]   at java.base/java.net.SocketInputStream.read(SocketInputStream.java:140)
+[2025-05-15 15:05:59]   at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+[2025-05-15 15:05:59]   at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+[2025-05-15 15:05:59]   at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+[2025-05-15 15:05:59]   at java.base/java.io.InputStreamReader.read(InputStreamReader.java:181)
+[2025-05-15 15:05:59]   at java.base/java.io.BufferedReader.fill(BufferedReader.java:161)
+[2025-05-15 15:05:59]   at java.base/java.io.BufferedReader.readLine(BufferedReader.java:326)
+[2025-05-15 15:05:59]   at java.base/java.io.BufferedReader.readLine(BufferedReader.java:392)
+[2025-05-15 15:05:59]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleClient(ClientHandler.java:94)
+[2025-05-15 15:05:59]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.run(ClientHandler.java:33)
+[2025-05-15 15:05:59]   at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+[2025-05-15 15:05:59]   at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+[2025-05-15 15:05:59]   at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-15 15:05:59] Cliente desconectado: Yeray
+[2025-05-15 15:05:59] Servidor detenido
+[2025-05-15 15:05:59] Servidor detenido
+[2025-05-15 15:09:57] Iniciando servidor de chat...
+[2025-05-15 15:09:57] Servidor iniciado en el puerto 5000
+[2025-05-15 15:09:57] Esperando conexiones...
+[2025-05-15 15:10:12] Nueva conexión desde: 127.0.0.1
+[2025-05-15 15:10:12] Procesando mensaje: Yeray
+[2025-05-15 15:10:12] Autenticando usuario: Yeray (usando hash+salt)
+[2025-05-15 15:10:12] Driver PostgreSQL cargado correctamente
+[2025-05-15 15:10:13] Conexión a la base de datos establecida correctamente
+[2025-05-15 15:10:14] Tablas creadas correctamente
+[2025-05-15 15:10:14] Usuarios prueba1 y prueba2 eliminados del sistema
+[2025-05-15 15:10:14] Usuario user1 creado o verificado en el sistema
+[2025-05-15 15:10:15] Usuario autenticado correctamente: Yeray
+[2025-05-15 15:10:16] Cliente conectado: Yeray
+[2025-05-15 15:10:36] ERROR: Error en la conexión con el cliente
+[2025-05-15 15:10:36] Exception: Software caused connection abort: recv failed
+[2025-05-15 15:10:36]   at java.base/java.net.SocketInputStream.socketRead0(Native Method)
+[2025-05-15 15:10:36]   at java.base/java.net.SocketInputStream.socketRead(SocketInputStream.java:115)
+[2025-05-15 15:10:36]   at java.base/java.net.SocketInputStream.read(SocketInputStream.java:168)
+[2025-05-15 15:10:36]   at java.base/java.net.SocketInputStream.read(SocketInputStream.java:140)
+[2025-05-15 15:10:36]   at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+[2025-05-15 15:10:36]   at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+[2025-05-15 15:10:36]   at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+[2025-05-15 15:10:36]   at java.base/java.io.InputStreamReader.read(InputStreamReader.java:181)
+[2025-05-15 15:10:36]   at java.base/java.io.BufferedReader.fill(BufferedReader.java:161)
+[2025-05-15 15:10:36]   at java.base/java.io.BufferedReader.readLine(BufferedReader.java:326)
+[2025-05-15 15:10:36]   at java.base/java.io.BufferedReader.readLine(BufferedReader.java:392)
+[2025-05-15 15:10:36]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleClient(ClientHandler.java:94)
+[2025-05-15 15:10:36]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.run(ClientHandler.java:33)
+[2025-05-15 15:10:36]   at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+[2025-05-15 15:10:36]   at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+[2025-05-15 15:10:36]   at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-15 15:10:36] Cliente desconectado: Yeray
+[2025-05-15 15:10:36] Servidor detenido
+[2025-05-15 15:10:36] Servidor detenido
+[2025-05-15 15:11:09] Iniciando servidor de chat...
+[2025-05-15 15:11:09] Servidor iniciado en el puerto 5000
+[2025-05-15 15:11:09] Esperando conexiones...
+[2025-05-15 15:11:15] Nueva conexión desde: 127.0.0.1
+[2025-05-15 15:11:15] Procesando mensaje: user1
+[2025-05-15 15:11:15] Autenticando usuario: user1 (usando hash+salt)
+[2025-05-15 15:11:15] Driver PostgreSQL cargado correctamente
+[2025-05-15 15:11:17] Conexión a la base de datos establecida correctamente
+[2025-05-15 15:11:18] Tablas creadas correctamente
+[2025-05-15 15:11:18] Usuarios prueba1 y prueba2 eliminados del sistema
+[2025-05-15 15:11:18] Usuario user1 creado o verificado en el sistema
+[2025-05-15 15:11:19] Usuario autenticado correctamente: user1
+[2025-05-15 15:11:20] Cliente conectado: user1
+[2025-05-15 15:17:52] ERROR: Error en la conexión con el cliente
+[2025-05-15 15:17:52] Exception: Software caused connection abort: recv failed
+[2025-05-15 15:17:52]   at java.base/java.net.SocketInputStream.socketRead0(Native Method)
+[2025-05-15 15:17:52]   at java.base/java.net.SocketInputStream.socketRead(SocketInputStream.java:115)
+[2025-05-15 15:17:52]   at java.base/java.net.SocketInputStream.read(SocketInputStream.java:168)
+[2025-05-15 15:17:52]   at java.base/java.net.SocketInputStream.read(SocketInputStream.java:140)
+[2025-05-15 15:17:52]   at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+[2025-05-15 15:17:52]   at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+[2025-05-15 15:17:52]   at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+[2025-05-15 15:17:52]   at java.base/java.io.InputStreamReader.read(InputStreamReader.java:181)
+[2025-05-15 15:17:52]   at java.base/java.io.BufferedReader.fill(BufferedReader.java:161)
+[2025-05-15 15:17:52]   at java.base/java.io.BufferedReader.readLine(BufferedReader.java:326)
+[2025-05-15 15:17:52]   at java.base/java.io.BufferedReader.readLine(BufferedReader.java:392)
+[2025-05-15 15:17:52]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleClient(ClientHandler.java:94)
+[2025-05-15 15:17:52]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.run(ClientHandler.java:33)
+[2025-05-15 15:17:52]   at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+[2025-05-15 15:17:52]   at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+[2025-05-15 15:17:52]   at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-15 15:17:52] Cliente desconectado: user1
+[2025-05-15 15:17:52] Servidor detenido
+[2025-05-15 15:17:52] Servidor detenido
+[2025-05-15 15:20:44] Iniciando servidor de chat...
+[2025-05-15 15:20:44] Servidor iniciado en el puerto 5000
+[2025-05-15 15:20:44] Esperando conexiones...
+[2025-05-15 15:20:50] Nueva conexión desde: 127.0.0.1
+[2025-05-15 15:20:50] Procesando mensaje: user1
+[2025-05-15 15:20:50] Autenticando usuario: user1 (usando hash+salt)
+[2025-05-15 15:20:50] Driver PostgreSQL cargado correctamente
+[2025-05-15 15:20:51] Conexión a la base de datos establecida correctamente
+[2025-05-15 15:20:52] Tablas creadas correctamente
+[2025-05-15 15:20:52] Usuario user1 creado o verificado en el sistema
+[2025-05-15 15:20:53] Usuario autenticado correctamente: user1
+[2025-05-15 15:20:53] Cliente conectado: user1
+[2025-05-15 15:20:59] ERROR: Error en la conexión con el cliente
+[2025-05-15 15:20:59] Exception: Software caused connection abort: recv failed
+[2025-05-15 15:20:59]   at java.base/java.net.SocketInputStream.socketRead0(Native Method)
+[2025-05-15 15:20:59]   at java.base/java.net.SocketInputStream.socketRead(SocketInputStream.java:115)
+[2025-05-15 15:20:59]   at java.base/java.net.SocketInputStream.read(SocketInputStream.java:168)
+[2025-05-15 15:20:59]   at java.base/java.net.SocketInputStream.read(SocketInputStream.java:140)
+[2025-05-15 15:20:59]   at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+[2025-05-15 15:20:59]   at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+[2025-05-15 15:20:59]   at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+[2025-05-15 15:20:59]   at java.base/java.io.InputStreamReader.read(InputStreamReader.java:181)
+[2025-05-15 15:20:59]   at java.base/java.io.BufferedReader.fill(BufferedReader.java:161)
+[2025-05-15 15:20:59]   at java.base/java.io.BufferedReader.readLine(BufferedReader.java:326)
+[2025-05-15 15:20:59]   at java.base/java.io.BufferedReader.readLine(BufferedReader.java:392)
+[2025-05-15 15:20:59]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleClient(ClientHandler.java:93)
+[2025-05-15 15:20:59]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.run(ClientHandler.java:32)
+[2025-05-15 15:20:59]   at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+[2025-05-15 15:20:59]   at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+[2025-05-15 15:20:59]   at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-15 15:20:59] Cliente desconectado: user1
+[2025-05-15 15:20:59] Servidor detenido
+[2025-05-15 15:20:59] Servidor detenido
+[2025-05-15 15:24:44] Iniciando servidor de chat...
+[2025-05-15 15:24:44] Servidor iniciado en el puerto 5000
+[2025-05-15 15:24:44] Esperando conexiones...
+[2025-05-15 15:26:13] Servidor detenido
+[2025-05-15 15:26:13] Servidor detenido
+[2025-05-15 15:29:49] Iniciando servidor de chat...
+[2025-05-15 15:29:49] Servidor iniciado en el puerto 5000
+[2025-05-15 15:29:49] Esperando conexiones...
+[2025-05-15 15:29:56] Nueva conexión desde: 127.0.0.1
+[2025-05-15 15:29:56] Procesando mensaje: user1
+[2025-05-15 15:29:56] Autenticando usuario: user1 (usando hash+salt)
+[2025-05-15 15:29:56] Driver PostgreSQL cargado correctamente
+[2025-05-15 15:29:57] Conexión a la base de datos establecida correctamente
+[2025-05-15 15:29:57] Tablas creadas correctamente
+[2025-05-15 15:29:57] Usuario user1 creado o verificado en el sistema
+[2025-05-15 15:29:58] Usuario autenticado correctamente: user1
+[2025-05-15 15:29:58] Cliente conectado: user1
+[2025-05-15 15:30:36] ERROR: Error en la conexión con el cliente
+[2025-05-15 15:30:36] Exception: Software caused connection abort: recv failed
+[2025-05-15 15:30:36]   at java.base/java.net.SocketInputStream.socketRead0(Native Method)
+[2025-05-15 15:30:36]   at java.base/java.net.SocketInputStream.socketRead(SocketInputStream.java:115)
+[2025-05-15 15:30:36]   at java.base/java.net.SocketInputStream.read(SocketInputStream.java:168)
+[2025-05-15 15:30:36]   at java.base/java.net.SocketInputStream.read(SocketInputStream.java:140)
+[2025-05-15 15:30:36]   at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+[2025-05-15 15:30:36]   at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+[2025-05-15 15:30:36]   at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+[2025-05-15 15:30:36]   at java.base/java.io.InputStreamReader.read(InputStreamReader.java:181)
+[2025-05-15 15:30:36]   at java.base/java.io.BufferedReader.fill(BufferedReader.java:161)
+[2025-05-15 15:30:36]   at java.base/java.io.BufferedReader.readLine(BufferedReader.java:326)
+[2025-05-15 15:30:36]   at java.base/java.io.BufferedReader.readLine(BufferedReader.java:392)
+[2025-05-15 15:30:36]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleClient(ClientHandler.java:93)
+[2025-05-15 15:30:36]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.run(ClientHandler.java:32)
+[2025-05-15 15:30:36]   at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+[2025-05-15 15:30:36]   at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+[2025-05-15 15:30:36]   at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-15 15:30:36] Cliente desconectado: user1
+[2025-05-15 15:30:36] Servidor detenido
+[2025-05-15 15:30:36] Servidor detenido
+[2025-05-15 15:38:10] Iniciando servidor de chat...
+[2025-05-15 15:38:10] Servidor iniciado en el puerto 5000
+[2025-05-15 15:38:10] Esperando conexiones...
+[2025-05-15 15:38:16] Nueva conexión desde: 127.0.0.1
+[2025-05-15 15:38:16] Procesando mensaje: user1
+[2025-05-15 15:38:16] Autenticando usuario: user1 (usando hash+salt)
+[2025-05-15 15:38:16] Driver PostgreSQL cargado correctamente
+[2025-05-15 15:38:17] Conexión a la base de datos establecida correctamente
+[2025-05-15 15:38:17] Tablas creadas correctamente
+[2025-05-15 15:38:17] Usuario user1 creado o verificado en el sistema
+[2025-05-15 15:38:19] Usuario autenticado correctamente: user1
+[2025-05-15 15:38:19] Cliente conectado: user1

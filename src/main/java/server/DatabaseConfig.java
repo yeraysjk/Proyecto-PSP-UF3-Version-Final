@@ -31,121 +31,63 @@ public class DatabaseConfig {
         try (Connection conn = getConnection()) {
             Logger.log("Conexión a la base de datos establecida correctamente");
             
-            // Crear tabla de usuarios1
+            // Crear tabla de usuarios
             String createUsersTable = 
-                "CREATE TABLE IF NOT EXISTS usuarios1 (" +
+                "CREATE TABLE IF NOT EXISTS usuarios (" +
                 "    id SERIAL PRIMARY KEY," +
                 "    username VARCHAR(50) UNIQUE NOT NULL," +
-                "    password VARCHAR(255) NOT NULL," +
+                "    password_hash VARCHAR(255) NOT NULL," +
+                "    salt VARCHAR(255) NOT NULL," +
                 "    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP," +
                 "    is_admin BOOLEAN DEFAULT FALSE" +
                 ")";
             
-            // Crear tabla de mensajes1
+            // Crear tabla de mensajes
             String createMessagesTable = 
-                "CREATE TABLE IF NOT EXISTS mensajes1 (" +
+                "CREATE TABLE IF NOT EXISTS mensajes (" +
                 "    id SERIAL PRIMARY KEY," +
                 "    sender VARCHAR(50) NOT NULL," +
                 "    recipient VARCHAR(50) NOT NULL," +
                 "    message TEXT NOT NULL," +
                 "    timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP," +
                 "    is_read BOOLEAN DEFAULT FALSE," +
-                "    FOREIGN KEY (sender) REFERENCES usuarios1(username)," +
-                "    FOREIGN KEY (recipient) REFERENCES usuarios1(username)" +
+                "    FOREIGN KEY (sender) REFERENCES usuarios(username)," +
+                "    FOREIGN KEY (recipient) REFERENCES usuarios(username)" +
                 ")";
             
-            // Crear tabla de mensajes_generales1
+            // Crear tabla de mensajes_generales
             String createGeneralMessagesTable = 
-                "CREATE TABLE IF NOT EXISTS mensajes_generales1 (" +
+                "CREATE TABLE IF NOT EXISTS mensajes_generales (" +
                 "    id SERIAL PRIMARY KEY," +
                 "    sender VARCHAR(50) NOT NULL," +
                 "    message TEXT NOT NULL," +
                 "    timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP," +
-                "    FOREIGN KEY (sender) REFERENCES usuarios1(username)" +
+                "    FOREIGN KEY (sender) REFERENCES usuarios(username)" +
                 ")";
             
             try (Statement stmt = conn.createStatement()) {
                 stmt.execute(createUsersTable);
                 stmt.execute(createMessagesTable);
                 stmt.execute(createGeneralMessagesTable);
-                Logger.log("Tablas nuevas creadas correctamente");
+                Logger.log("Tablas creadas correctamente");
             }
-            // Crear usuarios de prueba si no existen
-            try (PreparedStatement ps = conn.prepareStatement("INSERT INTO usuarios1 (username, password) SELECT ?, ? WHERE NOT EXISTS (SELECT 1 FROM usuarios1 WHERE username = ?)");) {
+            // Crear usuario de prueba si no existe
+            try (PreparedStatement ps = conn.prepareStatement("INSERT INTO usuarios (username, password_hash, salt) SELECT ?, ?, ? WHERE NOT EXISTS (SELECT 1 FROM usuarios WHERE username = ?)");) {
+                // Generar salt y hash para el usuario de prueba
+                String salt1 = UserManager.generateSalt();
+                String passwordHash1 = UserManager.hashPassword("user1", salt1);
                 ps.setString(1, "user1");
-                ps.setString(2, "user1");
-                ps.setString(3, "user1");
+                ps.setString(2, passwordHash1);
+                ps.setString(3, salt1);
+                ps.setString(4, "user1");
                 ps.executeUpdate();
-                ps.setString(1, "user2");
-                ps.setString(2, "user2");
-                ps.setString(3, "user2");
-                ps.executeUpdate();
-                ps.setString(1, "prueba1");
-                ps.setString(2, "prueba1");
-                ps.setString(3, "prueba1");
-                ps.executeUpdate();
-                ps.setString(1, "prueba2");
-                ps.setString(2, "prueba2");
-                ps.setString(3, "prueba2");
-                ps.executeUpdate();
+                Logger.debug("Usuario user1 creado o verificado en el sistema");
             }
-        }
-    }
-
-    public static boolean registerUser(String username, String password) {
-        String sql = "INSERT INTO usuarios1 (username, password) VALUES (?, ?)";
-        try (Connection conn = getConnection();
-             PreparedStatement pstmt = conn.prepareStatement(sql)) {
-            pstmt.setString(1, username);
-            pstmt.setString(2, password);
-            pstmt.executeUpdate();
-            System.out.println("Usuario registrado correctamente: " + username);
-            return true;
-        } catch (SQLException e) {
-            System.err.println("Error registrando usuario: " + e.getMessage());
-            return false;
-        }
-    }
-
-    public static boolean validateUser(String username, String password) {
-        String sql = "SELECT password FROM usuarios1 WHERE username = ?";
-        try (Connection conn = getConnection();
-             PreparedStatement pstmt = conn.prepareStatement(sql)) {
-            pstmt.setString(1, username);
-            try (ResultSet rs = pstmt.executeQuery()) {
-                if (rs.next()) {
-                    String storedPassword = rs.getString("password");
-                    boolean isValid = storedPassword.equals(password);
-                    System.out.println("Validación de usuario " + username + ": " + (isValid ? "correcta" : "incorrecta"));
-                    return isValid;
-                }
-                System.out.println("Usuario no encontrado: " + username);
-            }
-        } catch (SQLException e) {
-            System.err.println("Error validando usuario: " + e.getMessage());
-        }
-        return false;
-    }
-
-    public static boolean userExists(String username) {
-        String sql = "SELECT COUNT(*) FROM usuarios1 WHERE username = ?";
-        try (Connection conn = getConnection();
-             PreparedStatement pstmt = conn.prepareStatement(sql)) {
-            pstmt.setString(1, username);
-            try (ResultSet rs = pstmt.executeQuery()) {
-                rs.next();
-                boolean exists = rs.getInt(1) > 0;
-                System.out.println("Verificación de existencia de usuario " + username + ": " + (exists ? "existe" : "no existe"));
-                return exists;
-            }
-        } catch (SQLException e) {
-            System.err.println("Error verificando usuario: " + e.getMessage());
-            return false;
         }
     }
 
     public static void saveMessage(String sender, String recipient, String message) {
-        String sql = "INSERT INTO mensajes1 (sender, recipient, message, is_read) VALUES (?, ?, ?, ?)";
+        String sql = "INSERT INTO mensajes (sender, recipient, message, is_read) VALUES (?, ?, ?, ?)";
         try (Connection conn = getConnection();
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
             pstmt.setString(1, sender);
@@ -153,15 +95,15 @@ public class DatabaseConfig {
             pstmt.setString(3, message);
             pstmt.setBoolean(4, false);
             pstmt.executeUpdate();
-            System.out.println("Mensaje guardado en la base de datos: " + sender + " -> " + recipient + ": " + message);
+            Logger.debug("Mensaje guardado en la base de datos: " + sender + " -> " + recipient + ": " + message);
         } catch (SQLException e) {
-            System.err.println("Error guardando mensaje: " + e.getMessage());
+            Logger.error("Error guardando mensaje: " + e.getMessage(), e);
         }
     }
 
     public static List<String> getUnreadMessages(String recipient) {
         List<String> messages = new ArrayList<>();
-        String sql = "SELECT sender, message, timestamp FROM mensajes1 WHERE recipient = ? AND is_read = 0 ORDER BY timestamp";
+        String sql = "SELECT sender, message, timestamp FROM mensajes WHERE recipient = ? AND is_read = 0 ORDER BY timestamp";
         try (Connection conn = getConnection();
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
             pstmt.setString(1, recipient);
@@ -174,20 +116,20 @@ public class DatabaseConfig {
                 }
             }
             // Marcar mensajes como leídos
-            String updateSql = "UPDATE mensajes1 SET is_read = 1 WHERE recipient = ? AND is_read = 0";
+            String updateSql = "UPDATE mensajes SET is_read = 1 WHERE recipient = ? AND is_read = 0";
             try (PreparedStatement updateStmt = conn.prepareStatement(updateSql)) {
                 updateStmt.setString(1, recipient);
                 updateStmt.executeUpdate();
             }
         } catch (SQLException e) {
-            System.err.println("Error obteniendo mensajes: " + e.getMessage());
+            Logger.error("Error obteniendo mensajes: " + e.getMessage(), e);
         }
         return messages;
     }
 
     public static List<String> getAllUsers() {
         List<String> users = new ArrayList<>();
-        String sql = "SELECT username FROM usuarios1 WHERE username != 'admin' ORDER BY username";
+        String sql = "SELECT username FROM usuarios WHERE username != 'admin' ORDER BY username";
         try (Connection conn = getConnection();
              Statement stmt = conn.createStatement();
              ResultSet rs = stmt.executeQuery(sql)) {
@@ -195,21 +137,21 @@ public class DatabaseConfig {
                 users.add(rs.getString("username"));
             }
         } catch (SQLException e) {
-            System.err.println("Error obteniendo usuarios: " + e.getMessage());
+            Logger.error("Error obteniendo usuarios: " + e.getMessage(), e);
         }
         return users;
     }
 
     public static void saveGeneralMessage(String sender, String message) {
-        String sql = "INSERT INTO mensajes_generales1 (sender, message) VALUES (?, ?)";
+        String sql = "INSERT INTO mensajes_generales (sender, message) VALUES (?, ?)";
         try (Connection conn = getConnection();
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
             pstmt.setString(1, sender);
             pstmt.setString(2, message);
             pstmt.executeUpdate();
-            System.out.println("Mensaje general guardado en la base de datos: " + sender + ": " + message);
+            Logger.debug("Mensaje general guardado en la base de datos: " + sender + ": " + message);
         } catch (SQLException e) {
-            System.err.println("Error guardando mensaje general: " + e.getMessage());
+            Logger.error("Error guardando mensaje general: " + e.getMessage(), e);
         }
     }
 
@@ -218,14 +160,14 @@ public class DatabaseConfig {
         // Obtener mensajes privados
         String privateSql = 
             "SELECT sender, recipient, message, timestamp " +
-            "FROM mensajes1 " +
+            "FROM mensajes " +
             "WHERE sender = ? OR recipient = ? " +
             "ORDER BY timestamp DESC " +
             "LIMIT 50";
         // Obtener mensajes generales
         String generalSql = 
             "SELECT sender, message, timestamp " +
-            "FROM mensajes_generales1 " +
+            "FROM mensajes_generales " +
             "ORDER BY timestamp DESC " +
             "LIMIT 50";
         try (Connection conn = getConnection()) {
@@ -273,9 +215,9 @@ public class DatabaseConfig {
             if (messages.size() > 50) {
                 messages = messages.subList(0, 50);
             }
-            System.out.println("Total de mensajes encontrados: " + messages.size());
+            Logger.debug("Total de mensajes encontrados: " + messages.size());
         } catch (SQLException e) {
-            System.err.println("Error obteniendo historial de mensajes: " + e.getMessage());
+            Logger.error("Error obteniendo historial de mensajes: " + e.getMessage(), e);
         }
         return messages;
     }
@@ -295,28 +237,27 @@ public class DatabaseConfig {
     public static void clearMessageHistory() {
         try (Connection conn = getConnection()) {
             // Borrar mensajes privados
-            String privateSql = "DELETE FROM mensajes1";
+            String privateSql = "DELETE FROM mensajes";
             try (PreparedStatement pstmt = conn.prepareStatement(privateSql)) {
                 pstmt.executeUpdate();
             }
 
             // Borrar mensajes generales
-            String generalSql = "DELETE FROM mensajes_generales1";
+            String generalSql = "DELETE FROM mensajes_generales";
             try (PreparedStatement pstmt = conn.prepareStatement(generalSql)) {
                 pstmt.executeUpdate();
             }
 
-            System.out.println("Historial de mensajes limpiado correctamente");
+            Logger.debug("Historial de mensajes limpiado correctamente");
         } catch (SQLException e) {
-            System.err.println("Error al limpiar el historial de mensajes: " + e.getMessage());
-            e.printStackTrace();
+            Logger.error("Error al limpiar el historial de mensajes: " + e.getMessage(), e);
         }
     }
 
     public static void clearUserMessages(String username) {
         try (Connection conn = getConnection()) {
             // Borrar mensajes privados del usuario
-            String privateSql = "DELETE FROM mensajes1 WHERE sender = ? OR recipient = ?";
+            String privateSql = "DELETE FROM mensajes WHERE sender = ? OR recipient = ?";
             try (PreparedStatement pstmt = conn.prepareStatement(privateSql)) {
                 pstmt.setString(1, username);
                 pstmt.setString(2, username);
@@ -324,31 +265,29 @@ public class DatabaseConfig {
             }
 
             // Borrar mensajes generales del usuario
-            String generalSql = "DELETE FROM mensajes_generales1 WHERE sender = ?";
+            String generalSql = "DELETE FROM mensajes_generales WHERE sender = ?";
             try (PreparedStatement pstmt = conn.prepareStatement(generalSql)) {
                 pstmt.setString(1, username);
                 pstmt.executeUpdate();
             }
 
-            System.out.println("Mensajes del usuario " + username + " limpiados correctamente");
+            Logger.debug("Mensajes del usuario " + username + " limpiados correctamente");
         } catch (SQLException e) {
-            System.err.println("Error al limpiar los mensajes del usuario: " + e.getMessage());
-            e.printStackTrace();
+            Logger.error("Error al limpiar los mensajes del usuario: " + e.getMessage(), e);
         }
     }
 
     public static void clearGeneralMessages() {
         try (Connection conn = getConnection()) {
             // Borrar solo mensajes generales
-            String generalSql = "DELETE FROM mensajes_generales1";
+            String generalSql = "DELETE FROM mensajes_generales";
             try (PreparedStatement pstmt = conn.prepareStatement(generalSql)) {
                 pstmt.executeUpdate();
             }
 
-            System.out.println("Mensajes generales limpiados correctamente");
+            Logger.debug("Mensajes generales limpiados correctamente");
         } catch (SQLException e) {
-            System.err.println("Error al limpiar los mensajes generales: " + e.getMessage());
-            e.printStackTrace();
+            Logger.error("Error al limpiar los mensajes generales: " + e.getMessage(), e);
         }
     }
 } 

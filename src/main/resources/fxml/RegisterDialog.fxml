@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="mainContainer" alignment="CENTER" spacing="16" xmlns="http://javafx.com/javafx/8" 
+      xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.RegisterDialogController"
+      styleClass="login-bg" stylesheets="login_style.css">
+
+    <padding>
+        <Insets top="20" right="30" bottom="20" left="30" />
+    </padding>
+
+    <Label text="Registro de Usuario" styleClass="login-title" />
+    
+    <Label text="Crea una nueva cuenta para acceder al chat" 
+           styleClass="login-subtitle" 
+           alignment="CENTER" wrapText="true" maxWidth="280" />
+    
+    <Separator prefWidth="280" />
+    
+    <HBox alignment="CENTER_LEFT" prefWidth="280">
+        <Label text="Información de Usuario" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: #555;" />
+    </HBox>
+    
+    <TextField fx:id="usernameField" promptText="Usuario" maxWidth="280" prefHeight="35" 
+               styleClass="login-input">
+        <padding>
+            <Insets left="10" right="10" />
+        </padding>
+    </TextField>
+    
+    <PasswordField fx:id="passwordField" promptText="Contraseña" maxWidth="280" prefHeight="35"
+                  styleClass="login-input">
+        <padding>
+            <Insets left="10" right="10" />
+        </padding>
+    </PasswordField>
+    
+    <PasswordField fx:id="repeatPasswordField" promptText="Repetir contraseña" maxWidth="280" prefHeight="35"
+                  styleClass="login-input">
+        <padding>
+            <Insets left="10" right="10" />
+        </padding>
+    </PasswordField>
+    
+    <Label fx:id="errorLabel" maxWidth="280" wrapText="true" styleClass="login-error" visible="false" />
+    
+    <HBox alignment="CENTER" spacing="15">
+        <Button fx:id="registerButton" text="Registrar" prefWidth="130" prefHeight="35" 
+                styleClass="login-btn" />
+        <Button fx:id="backButton" text="Volver" prefWidth="130" prefHeight="35"
+                styleClass="register-btn" />
+    </HBox>
+</VBox> 

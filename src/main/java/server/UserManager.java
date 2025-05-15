@@ -14,27 +14,35 @@ public class UserManager {
     private static final int SALT_LENGTH = 16;
 
     public static boolean registerUser(String username, String password) {
+        Logger.log("Intentando registrar usuario: " + username);
         if (userExists(username)) {
             Logger.log("Intento de registro fallido: usuario ya existe - " + username);
             return false;
         }
 
-        // Guardar contraseña en texto plano para pruebas
-        String sql = "INSERT INTO usuarios (username, password) VALUES (?, ?)";
+        // Generar salt y hash para la contraseña
+        String salt = generateSalt();
+        String passwordHash = hashPassword(password, salt);
+        Logger.log("Hash y salt generados para el usuario: " + username);
+        
+        // Guardar usuario con contraseña cifrada
+        String sql = "INSERT INTO usuarios (username, password_hash, salt) VALUES (?, ?, ?)";
         try (Connection conn = DatabaseConfig.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
             stmt.setString(1, username);
-            stmt.setString(2, password);
+            stmt.setString(2, passwordHash);
+            stmt.setString(3, salt);
             stmt.executeUpdate();
             Logger.log("Usuario registrado correctamente: " + username);
             return true;
         } catch (SQLException e) {
-            Logger.error("Error registrando usuario", e);
+            Logger.error("Error SQL registrando usuario: " + e.getMessage(), e);
             return false;
         }
     }
 
     public static boolean authenticateUser(String username, String password) {
+        Logger.log("Autenticando usuario: " + username + " (usando hash+salt)");
         String sql = "SELECT password_hash, salt FROM usuarios WHERE username = ?";
         try (Connection conn = DatabaseConfig.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
@@ -48,16 +56,17 @@ public class UserManager {
                 boolean authenticated = storedHash.equals(calculatedHash);
                 
                 if (authenticated) {
-                    Logger.log("Usuario autenticado: " + username);
+                    Logger.log("Usuario autenticado correctamente: " + username);
                 } else {
-                    Logger.log("Intento de autenticación fallido: " + username);
+                    Logger.log("Intento de autenticación fallido (hash no coincide): " + username);
                 }
                 
                 return authenticated;
             }
+            Logger.log("Intento de autenticación fallido (usuario no existe): " + username);
             return false;
         } catch (SQLException e) {
-            Logger.error("Error autenticando usuario", e);
+            Logger.error("Error SQL autenticando usuario: " + e.getMessage(), e);
             return false;
         }
     }

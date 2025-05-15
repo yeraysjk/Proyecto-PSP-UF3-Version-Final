@@ -61,11 +61,12 @@ public class LoginDialogController {
             regStage.initOwner(dialogStage);
             controller.setDialogStage(regStage);
             regStage.showAndWait();
+            
             if (controller.isRegistered()) {
                 usernameField.setText(controller.getUsername());
                 passwordField.setText(controller.getPassword());
-                errorLabel.setText("Usuario listo para registrar. Pulsa Iniciar sesión.");
-                errorLabel.setStyle("-fx-text-fill: #00bcd4;");
+                errorLabel.setText("¡Usuario registrado! Haz clic en Iniciar sesión para continuar.");
+                errorLabel.setStyle("-fx-text-fill: #4caf50;");
                 errorLabel.setVisible(true);
             }
         } catch (Exception ex) {

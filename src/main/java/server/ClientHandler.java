@@ -3,10 +3,10 @@ package server;
 import java.io.*;
 import java.net.Socket;
 import javax.net.ssl.SSLSocket;
-import java.util.Base64;
 import java.util.concurrent.atomic.AtomicBoolean;
 import server.UserManager;
 import server.MessageManager;
+import server.DatabaseConfig;
 
 public class ClientHandler implements Runnable {
     private final Socket socket;
@@ -38,14 +38,40 @@ public class ClientHandler implements Runnable {
     }
 
     private void handleClient() throws IOException {
-        // Esperar login
-        String loginMessage = in.readLine();
-        if (loginMessage == null || !loginMessage.startsWith("LOGIN:")) {
+        // Esperar login o registro
+        String initialMessage = in.readLine();
+        
+        // Permitir registro antes del login
+        if (initialMessage != null && initialMessage.startsWith("REGISTER:")) {
+            String registerData = initialMessage.substring(9);
+            handleRegister(registerData);
+            return;
+        }
+        
+        // Continuar con el proceso de login
+        if (initialMessage == null || !initialMessage.startsWith("LOGIN:")) {
             sendMessage("ERROR: Formato de login inválido");
             return;
         }
 
-        username = loginMessage.substring(6);
+        // Obtener username y password del mensaje de login (formato LOGIN:username:password)
+        String[] loginParts = initialMessage.substring(6).split(":", 2);
+        if (loginParts.length != 2) {
+            sendMessage("ERROR: Formato de login inválido (debe incluir usuario y contraseña)");
+            return;
+        }
+        
+        Logger.log("Procesando mensaje: " + loginParts[0]);
+
+        username = loginParts[0];
+        String password = loginParts[1];
+        
+        // Verificar credenciales usando UserManager
+        if (!UserManager.authenticateUser(username, password)) {
+            sendMessage("ERROR: Usuario o contraseña incorrectos");
+            return;
+        }
+        
         if (!server.addClient(username, this)) {
             sendMessage("ERROR: Usuario ya conectado");
             return;
@@ -77,10 +103,6 @@ public class ClientHandler implements Runnable {
                 handleGeneralMessage(message.substring(8));
             } else if (message.startsWith("PRIVATE:")) {
                 handlePrivateMessage(message.substring(8));
-            } else if (message.startsWith("FILE:")) {
-                handleFileMessage(message.substring(5));
-            } else if (message.startsWith("PRIVATE_FILE:")) {
-                handlePrivateFileMessage(message.substring(13));
             } else if (message.equals("GET_USERS")) {
                 handleGetUsers();
             } else if (message.equals("LOGOUT")) {
@@ -141,31 +163,6 @@ public class ClientHandler implements Runnable {
         
         // Enviar el mensaje al destinatario
         server.sendPrivateMessage(username, recipient, content);
-    }
-
-    private void handleFileMessage(String message) {
-        String[] parts = message.split(":", 2);
-        if (parts.length != 2) {
-            sendMessage("ERROR: Formato de archivo inválido");
-            return;
-        }
-
-        String fileName = parts[0];
-        byte[] fileData = Base64.getDecoder().decode(parts[1]);
-        server.broadcastFile(username, null, fileName, fileData);
-    }
-
-    private void handlePrivateFileMessage(String message) {
-        String[] parts = message.split(":", 3);
-        if (parts.length != 3) {
-            sendMessage("ERROR: Formato de archivo privado inválido");
-            return;
-        }
-
-        String recipient = parts[0];
-        String fileName = parts[1];
-        byte[] fileData = Base64.getDecoder().decode(parts[2]);
-        server.sendFile(username, recipient, fileName, fileData);
     }
 
     private void handleGetUsers() {

@@ -20,10 +20,10 @@ public class MessageManager {
         List<String> messages = new ArrayList<>();
         
         // Obtener mensajes generales
-        String generalSql = "SELECT sender, message, timestamp FROM mensajes_generales1 ORDER BY timestamp DESC LIMIT 50";
+        String generalSql = "SELECT sender, message, timestamp FROM mensajes_generales ORDER BY timestamp DESC LIMIT 50";
         
         // Obtener mensajes privados donde el usuario es remitente o destinatario
-        String privateSql = "SELECT sender, recipient, message, timestamp FROM mensajes1 " +
+        String privateSql = "SELECT sender, recipient, message, timestamp FROM mensajes " +
                            "WHERE sender = ? OR recipient = ? ORDER BY timestamp DESC LIMIT 50";
         
         try (Connection conn = DatabaseConfig.getConnection()) {
@@ -85,7 +85,7 @@ public class MessageManager {
 
     public static List<String> getUnreadMessages(String username) {
         List<String> messages = new ArrayList<>();
-        String sql = "SELECT sender, message, timestamp FROM mensajes1 " +
+        String sql = "SELECT sender, message, timestamp FROM mensajes " +
                     "WHERE recipient = ? AND is_read = 0 ORDER BY timestamp";
 
         try (Connection conn = DatabaseConfig.getConnection();
@@ -112,7 +112,7 @@ public class MessageManager {
     }
 
     private static void markMessagesAsRead(String username) {
-        String sql = "UPDATE mensajes1 SET is_read = 1 WHERE recipient = ? AND is_read = 0";
+        String sql = "UPDATE mensajes SET is_read = 1 WHERE recipient = ? AND is_read = 0";
         try (Connection conn = DatabaseConfig.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
             stmt.setString(1, username);
@@ -123,7 +123,7 @@ public class MessageManager {
     }
 
     public static void clearMessageHistory() {
-        String[] tables = {"mensajes1", "mensajes_generales1"};
+        String[] tables = {"mensajes", "mensajes_generales"};
         for (String table : tables) {
             String sql = "DELETE FROM " + table;
             try (Connection conn = DatabaseConfig.getConnection();
@@ -138,7 +138,7 @@ public class MessageManager {
 
     public static List<String> getPrivateHistory(String user1, String user2) {
         List<String> messages = new ArrayList<>();
-        String sql = "SELECT sender, recipient, message, timestamp FROM mensajes1 " +
+        String sql = "SELECT sender, recipient, message, timestamp FROM mensajes " +
                      "WHERE (sender = ? AND recipient = ?) OR (sender = ? AND recipient = ?) " +
                      "ORDER BY timestamp ASC";
         try (Connection conn = DatabaseConfig.getConnection();
