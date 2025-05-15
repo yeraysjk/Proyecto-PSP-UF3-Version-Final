@@ -63,6 +63,7 @@ public class ChatWindowController {
                 currentSelectedUser = newVal;
                 mensajes.clear(); // Limpiar mensajes al cambiar de usuario
                 mensajeIds.clear(); // Limpiar IDs de mensajes
+                lastDateHeader = null; // Resetear el encabezado de fecha
                 chatListView.setItems(mensajes);
                 // Solicitar historial adecuado
                 if (chatClient != null) {
@@ -333,6 +334,13 @@ public class ChatWindowController {
             return;
         }
         
+        // Limpiar mensajes solo si es la primera carga
+        if (mensajes.isEmpty()) {
+            mensajes.clear();
+            mensajeIds.clear();
+            lastDateHeader = null;
+        }
+        
         String[] lines = historial.split("\\n|\n");
         for (String line : lines) {
             if (line.trim().isEmpty()) continue;
@@ -395,9 +403,6 @@ public class ChatWindowController {
                 chatClient.sendMessage(message, recipient);
                 
                 // Mostrar la imagen localmente
-                String displayMessage = recipient.isEmpty() ? 
-                    "Tú (a todos): [Imagen]" :
-                    "Tú (a " + recipient + "): [Imagen]";
                 MensajeChat msg = new MensajeChat(imagePath, "Tú", true, LocalDate.now(), LocalTime.now());
                 msg.setImagen(true);
                 appendMessage(msg);

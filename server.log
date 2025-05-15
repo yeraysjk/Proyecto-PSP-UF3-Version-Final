@@ -2304,3 +2304,89 @@
 [2025-05-15 16:40:44] Mensaje general guardado en la base de datos: user3: eiii
 [2025-05-15 16:41:14] Mensaje general guardado en la base de datos: user3: IMAGE:src/main/resources/images/1747320074271_barra.png
 [2025-05-15 16:41:49] Mensaje general guardado en la base de datos: user3: IMAGE:src/main/resources/images/1747320109077_diseny.png
+[2025-05-15 17:01:20] Iniciando servidor de chat...
+[2025-05-15 17:01:20] Servidor iniciado en el puerto 5000
+[2025-05-15 17:01:20] Esperando conexiones...
+[2025-05-15 17:01:24] Iniciando servidor de chat...
+[2025-05-15 17:01:24] ERROR: Error iniciando el servidor
+[2025-05-15 17:01:24] Exception: L’adreça ja és en ús (Bind failed)
+[2025-05-15 17:01:24]   at java.base/java.net.PlainSocketImpl.socketBind(Native Method)
+[2025-05-15 17:01:24]   at java.base/java.net.AbstractPlainSocketImpl.bind(AbstractPlainSocketImpl.java:452)
+[2025-05-15 17:01:24]   at java.base/java.net.ServerSocket.bind(ServerSocket.java:395)
+[2025-05-15 17:01:24]   at java.base/java.net.ServerSocket.<init>(ServerSocket.java:257)
+[2025-05-15 17:01:24]   at java.base/java.net.ServerSocket.<init>(ServerSocket.java:149)
+[2025-05-15 17:01:24]   at yeray.priede.projecte_uf3_psp_final/server.ChatServer.start(ChatServer.java:36)
+[2025-05-15 17:01:24]   at yeray.priede.projecte_uf3_psp_final/client.ChatClient.lambda$init$1(ChatClient.java:43)
+[2025-05-15 17:01:24]   at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-15 17:01:24] Servidor detenido
+[2025-05-15 17:01:31] Nueva conexión desde: 127.0.0.1
+[2025-05-15 17:01:31] Procesando mensaje: user3
+[2025-05-15 17:01:31] Autenticando usuario: user3 (usando hash+salt)
+[2025-05-15 17:01:31] Driver PostgreSQL cargado correctamente
+[2025-05-15 17:01:32] Conexión a la base de datos establecida correctamente
+[2025-05-15 17:01:32] Tablas creadas correctamente
+[2025-05-15 17:01:32] Usuario user1 creado o verificado en el sistema
+[2025-05-15 17:01:33] Usuario autenticado correctamente: user3
+[2025-05-15 17:01:33] Cliente conectado: user3
+[2025-05-15 17:01:45] Mensaje guardado en la base de datos: user3 -> Yeray: eii
+[2025-05-15 17:02:17] Mensaje guardado en la base de datos: user3 -> Yeray: alo
+[2025-05-15 17:03:01] Cliente desconectado: user3
+[2025-05-15 17:03:01] Servidor detenido
+[2025-05-15 17:03:07] Iniciando servidor de chat...
+[2025-05-15 17:03:07] Servidor iniciado en el puerto 5000
+[2025-05-15 17:03:07] Esperando conexiones...
+[2025-05-15 17:03:09] Iniciando servidor de chat...
+[2025-05-15 17:03:09] ERROR: Error iniciando el servidor
+[2025-05-15 17:03:09] Exception: L’adreça ja és en ús (Bind failed)
+[2025-05-15 17:03:09]   at java.base/java.net.PlainSocketImpl.socketBind(Native Method)
+[2025-05-15 17:03:09]   at java.base/java.net.AbstractPlainSocketImpl.bind(AbstractPlainSocketImpl.java:452)
+[2025-05-15 17:03:09]   at java.base/java.net.ServerSocket.bind(ServerSocket.java:395)
+[2025-05-15 17:03:09]   at java.base/java.net.ServerSocket.<init>(ServerSocket.java:257)
+[2025-05-15 17:03:09]   at java.base/java.net.ServerSocket.<init>(ServerSocket.java:149)
+[2025-05-15 17:03:09]   at yeray.priede.projecte_uf3_psp_final/server.ChatServer.start(ChatServer.java:36)
+[2025-05-15 17:03:09]   at yeray.priede.projecte_uf3_psp_final/client.ChatClient.lambda$init$1(ChatClient.java:43)
+[2025-05-15 17:03:09]   at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-15 17:03:09] Servidor detenido
+[2025-05-15 17:03:17] Nueva conexión desde: 127.0.0.1
+[2025-05-15 17:03:17] Procesando mensaje: user3
+[2025-05-15 17:03:17] Autenticando usuario: user3 (usando hash+salt)
+[2025-05-15 17:03:17] Driver PostgreSQL cargado correctamente
+[2025-05-15 17:03:18] Conexión a la base de datos establecida correctamente
+[2025-05-15 17:03:18] Tablas creadas correctamente
+[2025-05-15 17:03:18] Usuario user1 creado o verificado en el sistema
+[2025-05-15 17:03:18] Usuario autenticado correctamente: user3
+[2025-05-15 17:03:19] Cliente conectado: user3
+[2025-05-15 17:04:11] Mensaje guardado en la base de datos: user3 -> Yeray: IMAGE:src/main/resources/images/1747321451245_pilota.jpeg
+[2025-05-15 17:04:32] Mensaje general guardado en la base de datos: user3: IMAGE:src/main/resources/images/1747321471806_pilota.jpeg
+[2025-05-15 17:05:20] Mensaje general guardado en la base de datos: user3: holaa
+[2025-05-15 17:05:27] Mensaje general guardado en la base de datos: user3: IMAGE:src/main/resources/images/1747321526622_diseny.png
+[2025-05-15 17:08:53] Iniciando servidor de chat...
+[2025-05-15 17:08:53] Servidor iniciado en el puerto 5000
+[2025-05-15 17:08:53] Esperando conexiones...
+[2025-05-15 17:08:57] Iniciando servidor de chat...
+[2025-05-15 17:08:57] ERROR: Error iniciando el servidor
+[2025-05-15 17:08:57] Exception: L’adreça ja és en ús (Bind failed)
+[2025-05-15 17:08:57]   at java.base/java.net.PlainSocketImpl.socketBind(Native Method)
+[2025-05-15 17:08:57]   at java.base/java.net.AbstractPlainSocketImpl.bind(AbstractPlainSocketImpl.java:452)
+[2025-05-15 17:08:57]   at java.base/java.net.ServerSocket.bind(ServerSocket.java:395)
+[2025-05-15 17:08:57]   at java.base/java.net.ServerSocket.<init>(ServerSocket.java:257)
+[2025-05-15 17:08:57]   at java.base/java.net.ServerSocket.<init>(ServerSocket.java:149)
+[2025-05-15 17:08:57]   at yeray.priede.projecte_uf3_psp_final/server.ChatServer.start(ChatServer.java:36)
+[2025-05-15 17:08:57]   at yeray.priede.projecte_uf3_psp_final/client.ChatClient.lambda$init$1(ChatClient.java:43)
+[2025-05-15 17:08:57]   at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-15 17:08:57] Servidor detenido
+[2025-05-15 17:09:04] Nueva conexión desde: 127.0.0.1
+[2025-05-15 17:09:04] Procesando mensaje: user3
+[2025-05-15 17:09:04] Autenticando usuario: user3 (usando hash+salt)
+[2025-05-15 17:09:04] Driver PostgreSQL cargado correctamente
+[2025-05-15 17:09:05] Conexión a la base de datos establecida correctamente
+[2025-05-15 17:09:05] Tablas creadas correctamente
+[2025-05-15 17:09:05] Usuario user1 creado o verificado en el sistema
+[2025-05-15 17:09:06] Usuario autenticado correctamente: user3
+[2025-05-15 17:09:06] Cliente conectado: user3
+[2025-05-15 17:09:19] Mensaje general guardado en la base de datos: user3: eiii
+[2025-05-15 17:09:47] Mensaje guardado en la base de datos: user3 -> Yeray: ola
+[2025-05-15 17:09:57] Mensaje guardado en la base de datos: user3 -> Yeray: IMAGE:src/main/resources/images/1747321797231_diseny.png
+[2025-05-15 17:10:55] Mensaje guardado en la base de datos: user3 -> Yeray: IMAGE:src/main/resources/images/1747321854904_barra.png
+[2025-05-15 17:11:09] Cliente desconectado: user3
+[2025-05-15 17:11:09] Servidor detenido
