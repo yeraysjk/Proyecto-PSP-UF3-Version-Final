@@ -184,7 +184,11 @@ public class ChatWindowController {
             String emisor = rest.contains(":") ? rest.split(":")[0] : "";
             boolean enviado = rest.startsWith("Tú");
             
-            return new MensajeChat(texto, emisor, enviado, LocalDate.parse(date), LocalTime.parse(hour));
+            // Determinar si es un mensaje general o privado
+            boolean esGeneral = !rest.contains("->");
+            
+            MensajeChat msg = new MensajeChat(texto, emisor, enviado, LocalDate.parse(date), LocalTime.parse(hour));
+            return msg;
         } catch (Exception e) {
             return null;
         }

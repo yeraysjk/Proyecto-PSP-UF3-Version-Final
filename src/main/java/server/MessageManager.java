@@ -20,11 +20,11 @@ public class MessageManager {
         List<String> messages = new ArrayList<>();
         
         // Obtener mensajes generales
-        String generalSql = "SELECT sender, message, timestamp FROM mensajes_generales ORDER BY timestamp DESC LIMIT 50";
+        String generalSql = "SELECT sender, message, timestamp FROM mensajes_generales ORDER BY timestamp ASC";
         
         // Obtener mensajes privados donde el usuario es remitente o destinatario
         String privateSql = "SELECT sender, recipient, message, timestamp FROM mensajes " +
-                           "WHERE sender = ? OR recipient = ? ORDER BY timestamp DESC LIMIT 50";
+                           "WHERE sender = ? OR recipient = ? ORDER BY timestamp ASC";
         
         try (Connection conn = DatabaseConfig.getConnection()) {
             // Obtener mensajes generales
@@ -64,21 +64,16 @@ public class MessageManager {
             Logger.error("Error obteniendo historial de mensajes", e);
         }
 
-        // Ordenar los mensajes por fecha (los más recientes primero)
+        // Ordenar los mensajes por fecha (los más antiguos primero)
         messages.sort((m1, m2) -> {
             try {
                 String timestamp1 = m1.substring(m1.indexOf("[") + 1, m1.indexOf("]"));
                 String timestamp2 = m2.substring(m2.indexOf("[") + 1, m2.indexOf("]"));
-                return timestamp2.compareTo(timestamp1);
+                return timestamp1.compareTo(timestamp2);
             } catch (Exception e) {
                 return 0;
             }
         });
-        
-        // Limitar a los 100 mensajes más recientes
-        if (messages.size() > 100) {
-            messages = messages.subList(0, 100);
-        }
 
         return messages;
     }
