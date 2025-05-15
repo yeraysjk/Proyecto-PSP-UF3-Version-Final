@@ -166,4 +166,32 @@ public class MessageManager {
         }
         return messages;
     }
+
+    public static void clearPrivateHistory(String user1, String user2) {
+        try (Connection conn = DatabaseConfig.getConnection()) {
+            String sql = "DELETE FROM mensajes WHERE (sender = ? AND recipient = ?) OR (sender = ? AND recipient = ?)";
+            try (PreparedStatement stmt = conn.prepareStatement(sql)) {
+                stmt.setString(1, user1);
+                stmt.setString(2, user2);
+                stmt.setString(3, user2);
+                stmt.setString(4, user1);
+                stmt.executeUpdate();
+                Logger.log("Historial privado limpiado entre " + user1 + " y " + user2);
+            }
+        } catch (SQLException e) {
+            Logger.error("Error limpiando historial privado", e);
+        }
+    }
+
+    public static void clearGeneralHistory() {
+        try (Connection conn = DatabaseConfig.getConnection()) {
+            String sql = "DELETE FROM mensajes_generales";
+            try (PreparedStatement stmt = conn.prepareStatement(sql)) {
+                stmt.executeUpdate();
+                Logger.log("Historial general limpiado");
+            }
+        } catch (SQLException e) {
+            Logger.error("Error limpiando historial general", e);
+        }
+    }
 }

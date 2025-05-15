@@ -115,6 +115,13 @@ public class ClientHandler implements Runnable {
                     sb.append(msg).append("\n");
                 }
                 sendMessage("HISTORIAL_PRIVADO:" + sb.toString());
+            } else if (message.startsWith("CLEAR_PRIVATE_HISTORY:")) {
+                String otherUser = message.substring("CLEAR_PRIVATE_HISTORY:".length());
+                MessageManager.clearPrivateHistory(username, otherUser);
+                sendMessage("OK: Historial privado limpiado");
+            } else if (message.equals("CLEAR_GENERAL_HISTORY")) {
+                MessageManager.clearGeneralHistory();
+                sendMessage("OK: Historial general limpiado");
             } else {
                 sendMessage("ERROR: Comando no reconocido");
             }

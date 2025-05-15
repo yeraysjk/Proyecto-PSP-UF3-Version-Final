@@ -191,7 +191,7 @@ public class ChatWindowController {
         String message = messageField.getText().trim();
         if (!message.isEmpty()) {
             String recipient = recipientField.getText().trim();
-            // Validar destinatario
+            // Validar destinatario solo si no es un mensaje general
             if (!recipient.isEmpty() && !userList.contains(recipient)) {
                 showError("El usuario seleccionado no es válido.");
                 return;
@@ -213,6 +213,15 @@ public class ChatWindowController {
         mensajes.clear();
         mensajeIds.clear();
         lastDateHeader = null;
+        
+        // Notificar al servidor para limpiar el historial
+        if (chatClient != null) {
+            if (currentSelectedUser != null && !currentSelectedUser.equals("General")) {
+                chatClient.clearPrivateHistory(currentSelectedUser);
+            } else {
+                chatClient.clearGeneralHistory();
+            }
+        }
     }
     
     private void updateStatus(String status) {

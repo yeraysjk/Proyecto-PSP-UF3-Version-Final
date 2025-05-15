@@ -2144,3 +2144,475 @@
 [2025-05-15 15:38:17] Usuario user1 creado o verificado en el sistema
 [2025-05-15 15:38:19] Usuario autenticado correctamente: user1
 [2025-05-15 15:38:19] Cliente conectado: user1
+[2025-05-15 15:56:21] Iniciando servidor de chat...
+[2025-05-15 15:56:21] Servidor iniciado en el puerto 5000
+[2025-05-15 15:56:21] Esperando conexiones...
+[2025-05-15 15:56:44] Iniciando servidor de chat...
+[2025-05-15 15:56:44] ERROR: Error iniciando el servidor
+[2025-05-15 15:56:44] Exception: Address already in use: NET_Bind
+[2025-05-15 15:56:44]   at java.base/java.net.PlainSocketImpl.bind0(Native Method)
+[2025-05-15 15:56:44]   at java.base/java.net.PlainSocketImpl.socketBind(PlainSocketImpl.java:132)
+[2025-05-15 15:56:44]   at java.base/java.net.AbstractPlainSocketImpl.bind(AbstractPlainSocketImpl.java:452)
+[2025-05-15 15:56:44]   at java.base/java.net.ServerSocket.bind(ServerSocket.java:395)
+[2025-05-15 15:56:44]   at java.base/java.net.ServerSocket.<init>(ServerSocket.java:257)
+[2025-05-15 15:56:44]   at java.base/java.net.ServerSocket.<init>(ServerSocket.java:149)
+[2025-05-15 15:56:44]   at yeray.priede.projecte_uf3_psp_final/server.ChatServer.start(ChatServer.java:36)
+[2025-05-15 15:56:44]   at yeray.priede.projecte_uf3_psp_final/client.ChatClient.lambda$init$1(ChatClient.java:43)
+[2025-05-15 15:56:44]   at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-15 15:56:44] Servidor detenido
+[2025-05-15 15:57:02] Nueva conexión desde: 127.0.0.1
+[2025-05-15 15:57:02] Procesando mensaje: user1
+[2025-05-15 15:57:02] Autenticando usuario: user1 (usando hash+salt)
+[2025-05-15 15:57:02] Driver PostgreSQL cargado correctamente
+[2025-05-15 15:57:04] Conexión a la base de datos establecida correctamente
+[2025-05-15 15:57:04] Tablas creadas correctamente
+[2025-05-15 15:57:04] Usuario user1 creado o verificado en el sistema
+[2025-05-15 15:57:05] Usuario autenticado correctamente: user1
+[2025-05-15 15:57:05] Cliente conectado: user1
+[2025-05-15 15:58:16] Mensaje guardado en la base de datos: user1 -> Yeray: que tal
+[2025-05-15 15:58:34] Mensaje guardado en la base de datos: user1 -> Yeray: perfecto
+[2025-05-15 15:59:02] Mensaje guardado en la base de datos: user1 -> Yeray: si puede mandar fotos?
+[2025-05-15 16:06:05] Mensaje general guardado en la base de datos: user1: baaaaarça
+[2025-05-15 16:11:27] Iniciando servidor de chat...
+[2025-05-15 16:11:27] Servidor iniciado en el puerto 5000
+[2025-05-15 16:11:27] Esperando conexiones...
+[2025-05-15 16:11:34] Iniciando servidor de chat...
+[2025-05-15 16:11:34] ERROR: Error iniciando el servidor
+[2025-05-15 16:11:34] Exception: Address already in use: NET_Bind
+[2025-05-15 16:11:34]   at java.base/java.net.PlainSocketImpl.bind0(Native Method)
+[2025-05-15 16:11:34]   at java.base/java.net.PlainSocketImpl.socketBind(PlainSocketImpl.java:132)
+[2025-05-15 16:11:34]   at java.base/java.net.AbstractPlainSocketImpl.bind(AbstractPlainSocketImpl.java:452)
+[2025-05-15 16:11:34]   at java.base/java.net.ServerSocket.bind(ServerSocket.java:395)
+[2025-05-15 16:11:34]   at java.base/java.net.ServerSocket.<init>(ServerSocket.java:257)
+[2025-05-15 16:11:34]   at java.base/java.net.ServerSocket.<init>(ServerSocket.java:149)
+[2025-05-15 16:11:34]   at yeray.priede.projecte_uf3_psp_final/server.ChatServer.start(ChatServer.java:36)
+[2025-05-15 16:11:34]   at yeray.priede.projecte_uf3_psp_final/client.ChatClient.lambda$init$1(ChatClient.java:43)
+[2025-05-15 16:11:34]   at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-15 16:11:34] Servidor detenido
+[2025-05-15 16:11:46] Nueva conexión desde: 127.0.0.1
+[2025-05-15 16:11:46] Procesando mensaje: user1
+[2025-05-15 16:11:46] Autenticando usuario: user1 (usando hash+salt)
+[2025-05-15 16:11:46] Driver PostgreSQL cargado correctamente
+[2025-05-15 16:11:47] Conexión a la base de datos establecida correctamente
+[2025-05-15 16:11:47] Tablas creadas correctamente
+[2025-05-15 16:11:47] Usuario user1 creado o verificado en el sistema
+[2025-05-15 16:11:47] Usuario autenticado correctamente: user1
+[2025-05-15 16:11:47] Cliente conectado: user1
+[2025-05-15 16:18:26] Iniciando servidor de chat...
+[2025-05-15 16:18:26] Servidor iniciado en el puerto 5000
+[2025-05-15 16:18:26] Esperando conexiones...
+[2025-05-15 16:18:42] Iniciando servidor de chat...
+[2025-05-15 16:18:42] ERROR: Error iniciando el servidor
+[2025-05-15 16:18:42] Exception: Address already in use: NET_Bind
+[2025-05-15 16:18:42]   at java.base/java.net.PlainSocketImpl.bind0(Native Method)
+[2025-05-15 16:18:42]   at java.base/java.net.PlainSocketImpl.socketBind(PlainSocketImpl.java:132)
+[2025-05-15 16:18:42]   at java.base/java.net.AbstractPlainSocketImpl.bind(AbstractPlainSocketImpl.java:452)
+[2025-05-15 16:18:42]   at java.base/java.net.ServerSocket.bind(ServerSocket.java:395)
+[2025-05-15 16:18:42]   at java.base/java.net.ServerSocket.<init>(ServerSocket.java:257)
+[2025-05-15 16:18:42]   at java.base/java.net.ServerSocket.<init>(ServerSocket.java:149)
+[2025-05-15 16:18:42]   at yeray.priede.projecte_uf3_psp_final/server.ChatServer.start(ChatServer.java:36)
+[2025-05-15 16:18:42]   at yeray.priede.projecte_uf3_psp_final/client.ChatClient.lambda$0(ChatClient.java:43)
+[2025-05-15 16:18:42]   at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-15 16:18:42] Servidor detenido
+[2025-05-15 16:18:59] Nueva conexión desde: 127.0.0.1
+[2025-05-15 16:18:59] Procesando mensaje: user1
+[2025-05-15 16:18:59] Autenticando usuario: user1 (usando hash+salt)
+[2025-05-15 16:18:59] Driver PostgreSQL cargado correctamente
+[2025-05-15 16:19:00] Conexión a la base de datos establecida correctamente
+[2025-05-15 16:19:00] Tablas creadas correctamente
+[2025-05-15 16:19:00] Usuario user1 creado o verificado en el sistema
+[2025-05-15 16:19:01] Usuario autenticado correctamente: user1
+[2025-05-15 16:19:01] Cliente conectado: user1
+[2025-05-15 16:32:16] Iniciando servidor de chat...
+[2025-05-15 16:32:16] Servidor iniciado en el puerto 5000
+[2025-05-15 16:32:16] Esperando conexiones...
+[2025-05-15 16:32:26] Iniciando servidor de chat...
+[2025-05-15 16:32:26] ERROR: Error iniciando el servidor
+[2025-05-15 16:32:26] Exception: Address already in use: NET_Bind
+[2025-05-15 16:32:26]   at java.base/java.net.PlainSocketImpl.bind0(Native Method)
+[2025-05-15 16:32:26]   at java.base/java.net.PlainSocketImpl.socketBind(PlainSocketImpl.java:132)
+[2025-05-15 16:32:26]   at java.base/java.net.AbstractPlainSocketImpl.bind(AbstractPlainSocketImpl.java:452)
+[2025-05-15 16:32:26]   at java.base/java.net.ServerSocket.bind(ServerSocket.java:395)
+[2025-05-15 16:32:26]   at java.base/java.net.ServerSocket.<init>(ServerSocket.java:257)
+[2025-05-15 16:32:26]   at java.base/java.net.ServerSocket.<init>(ServerSocket.java:149)
+[2025-05-15 16:32:26]   at yeray.priede.projecte_uf3_psp_final/server.ChatServer.start(ChatServer.java:36)
+[2025-05-15 16:32:26]   at yeray.priede.projecte_uf3_psp_final/client.ChatClient.lambda$init$1(ChatClient.java:43)
+[2025-05-15 16:32:26]   at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-15 16:32:26] Servidor detenido
+[2025-05-15 16:32:35] Nueva conexión desde: 127.0.0.1
+[2025-05-15 16:32:35] Procesando mensaje: user1
+[2025-05-15 16:32:35] Autenticando usuario: user1 (usando hash+salt)
+[2025-05-15 16:32:35] Driver PostgreSQL cargado correctamente
+[2025-05-15 16:32:36] Conexión a la base de datos establecida correctamente
+[2025-05-15 16:32:36] Tablas creadas correctamente
+[2025-05-15 16:32:36] Usuario user1 creado o verificado en el sistema
+[2025-05-15 16:32:36] Usuario autenticado correctamente: user1
+[2025-05-15 16:32:36] Cliente conectado: user1
+[2025-05-15 16:32:54] Historial privado limpiado entre user1 y user3
+[2025-05-15 16:33:22] Mensaje guardado en la base de datos: user1 -> user3: hola
+[2025-05-15 16:33:37] Historial privado limpiado entre user1 y user3
+[2025-05-15 16:35:40] Mensaje general guardado en la base de datos: user1: hola
+[2025-05-15 16:38:44] Iniciando servidor de chat...
+[2025-05-15 16:38:44] Servidor iniciado en el puerto 5000
+[2025-05-15 16:38:44] Esperando conexiones...
+[2025-05-15 16:38:48] Iniciando servidor de chat...
+[2025-05-15 16:38:48] ERROR: Error iniciando el servidor
+[2025-05-15 16:38:48] Exception: Address already in use: NET_Bind
+[2025-05-15 16:38:48]   at java.base/java.net.PlainSocketImpl.bind0(Native Method)
+[2025-05-15 16:38:48]   at java.base/java.net.PlainSocketImpl.socketBind(PlainSocketImpl.java:132)
+[2025-05-15 16:38:48]   at java.base/java.net.AbstractPlainSocketImpl.bind(AbstractPlainSocketImpl.java:452)
+[2025-05-15 16:38:48]   at java.base/java.net.ServerSocket.bind(ServerSocket.java:395)
+[2025-05-15 16:38:48]   at java.base/java.net.ServerSocket.<init>(ServerSocket.java:257)
+[2025-05-15 16:38:48]   at java.base/java.net.ServerSocket.<init>(ServerSocket.java:149)
+[2025-05-15 16:38:48]   at yeray.priede.projecte_uf3_psp_final/server.ChatServer.start(ChatServer.java:36)
+[2025-05-15 16:38:48]   at yeray.priede.projecte_uf3_psp_final/client.ChatClient.lambda$init$1(ChatClient.java:43)
+[2025-05-15 16:38:48]   at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-15 16:38:48] Servidor detenido
+[2025-05-15 16:38:58] Nueva conexión desde: 127.0.0.1
+[2025-05-15 16:38:58] Procesando mensaje: user1
+[2025-05-15 16:38:58] Autenticando usuario: user1 (usando hash+salt)
+[2025-05-15 16:38:58] Driver PostgreSQL cargado correctamente
+[2025-05-15 16:38:59] Conexión a la base de datos establecida correctamente
+[2025-05-15 16:38:59] Tablas creadas correctamente
+[2025-05-15 16:38:59] Usuario user1 creado o verificado en el sistema
+[2025-05-15 16:38:59] Usuario autenticado correctamente: user1
+[2025-05-15 16:38:59] Cliente conectado: user1
+[2025-05-15 16:39:07] Mensaje general guardado en la base de datos: user1: hola
+[2025-05-15 16:39:53] Mensaje general guardado en la base de datos: user1: hola
+[2025-05-15 16:40:28] Mensaje guardado en la base de datos: user1 -> Yeray: njnjnj
+[2025-05-15 16:40:46] Mensaje general guardado en la base de datos: user1: bjbj
+[2025-05-15 17:02:54] Iniciando servidor de chat...
+[2025-05-15 17:02:54] Servidor iniciado en el puerto 5000
+[2025-05-15 17:02:54] Esperando conexiones...
+[2025-05-15 17:03:43] Iniciando servidor de chat...
+[2025-05-15 17:03:43] ERROR: Error iniciando el servidor
+[2025-05-15 17:03:43] Exception: Address already in use: NET_Bind
+[2025-05-15 17:03:43]   at java.base/java.net.PlainSocketImpl.bind0(Native Method)
+[2025-05-15 17:03:43]   at java.base/java.net.PlainSocketImpl.socketBind(PlainSocketImpl.java:132)
+[2025-05-15 17:03:43]   at java.base/java.net.AbstractPlainSocketImpl.bind(AbstractPlainSocketImpl.java:452)
+[2025-05-15 17:03:43]   at java.base/java.net.ServerSocket.bind(ServerSocket.java:395)
+[2025-05-15 17:03:43]   at java.base/java.net.ServerSocket.<init>(ServerSocket.java:257)
+[2025-05-15 17:03:43]   at java.base/java.net.ServerSocket.<init>(ServerSocket.java:149)
+[2025-05-15 17:03:43]   at yeray.priede.projecte_uf3_psp_final/server.ChatServer.start(ChatServer.java:36)
+[2025-05-15 17:03:43]   at yeray.priede.projecte_uf3_psp_final/client.ChatClient.lambda$init$1(ChatClient.java:43)
+[2025-05-15 17:03:43]   at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-15 17:03:43] Servidor detenido
+[2025-05-15 17:03:53] Nueva conexión desde: 127.0.0.1
+[2025-05-15 17:03:53] Procesando mensaje: user1
+[2025-05-15 17:03:53] Autenticando usuario: user1 (usando hash+salt)
+[2025-05-15 17:03:53] Driver PostgreSQL cargado correctamente
+[2025-05-15 17:03:54] Conexión a la base de datos establecida correctamente
+[2025-05-15 17:03:54] Tablas creadas correctamente
+[2025-05-15 17:03:54] Usuario user1 creado o verificado en el sistema
+[2025-05-15 17:03:54] Usuario autenticado correctamente: user1
+[2025-05-15 17:03:54] Cliente conectado: user1
+[2025-05-15 17:04:03] Mensaje general guardado en la base de datos: user1: hola
+[2025-05-15 17:04:18] Mensaje guardado en la base de datos: user1 -> Yeray: hola
+[2025-05-15 17:04:41] Historial privado limpiado entre user1 y Yeray
+[2025-05-15 17:08:51] Mensaje guardado en la base de datos: user1 -> Yeray: dime
+[2025-05-15 17:31:43] ERROR: Error obteniendo historial privado
+[2025-05-15 17:31:43] Exception: El intento de conexión falló.
+[2025-05-15 17:31:44]   at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:358)
+[2025-05-15 17:31:44]   at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54)
+[2025-05-15 17:31:44]   at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:273)
+[2025-05-15 17:31:44]   at org.postgresql.Driver.makeConnection(Driver.java:446)
+[2025-05-15 17:31:44]   at org.postgresql.Driver.connect(Driver.java:298)
+[2025-05-15 17:31:44]   at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+[2025-05-15 17:31:44]   at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+[2025-05-15 17:31:44]   at yeray.priede.projecte_uf3_psp_final/server.DatabaseConfig.getConnection(DatabaseConfig.java:27)
+[2025-05-15 17:31:44]   at yeray.priede.projecte_uf3_psp_final/server.MessageManager.getPrivateHistory(MessageManager.java:144)
+[2025-05-15 17:31:44]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleMessage(ClientHandler.java:112)
+[2025-05-15 17:31:44]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleClient(ClientHandler.java:94)
+[2025-05-15 17:31:44]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.run(ClientHandler.java:32)
+[2025-05-15 17:31:44]   at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+[2025-05-15 17:31:44]   at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+[2025-05-15 17:31:44]   at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-15 17:31:47] ERROR: Error obteniendo historial privado
+[2025-05-15 17:31:47] Exception: El intento de conexión falló.
+[2025-05-15 17:31:47]   at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:358)
+[2025-05-15 17:31:47]   at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54)
+[2025-05-15 17:31:47]   at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:273)
+[2025-05-15 17:31:47]   at org.postgresql.Driver.makeConnection(Driver.java:446)
+[2025-05-15 17:31:47]   at org.postgresql.Driver.connect(Driver.java:298)
+[2025-05-15 17:31:47]   at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+[2025-05-15 17:31:47]   at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+[2025-05-15 17:31:47]   at yeray.priede.projecte_uf3_psp_final/server.DatabaseConfig.getConnection(DatabaseConfig.java:27)
+[2025-05-15 17:31:47]   at yeray.priede.projecte_uf3_psp_final/server.MessageManager.getPrivateHistory(MessageManager.java:144)
+[2025-05-15 17:31:47]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleMessage(ClientHandler.java:112)
+[2025-05-15 17:31:47]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleClient(ClientHandler.java:94)
+[2025-05-15 17:31:47]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.run(ClientHandler.java:32)
+[2025-05-15 17:31:47]   at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+[2025-05-15 17:31:47]   at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+[2025-05-15 17:31:47]   at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-15 17:31:52] ERROR: Error obteniendo historial privado
+[2025-05-15 17:31:52] Exception: El intento de conexión falló.
+[2025-05-15 17:31:52]   at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:358)
+[2025-05-15 17:31:52]   at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54)
+[2025-05-15 17:31:52]   at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:273)
+[2025-05-15 17:31:52]   at org.postgresql.Driver.makeConnection(Driver.java:446)
+[2025-05-15 17:31:52]   at org.postgresql.Driver.connect(Driver.java:298)
+[2025-05-15 17:31:52]   at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+[2025-05-15 17:31:52]   at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+[2025-05-15 17:31:52]   at yeray.priede.projecte_uf3_psp_final/server.DatabaseConfig.getConnection(DatabaseConfig.java:27)
+[2025-05-15 17:31:52]   at yeray.priede.projecte_uf3_psp_final/server.MessageManager.getPrivateHistory(MessageManager.java:144)
+[2025-05-15 17:31:52]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleMessage(ClientHandler.java:112)
+[2025-05-15 17:31:52]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleClient(ClientHandler.java:94)
+[2025-05-15 17:31:52]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.run(ClientHandler.java:32)
+[2025-05-15 17:31:52]   at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+[2025-05-15 17:31:52]   at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+[2025-05-15 17:31:52]   at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-15 17:32:04] ERROR: Error obteniendo historial privado
+[2025-05-15 17:32:04] Exception: El intento de conexión falló.
+[2025-05-15 17:32:04]   at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:358)
+[2025-05-15 17:32:04]   at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54)
+[2025-05-15 17:32:04]   at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:273)
+[2025-05-15 17:32:04]   at org.postgresql.Driver.makeConnection(Driver.java:446)
+[2025-05-15 17:32:04]   at org.postgresql.Driver.connect(Driver.java:298)
+[2025-05-15 17:32:04]   at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+[2025-05-15 17:32:04]   at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+[2025-05-15 17:32:04]   at yeray.priede.projecte_uf3_psp_final/server.DatabaseConfig.getConnection(DatabaseConfig.java:27)
+[2025-05-15 17:32:04]   at yeray.priede.projecte_uf3_psp_final/server.MessageManager.getPrivateHistory(MessageManager.java:144)
+[2025-05-15 17:32:04]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleMessage(ClientHandler.java:112)
+[2025-05-15 17:32:04]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleClient(ClientHandler.java:94)
+[2025-05-15 17:32:04]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.run(ClientHandler.java:32)
+[2025-05-15 17:32:04]   at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+[2025-05-15 17:32:04]   at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+[2025-05-15 17:32:04]   at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-15 17:32:10] ERROR: Error obteniendo historial privado
+[2025-05-15 17:32:10] Exception: El intento de conexión falló.
+[2025-05-15 17:32:10]   at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:358)
+[2025-05-15 17:32:10]   at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54)
+[2025-05-15 17:32:10]   at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:273)
+[2025-05-15 17:32:10]   at org.postgresql.Driver.makeConnection(Driver.java:446)
+[2025-05-15 17:32:10]   at org.postgresql.Driver.connect(Driver.java:298)
+[2025-05-15 17:32:10]   at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+[2025-05-15 17:32:10]   at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+[2025-05-15 17:32:10]   at yeray.priede.projecte_uf3_psp_final/server.DatabaseConfig.getConnection(DatabaseConfig.java:27)
+[2025-05-15 17:32:10]   at yeray.priede.projecte_uf3_psp_final/server.MessageManager.getPrivateHistory(MessageManager.java:144)
+[2025-05-15 17:32:10]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleMessage(ClientHandler.java:112)
+[2025-05-15 17:32:10]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleClient(ClientHandler.java:94)
+[2025-05-15 17:32:10]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.run(ClientHandler.java:32)
+[2025-05-15 17:32:10]   at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+[2025-05-15 17:32:10]   at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+[2025-05-15 17:32:10]   at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-15 17:32:15] ERROR: Error obteniendo historial privado
+[2025-05-15 17:32:15] Exception: El intento de conexión falló.
+[2025-05-15 17:32:15]   at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:358)
+[2025-05-15 17:32:15]   at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54)
+[2025-05-15 17:32:15]   at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:273)
+[2025-05-15 17:32:15]   at org.postgresql.Driver.makeConnection(Driver.java:446)
+[2025-05-15 17:32:15]   at org.postgresql.Driver.connect(Driver.java:298)
+[2025-05-15 17:32:15]   at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+[2025-05-15 17:32:15]   at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+[2025-05-15 17:32:15]   at yeray.priede.projecte_uf3_psp_final/server.DatabaseConfig.getConnection(DatabaseConfig.java:27)
+[2025-05-15 17:32:15]   at yeray.priede.projecte_uf3_psp_final/server.MessageManager.getPrivateHistory(MessageManager.java:144)
+[2025-05-15 17:32:15]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleMessage(ClientHandler.java:112)
+[2025-05-15 17:32:15]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleClient(ClientHandler.java:94)
+[2025-05-15 17:32:15]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.run(ClientHandler.java:32)
+[2025-05-15 17:32:15]   at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+[2025-05-15 17:32:15]   at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+[2025-05-15 17:32:15]   at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-15 17:32:20] ERROR: Error obteniendo historial privado
+[2025-05-15 17:32:20] Exception: El intento de conexión falló.
+[2025-05-15 17:32:20]   at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:358)
+[2025-05-15 17:32:20]   at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54)
+[2025-05-15 17:32:20]   at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:273)
+[2025-05-15 17:32:20]   at org.postgresql.Driver.makeConnection(Driver.java:446)
+[2025-05-15 17:32:20]   at org.postgresql.Driver.connect(Driver.java:298)
+[2025-05-15 17:32:20]   at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+[2025-05-15 17:32:20]   at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+[2025-05-15 17:32:20]   at yeray.priede.projecte_uf3_psp_final/server.DatabaseConfig.getConnection(DatabaseConfig.java:27)
+[2025-05-15 17:32:20]   at yeray.priede.projecte_uf3_psp_final/server.MessageManager.getPrivateHistory(MessageManager.java:144)
+[2025-05-15 17:32:20]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleMessage(ClientHandler.java:112)
+[2025-05-15 17:32:20]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleClient(ClientHandler.java:94)
+[2025-05-15 17:32:20]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.run(ClientHandler.java:32)
+[2025-05-15 17:32:20]   at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+[2025-05-15 17:32:20]   at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+[2025-05-15 17:32:20]   at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-15 17:32:25] ERROR: Error obteniendo historial privado
+[2025-05-15 17:32:25] Exception: El intento de conexión falló.
+[2025-05-15 17:32:25]   at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:358)
+[2025-05-15 17:32:25]   at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54)
+[2025-05-15 17:32:25]   at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:273)
+[2025-05-15 17:32:25]   at org.postgresql.Driver.makeConnection(Driver.java:446)
+[2025-05-15 17:32:25]   at org.postgresql.Driver.connect(Driver.java:298)
+[2025-05-15 17:32:25]   at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+[2025-05-15 17:32:25]   at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+[2025-05-15 17:32:25]   at yeray.priede.projecte_uf3_psp_final/server.DatabaseConfig.getConnection(DatabaseConfig.java:27)
+[2025-05-15 17:32:25]   at yeray.priede.projecte_uf3_psp_final/server.MessageManager.getPrivateHistory(MessageManager.java:144)
+[2025-05-15 17:32:25]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleMessage(ClientHandler.java:112)
+[2025-05-15 17:32:25]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleClient(ClientHandler.java:94)
+[2025-05-15 17:32:25]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.run(ClientHandler.java:32)
+[2025-05-15 17:32:25]   at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+[2025-05-15 17:32:25]   at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+[2025-05-15 17:32:25]   at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-15 17:32:30] ERROR: Error obteniendo historial privado
+[2025-05-15 17:32:30] Exception: El intento de conexión falló.
+[2025-05-15 17:32:30]   at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:358)
+[2025-05-15 17:32:30]   at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54)
+[2025-05-15 17:32:30]   at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:273)
+[2025-05-15 17:32:30]   at org.postgresql.Driver.makeConnection(Driver.java:446)
+[2025-05-15 17:32:30]   at org.postgresql.Driver.connect(Driver.java:298)
+[2025-05-15 17:32:30]   at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+[2025-05-15 17:32:30]   at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+[2025-05-15 17:32:30]   at yeray.priede.projecte_uf3_psp_final/server.DatabaseConfig.getConnection(DatabaseConfig.java:27)
+[2025-05-15 17:32:30]   at yeray.priede.projecte_uf3_psp_final/server.MessageManager.getPrivateHistory(MessageManager.java:144)
+[2025-05-15 17:32:30]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleMessage(ClientHandler.java:112)
+[2025-05-15 17:32:30]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleClient(ClientHandler.java:94)
+[2025-05-15 17:32:30]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.run(ClientHandler.java:32)
+[2025-05-15 17:32:30]   at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+[2025-05-15 17:32:30]   at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+[2025-05-15 17:32:30]   at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-15 17:32:35] ERROR: Error obteniendo historial privado
+[2025-05-15 17:32:35] Exception: El intento de conexión falló.
+[2025-05-15 17:32:35]   at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:358)
+[2025-05-15 17:32:35]   at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54)
+[2025-05-15 17:32:35]   at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:273)
+[2025-05-15 17:32:35]   at org.postgresql.Driver.makeConnection(Driver.java:446)
+[2025-05-15 17:32:35]   at org.postgresql.Driver.connect(Driver.java:298)
+[2025-05-15 17:32:35]   at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+[2025-05-15 17:32:35]   at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+[2025-05-15 17:32:35]   at yeray.priede.projecte_uf3_psp_final/server.DatabaseConfig.getConnection(DatabaseConfig.java:27)
+[2025-05-15 17:32:35]   at yeray.priede.projecte_uf3_psp_final/server.MessageManager.getPrivateHistory(MessageManager.java:144)
+[2025-05-15 17:32:35]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleMessage(ClientHandler.java:112)
+[2025-05-15 17:32:35]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleClient(ClientHandler.java:94)
+[2025-05-15 17:32:35]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.run(ClientHandler.java:32)
+[2025-05-15 17:32:35]   at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+[2025-05-15 17:32:35]   at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+[2025-05-15 17:32:35]   at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-15 17:32:40] ERROR: Error obteniendo historial privado
+[2025-05-15 17:32:40] Exception: El intento de conexión falló.
+[2025-05-15 17:32:40]   at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:358)
+[2025-05-15 17:32:40]   at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54)
+[2025-05-15 17:32:40]   at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:273)
+[2025-05-15 17:32:40]   at org.postgresql.Driver.makeConnection(Driver.java:446)
+[2025-05-15 17:32:40]   at org.postgresql.Driver.connect(Driver.java:298)
+[2025-05-15 17:32:40]   at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+[2025-05-15 17:32:40]   at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+[2025-05-15 17:32:40]   at yeray.priede.projecte_uf3_psp_final/server.DatabaseConfig.getConnection(DatabaseConfig.java:27)
+[2025-05-15 17:32:40]   at yeray.priede.projecte_uf3_psp_final/server.MessageManager.getPrivateHistory(MessageManager.java:144)
+[2025-05-15 17:32:40]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleMessage(ClientHandler.java:112)
+[2025-05-15 17:32:40]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleClient(ClientHandler.java:94)
+[2025-05-15 17:32:40]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.run(ClientHandler.java:32)
+[2025-05-15 17:32:40]   at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+[2025-05-15 17:32:40]   at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+[2025-05-15 17:32:40]   at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-15 17:32:45] ERROR: Error obteniendo historial privado
+[2025-05-15 17:32:45] Exception: El intento de conexión falló.
+[2025-05-15 17:32:45]   at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:358)
+[2025-05-15 17:32:45]   at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54)
+[2025-05-15 17:32:45]   at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:273)
+[2025-05-15 17:32:45]   at org.postgresql.Driver.makeConnection(Driver.java:446)
+[2025-05-15 17:32:45]   at org.postgresql.Driver.connect(Driver.java:298)
+[2025-05-15 17:32:45]   at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+[2025-05-15 17:32:45]   at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+[2025-05-15 17:32:45]   at yeray.priede.projecte_uf3_psp_final/server.DatabaseConfig.getConnection(DatabaseConfig.java:27)
+[2025-05-15 17:32:45]   at yeray.priede.projecte_uf3_psp_final/server.MessageManager.getPrivateHistory(MessageManager.java:144)
+[2025-05-15 17:32:45]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleMessage(ClientHandler.java:112)
+[2025-05-15 17:32:45]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleClient(ClientHandler.java:94)
+[2025-05-15 17:32:45]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.run(ClientHandler.java:32)
+[2025-05-15 17:32:45]   at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+[2025-05-15 17:32:45]   at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+[2025-05-15 17:32:45]   at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-15 17:32:50] ERROR: Error obteniendo historial privado
+[2025-05-15 17:32:50] Exception: El intento de conexión falló.
+[2025-05-15 17:32:50]   at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:358)
+[2025-05-15 17:32:50]   at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54)
+[2025-05-15 17:32:50]   at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:273)
+[2025-05-15 17:32:50]   at org.postgresql.Driver.makeConnection(Driver.java:446)
+[2025-05-15 17:32:50]   at org.postgresql.Driver.connect(Driver.java:298)
+[2025-05-15 17:32:50]   at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+[2025-05-15 17:32:50]   at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+[2025-05-15 17:32:50]   at yeray.priede.projecte_uf3_psp_final/server.DatabaseConfig.getConnection(DatabaseConfig.java:27)
+[2025-05-15 17:32:50]   at yeray.priede.projecte_uf3_psp_final/server.MessageManager.getPrivateHistory(MessageManager.java:144)
+[2025-05-15 17:32:50]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleMessage(ClientHandler.java:112)
+[2025-05-15 17:32:50]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleClient(ClientHandler.java:94)
+[2025-05-15 17:32:50]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.run(ClientHandler.java:32)
+[2025-05-15 17:32:50]   at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+[2025-05-15 17:32:50]   at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+[2025-05-15 17:32:51]   at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-15 17:32:55] ERROR: Error obteniendo historial privado
+[2025-05-15 17:32:55] Exception: El intento de conexión falló.
+[2025-05-15 17:32:55]   at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:358)
+[2025-05-15 17:32:55]   at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54)
+[2025-05-15 17:32:55]   at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:273)
+[2025-05-15 17:32:55]   at org.postgresql.Driver.makeConnection(Driver.java:446)
+[2025-05-15 17:32:55]   at org.postgresql.Driver.connect(Driver.java:298)
+[2025-05-15 17:32:55]   at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+[2025-05-15 17:32:55]   at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+[2025-05-15 17:32:55]   at yeray.priede.projecte_uf3_psp_final/server.DatabaseConfig.getConnection(DatabaseConfig.java:27)
+[2025-05-15 17:32:55]   at yeray.priede.projecte_uf3_psp_final/server.MessageManager.getPrivateHistory(MessageManager.java:144)
+[2025-05-15 17:32:55]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleMessage(ClientHandler.java:112)
+[2025-05-15 17:32:55]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleClient(ClientHandler.java:94)
+[2025-05-15 17:32:55]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.run(ClientHandler.java:32)
+[2025-05-15 17:32:55]   at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+[2025-05-15 17:32:55]   at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+[2025-05-15 17:32:55]   at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-15 17:33:00] ERROR: Error obteniendo historial privado
+[2025-05-15 17:33:00] Exception: El intento de conexión falló.
+[2025-05-15 17:33:00]   at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:358)
+[2025-05-15 17:33:01]   at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54)
+[2025-05-15 17:33:01]   at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:273)
+[2025-05-15 17:33:01]   at org.postgresql.Driver.makeConnection(Driver.java:446)
+[2025-05-15 17:33:01]   at org.postgresql.Driver.connect(Driver.java:298)
+[2025-05-15 17:33:01]   at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+[2025-05-15 17:33:01]   at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+[2025-05-15 17:33:01]   at yeray.priede.projecte_uf3_psp_final/server.DatabaseConfig.getConnection(DatabaseConfig.java:27)
+[2025-05-15 17:33:01]   at yeray.priede.projecte_uf3_psp_final/server.MessageManager.getPrivateHistory(MessageManager.java:144)
+[2025-05-15 17:33:01]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleMessage(ClientHandler.java:112)
+[2025-05-15 17:33:01]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleClient(ClientHandler.java:94)
+[2025-05-15 17:33:01]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.run(ClientHandler.java:32)
+[2025-05-15 17:33:01]   at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+[2025-05-15 17:33:01]   at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+[2025-05-15 17:33:01]   at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-15 17:33:05] ERROR: Error obteniendo historial privado
+[2025-05-15 17:33:05] Exception: El intento de conexión falló.
+[2025-05-15 17:33:05]   at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:358)
+[2025-05-15 17:33:05]   at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54)
+[2025-05-15 17:33:05]   at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:273)
+[2025-05-15 17:33:05]   at org.postgresql.Driver.makeConnection(Driver.java:446)
+[2025-05-15 17:33:05]   at org.postgresql.Driver.connect(Driver.java:298)
+[2025-05-15 17:33:05]   at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+[2025-05-15 17:33:06]   at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+[2025-05-15 17:33:06]   at yeray.priede.projecte_uf3_psp_final/server.DatabaseConfig.getConnection(DatabaseConfig.java:27)
+[2025-05-15 17:33:06]   at yeray.priede.projecte_uf3_psp_final/server.MessageManager.getPrivateHistory(MessageManager.java:144)
+[2025-05-15 17:33:06]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleMessage(ClientHandler.java:112)
+[2025-05-15 17:33:06]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleClient(ClientHandler.java:94)
+[2025-05-15 17:33:06]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.run(ClientHandler.java:32)
+[2025-05-15 17:33:06]   at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+[2025-05-15 17:33:06]   at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+[2025-05-15 17:33:06]   at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-15 17:33:12] ERROR: Error obteniendo historial privado
+[2025-05-15 17:33:12] Exception: El intento de conexión falló.
+[2025-05-15 17:33:12]   at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:358)
+[2025-05-15 17:33:12]   at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54)
+[2025-05-15 17:33:12]   at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:273)
+[2025-05-15 17:33:12]   at org.postgresql.Driver.makeConnection(Driver.java:446)
+[2025-05-15 17:33:12]   at org.postgresql.Driver.connect(Driver.java:298)
+[2025-05-15 17:33:12]   at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+[2025-05-15 17:33:12]   at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+[2025-05-15 17:33:12]   at yeray.priede.projecte_uf3_psp_final/server.DatabaseConfig.getConnection(DatabaseConfig.java:27)
+[2025-05-15 17:33:12]   at yeray.priede.projecte_uf3_psp_final/server.MessageManager.getPrivateHistory(MessageManager.java:144)
+[2025-05-15 17:33:12]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleMessage(ClientHandler.java:112)
+[2025-05-15 17:33:12]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleClient(ClientHandler.java:94)
+[2025-05-15 17:33:12]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.run(ClientHandler.java:32)
+[2025-05-15 17:33:12]   at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+[2025-05-15 17:33:12]   at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+[2025-05-15 17:33:12]   at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-15 17:35:48] ERROR: Error obteniendo historial privado
+[2025-05-15 17:35:48] Exception: El intento de conexión falló.
+[2025-05-15 17:35:48]   at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:358)
+[2025-05-15 17:35:48]   at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54)
+[2025-05-15 17:35:48]   at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:273)
+[2025-05-15 17:35:48]   at org.postgresql.Driver.makeConnection(Driver.java:446)
+[2025-05-15 17:35:48]   at org.postgresql.Driver.connect(Driver.java:298)
+[2025-05-15 17:35:48]   at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+[2025-05-15 17:35:48]   at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+[2025-05-15 17:35:48]   at yeray.priede.projecte_uf3_psp_final/server.DatabaseConfig.getConnection(DatabaseConfig.java:27)
+[2025-05-15 17:35:48]   at yeray.priede.projecte_uf3_psp_final/server.MessageManager.getPrivateHistory(MessageManager.java:144)
+[2025-05-15 17:35:48]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleMessage(ClientHandler.java:112)
+[2025-05-15 17:35:48]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.handleClient(ClientHandler.java:94)
+[2025-05-15 17:35:48]   at yeray.priede.projecte_uf3_psp_final/server.ClientHandler.run(ClientHandler.java:32)
+[2025-05-15 17:35:48]   at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+[2025-05-15 17:35:48]   at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+[2025-05-15 17:35:48]   at java.base/java.lang.Thread.run(Thread.java:829)

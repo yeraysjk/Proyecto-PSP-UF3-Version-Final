@@ -307,6 +307,32 @@ public class ChatClient extends Application {
         }
     }
     
+    public void clearPrivateHistory(String username) {
+        if (!isConnected) {
+            showError("No estás conectado al servidor");
+            return;
+        }
+        
+        try {
+            out.println("CLEAR_PRIVATE_HISTORY:" + username);
+        } catch (Exception e) {
+            showError("Error al limpiar historial privado: " + e.getMessage());
+        }
+    }
+    
+    public void clearGeneralHistory() {
+        if (!isConnected) {
+            showError("No estás conectado al servidor");
+            return;
+        }
+        
+        try {
+            out.println("CLEAR_GENERAL_HISTORY");
+        } catch (Exception e) {
+            showError("Error al limpiar historial general: " + e.getMessage());
+        }
+    }
+    
     public static void main(String[] args) {
         launch(args);
     }
