@@ -181,13 +181,26 @@ public class ChatWindowController {
             String date = datetime.split(" ")[0];
             String hour = datetime.split(" ")[1].substring(0,5);
             String texto = rest;
-            String emisor = rest.contains(":") ? rest.split(":")[0] : "";
-            
-            // Determinar si es un mensaje enviado por el usuario actual
-            boolean enviado = emisor.equals(username) || emisor.equals("Tú");
             
             // Determinar si es un mensaje general o privado
             boolean esGeneral = !rest.contains("->");
+            String emisor;
+            boolean enviado;
+            
+            if (esGeneral) {
+                // Para mensajes generales
+                emisor = rest.split(":")[0];
+                enviado = emisor.equals(username);
+            } else {
+                // Para mensajes privados
+                if (rest.startsWith("Tú ->")) {
+                    emisor = "Tú";
+                    enviado = true;
+                } else {
+                    emisor = rest.split(" ->")[0];
+                    enviado = emisor.equals(username);
+                }
+            }
             
             MensajeChat msg = new MensajeChat(texto, emisor, enviado, LocalDate.parse(date), LocalTime.parse(hour));
             return msg;
@@ -256,7 +269,7 @@ public class ChatWindowController {
                 public void run() {
                     if (currentSelectedUser != null) {
                         if (currentSelectedUser.equals("General")) {
-                            chatClient.requestPrivateHistory("");
+                            chatClient.requestGeneralHistory();
                         } else {
                             chatClient.requestPrivateHistory(currentSelectedUser);
                         }

@@ -2525,3 +2525,30 @@
 [2025-05-15 17:37:15] Usuario autenticado correctamente: user3
 [2025-05-15 17:37:15] Cliente conectado: user3
 [2025-05-15 17:38:03] Mensaje general guardado en la base de datos: user3: porfin
+[2025-05-15 17:41:02] Iniciando servidor de chat...
+[2025-05-15 17:41:02] Servidor iniciado en el puerto 5000
+[2025-05-15 17:41:02] Esperando conexiones...
+[2025-05-15 17:41:04] Iniciando servidor de chat...
+[2025-05-15 17:41:04] ERROR: Error iniciando el servidor
+[2025-05-15 17:41:04] Exception: L’adreça ja és en ús (Bind failed)
+[2025-05-15 17:41:04]   at java.base/java.net.PlainSocketImpl.socketBind(Native Method)
+[2025-05-15 17:41:04]   at java.base/java.net.AbstractPlainSocketImpl.bind(AbstractPlainSocketImpl.java:452)
+[2025-05-15 17:41:04]   at java.base/java.net.ServerSocket.bind(ServerSocket.java:395)
+[2025-05-15 17:41:04]   at java.base/java.net.ServerSocket.<init>(ServerSocket.java:257)
+[2025-05-15 17:41:04]   at java.base/java.net.ServerSocket.<init>(ServerSocket.java:149)
+[2025-05-15 17:41:04]   at yeray.priede.projecte_uf3_psp_final/server.ChatServer.start(ChatServer.java:36)
+[2025-05-15 17:41:04]   at yeray.priede.projecte_uf3_psp_final/client.ChatClient.lambda$init$1(ChatClient.java:44)
+[2025-05-15 17:41:04]   at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-15 17:41:04] Servidor detenido
+[2025-05-15 17:41:12] Nueva conexión desde: 127.0.0.1
+[2025-05-15 17:41:12] Procesando mensaje: user3
+[2025-05-15 17:41:12] Autenticando usuario: user3 (usando hash+salt)
+[2025-05-15 17:41:12] Driver PostgreSQL cargado correctamente
+[2025-05-15 17:41:13] Conexión a la base de datos establecida correctamente
+[2025-05-15 17:41:14] Tablas creadas correctamente
+[2025-05-15 17:41:14] Usuario user1 creado o verificado en el sistema
+[2025-05-15 17:41:14] Usuario autenticado correctamente: user3
+[2025-05-15 17:41:14] Cliente conectado: user3
+[2025-05-15 17:41:46] Mensaje guardado en la base de datos: user3 -> Yeray: olaaa
+[2025-05-15 17:42:36] Mensaje general guardado en la base de datos: user3: olaaa
+[2025-05-15 17:42:47] Mensaje guardado en la base de datos: user3 -> Yeray: eiii
