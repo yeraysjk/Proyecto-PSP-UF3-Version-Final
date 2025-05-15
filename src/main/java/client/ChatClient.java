@@ -309,6 +309,12 @@ public class ChatClient extends Application {
         }
     }
     
+    public void requestGeneralHistory() {
+        if (out != null) {
+            out.println("GET_GENERAL_HISTORY");
+        }
+    }
+    
     public void clearGeneralChat() {
         if (!isConnected) {
             showError("No estás conectado al servidor");

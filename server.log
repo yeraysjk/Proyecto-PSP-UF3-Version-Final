@@ -2474,3 +2474,29 @@
 [2025-05-15 17:31:21] Mensaje general guardado en la base de datos: user3: joddeeeeer
 [2025-05-15 17:31:35] Cliente desconectado: user3
 [2025-05-15 17:31:35] Servidor detenido
+[2025-05-15 17:34:04] Iniciando servidor de chat...
+[2025-05-15 17:34:04] Servidor iniciado en el puerto 5000
+[2025-05-15 17:34:04] Esperando conexiones...
+[2025-05-15 17:34:05] Iniciando servidor de chat...
+[2025-05-15 17:34:05] ERROR: Error iniciando el servidor
+[2025-05-15 17:34:05] Exception: L’adreça ja és en ús (Bind failed)
+[2025-05-15 17:34:05]   at java.base/java.net.PlainSocketImpl.socketBind(Native Method)
+[2025-05-15 17:34:05]   at java.base/java.net.AbstractPlainSocketImpl.bind(AbstractPlainSocketImpl.java:452)
+[2025-05-15 17:34:05]   at java.base/java.net.ServerSocket.bind(ServerSocket.java:395)
+[2025-05-15 17:34:05]   at java.base/java.net.ServerSocket.<init>(ServerSocket.java:257)
+[2025-05-15 17:34:05]   at java.base/java.net.ServerSocket.<init>(ServerSocket.java:149)
+[2025-05-15 17:34:05]   at yeray.priede.projecte_uf3_psp_final/server.ChatServer.start(ChatServer.java:36)
+[2025-05-15 17:34:05]   at yeray.priede.projecte_uf3_psp_final/client.ChatClient.lambda$init$1(ChatClient.java:44)
+[2025-05-15 17:34:05]   at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-15 17:34:05] Servidor detenido
+[2025-05-15 17:34:14] Nueva conexión desde: 127.0.0.1
+[2025-05-15 17:34:14] Procesando mensaje: user3
+[2025-05-15 17:34:14] Autenticando usuario: user3 (usando hash+salt)
+[2025-05-15 17:34:14] Driver PostgreSQL cargado correctamente
+[2025-05-15 17:34:15] Conexión a la base de datos establecida correctamente
+[2025-05-15 17:34:15] Tablas creadas correctamente
+[2025-05-15 17:34:15] Usuario user1 creado o verificado en el sistema
+[2025-05-15 17:34:16] Usuario autenticado correctamente: user3
+[2025-05-15 17:34:16] Cliente conectado: user3
+[2025-05-15 17:34:25] Mensaje general guardado en la base de datos: user3: aaaaaa
+[2025-05-15 17:34:53] Mensaje general guardado en la base de datos: user3: aaaaaaaa

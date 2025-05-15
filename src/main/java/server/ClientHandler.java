@@ -115,6 +115,13 @@ public class ClientHandler implements Runnable {
                     sb.append(msg).append("\n");
                 }
                 sendMessage("HISTORIAL_PRIVADO:" + sb.toString());
+            } else if (message.equals("GET_GENERAL_HISTORY")) {
+                java.util.List<String> historial = MessageManager.getGeneralHistory();
+                StringBuilder sb = new StringBuilder();
+                for (String msg : historial) {
+                    sb.append(msg).append("\n");
+                }
+                sendMessage("HISTORIAL:" + sb.toString());
             } else if (message.startsWith("CLEAR_GENERAL")) {
                 MessageManager.clearGeneralMessages();
                 sendMessage("OK: Chat general limpiado");

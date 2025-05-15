@@ -54,7 +54,7 @@ public class ChatWindowController {
                 // Solicitar historial adecuado
                 if (chatClient != null) {
                     if (newVal.equals("General")) {
-                        chatClient.requestPrivateHistory(""); // Usar vacío para general
+                        chatClient.requestGeneralHistory(); // Usar método específico para general
                     } else {
                         chatClient.requestPrivateHistory(newVal);
                     }

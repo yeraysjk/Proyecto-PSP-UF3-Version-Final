@@ -162,6 +162,24 @@ public class MessageManager {
         return messages;
     }
 
+    public static List<String> getGeneralHistory() {
+        List<String> messages = new ArrayList<>();
+        String sql = "SELECT sender, message, timestamp FROM mensajes_generales ORDER BY timestamp ASC";
+        try (Connection conn = DatabaseConfig.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+            ResultSet rs = stmt.executeQuery();
+            while (rs.next()) {
+                String sender = rs.getString("sender");
+                String message = rs.getString("message");
+                String timestamp = rs.getString("timestamp");
+                messages.add("[" + timestamp + "] " + sender + ": " + message);
+            }
+        } catch (SQLException e) {
+            Logger.error("Error obteniendo historial general", e);
+        }
+        return messages;
+    }
+
     public static void clearGeneralMessages() {
         try (Connection conn = DatabaseConfig.getConnection()) {
             String sql = "DELETE FROM mensajes_generales";
