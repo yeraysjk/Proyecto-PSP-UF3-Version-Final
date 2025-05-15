@@ -115,6 +115,14 @@ public class ClientHandler implements Runnable {
                     sb.append(msg).append("\n");
                 }
                 sendMessage("HISTORIAL_PRIVADO:" + sb.toString());
+            } else if (message.startsWith("CLEAR_GENERAL")) {
+                MessageManager.clearGeneralMessages();
+                sendMessage("OK: Chat general limpiado");
+            } else if (message.startsWith("CLEAR_PRIVATE:")) {
+                String otherUser = message.substring("CLEAR_PRIVATE:".length());
+                MessageManager.clearUserMessages(username);
+                MessageManager.clearUserMessages(otherUser);
+                sendMessage("OK: Chat privado limpiado");
             } else {
                 sendMessage("ERROR: Comando no reconocido");
             }
@@ -141,11 +149,15 @@ public class ClientHandler implements Runnable {
     }
 
     private void handleGeneralMessage(String message) {
-        // Guardar el mensaje original (sin cifrar) en la base de datos
+        // Guardar el mensaje en la base de datos
         MessageManager.saveMessage(username, null, message);
         
         // Enviar el mensaje a todos los clientes
-        server.broadcast(username + ": " + message, username);
+        if (message.startsWith("IMAGE:")) {
+            server.broadcast(username + ": [Imagen]", username);
+        } else {
+            server.broadcast(username + ": " + message, username);
+        }
     }
 
     private void handlePrivateMessage(String message) {
@@ -158,11 +170,15 @@ public class ClientHandler implements Runnable {
         String recipient = parts[0];
         String content = parts[1];
         
-        // Guardar el mensaje sin cifrar en la base de datos
+        // Guardar el mensaje en la base de datos
         MessageManager.saveMessage(username, recipient, content);
         
         // Enviar el mensaje al destinatario
-        server.sendPrivateMessage(username, recipient, content);
+        if (content.startsWith("IMAGE:")) {
+            server.sendPrivateMessage(username, recipient, "[Imagen]");
+        } else {
+            server.sendPrivateMessage(username, recipient, content);
+        }
     }
 
     private void handleGetUsers() {

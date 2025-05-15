@@ -166,4 +166,36 @@ public class MessageManager {
         }
         return messages;
     }
+
+    public static void clearGeneralMessages() {
+        try (Connection conn = DatabaseConfig.getConnection()) {
+            String sql = "DELETE FROM mensajes_generales";
+            try (PreparedStatement pstmt = conn.prepareStatement(sql)) {
+                pstmt.executeUpdate();
+            }
+        } catch (SQLException e) {
+            Logger.error("Error limpiando mensajes generales", e);
+        }
+    }
+
+    public static void clearUserMessages(String username) {
+        try (Connection conn = DatabaseConfig.getConnection()) {
+            // Limpiar mensajes privados donde el usuario es remitente o destinatario
+            String privateSql = "DELETE FROM mensajes WHERE sender = ? OR recipient = ?";
+            try (PreparedStatement pstmt = conn.prepareStatement(privateSql)) {
+                pstmt.setString(1, username);
+                pstmt.setString(2, username);
+                pstmt.executeUpdate();
+            }
+
+            // Limpiar mensajes generales del usuario
+            String generalSql = "DELETE FROM mensajes_generales WHERE sender = ?";
+            try (PreparedStatement pstmt = conn.prepareStatement(generalSql)) {
+                pstmt.setString(1, username);
+                pstmt.executeUpdate();
+            }
+        } catch (SQLException e) {
+            Logger.error("Error limpiando mensajes del usuario", e);
+        }
+    }
 }

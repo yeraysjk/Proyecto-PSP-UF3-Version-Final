@@ -127,4 +127,29 @@
 .clear-btn:hover {
     -fx-background-color: #374248;
     -fx-text-fill: #e9edef;
+}
+
+.upload-btn {
+    -fx-background-color: #1f2c34;
+    -fx-text-fill: #e9edef;
+    -fx-border-color: #374248;
+    -fx-border-radius: 8;
+    -fx-font-size: 18px;
+    -fx-padding: 8 12 8 12;
+    -fx-background-radius: 8;
+}
+.upload-btn:hover {
+    -fx-background-color: #374248;
+    -fx-text-fill: #e9edef;
+}
+
+/* Estilo para las imágenes en el chat */
+.chat-image {
+    -fx-background-color: #1f2c34;
+    -fx-background-radius: 8;
+    -fx-padding: 4;
+    -fx-cursor: hand;
+}
+.chat-image:hover {
+    -fx-background-color: #374248;
 } 

@@ -307,6 +307,22 @@ public class ChatClient extends Application {
         }
     }
     
+    public void clearGeneralChat() {
+        if (!isConnected) {
+            showError("No estás conectado al servidor");
+            return;
+        }
+        out.println("CLEAR_GENERAL");
+    }
+
+    public void clearPrivateChat(String username) {
+        if (!isConnected) {
+            showError("No estás conectado al servidor");
+            return;
+        }
+        out.println("CLEAR_PRIVATE:" + username);
+    }
+    
     public static void main(String[] args) {
         launch(args);
     }
