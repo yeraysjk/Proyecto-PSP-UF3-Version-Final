@@ -182,7 +182,9 @@ public class ChatWindowController {
             String hour = datetime.split(" ")[1].substring(0,5);
             String texto = rest;
             String emisor = rest.contains(":") ? rest.split(":")[0] : "";
-            boolean enviado = rest.startsWith("Tú");
+            
+            // Determinar si es un mensaje enviado por el usuario actual
+            boolean enviado = emisor.equals(username) || emisor.equals("Tú");
             
             // Determinar si es un mensaje general o privado
             boolean esGeneral = !rest.contains("->");
