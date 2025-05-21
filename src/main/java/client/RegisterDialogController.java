@@ -6,26 +6,40 @@ import javafx.stage.Stage;
 import java.io.*;
 import java.net.Socket;
 
+/**
+ * Controlador para la ventana de registro de usuarios.
+ * Maneja el proceso de registro de nuevos usuarios en el sistema.
+ */
 public class RegisterDialogController {
+    // Configuración de conexión
     private static final String SERVER_ADDRESS = "localhost";
     private static final int SERVER_PORT = 5000;
     
-    @FXML private TextField usernameField;
-    @FXML private PasswordField passwordField;
-    @FXML private PasswordField repeatPasswordField;
-    @FXML private Label errorLabel;
-    @FXML private Button registerButton;
-    @FXML private Button backButton;
+    // Componentes de la interfaz gráfica
+    @FXML private TextField usernameField;         // Campo para el nombre de usuario
+    @FXML private PasswordField passwordField;     // Campo para la contraseña
+    @FXML private PasswordField repeatPasswordField; // Campo para repetir la contraseña
+    @FXML private Label errorLabel;                // Etiqueta para mensajes de error/éxito
+    @FXML private Button registerButton;           // Botón de registro
+    @FXML private Button backButton;               // Botón para volver
 
-    private Stage dialogStage;
-    private String username;
-    private String password;
-    private boolean registered = false;
+    // Variables de control
+    private Stage dialogStage;                     // Ventana del diálogo
+    private String username;                       // Nombre de usuario registrado
+    private String password;                       // Contraseña registrada
+    private boolean registered = false;            // Estado del registro
 
+    /**
+     * Establece la ventana del diálogo
+     * @param dialogStage Ventana del diálogo
+     */
     public void setDialogStage(Stage dialogStage) {
         this.dialogStage = dialogStage;
     }
 
+    /**
+     * Inicializa los componentes de la interfaz y configura los eventos
+     */
     @FXML
     private void initialize() {
         errorLabel.setVisible(false);
@@ -33,6 +47,10 @@ public class RegisterDialogController {
         backButton.setOnAction(e -> handleBack());
     }
 
+    /**
+     * Maneja el evento de registro de usuario
+     * Valida los campos y envía la solicitud al servidor
+     */
     private void handleRegister() {
         String user = usernameField.getText().trim();
         String pass = passwordField.getText();
@@ -68,6 +86,12 @@ public class RegisterDialogController {
         }
     }
     
+    /**
+     * Envía la solicitud de registro al servidor
+     * @param username Nombre de usuario
+     * @param password Contraseña
+     * @return true si el registro fue exitoso
+     */
     private boolean registerUser(String username, String password) {
         try {
             // Crear una conexión independiente para el registro
@@ -107,6 +131,9 @@ public class RegisterDialogController {
         }
     }
 
+    /**
+     * Maneja el evento de volver al login
+     */
     private void handleBack() {
         this.username = null;
         this.password = null;
@@ -114,19 +141,41 @@ public class RegisterDialogController {
         dialogStage.close();
     }
 
+    /**
+     * Muestra un mensaje de error
+     * @param msg Mensaje de error
+     */
     private void showError(String msg) {
         errorLabel.setText(msg);
         errorLabel.setStyle("-fx-text-fill: #ff5252;");
         errorLabel.setVisible(true);
     }
     
+    /**
+     * Muestra un mensaje de éxito
+     * @param msg Mensaje de éxito
+     */
     private void showSuccess(String msg) {
         errorLabel.setText(msg);
         errorLabel.setStyle("-fx-text-fill: #4caf50;");
         errorLabel.setVisible(true);
     }
 
+    /**
+     * Obtiene el nombre de usuario registrado
+     * @return Nombre de usuario
+     */
     public String getUsername() { return username; }
+
+    /**
+     * Obtiene la contraseña registrada
+     * @return Contraseña
+     */
     public String getPassword() { return password; }
+
+    /**
+     * Verifica si el registro fue exitoso
+     * @return true si el registro fue exitoso
+     */
     public boolean isRegistered() { return registered; }
 } 

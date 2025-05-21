@@ -14,14 +14,25 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicBoolean;
 
+/**
+ * Servidor principal del chat.
+ * Maneja las conexiones de los clientes, la distribución de mensajes y la gestión de usuarios.
+ */
 public class ChatServer {
-    private static final int PORT = 5000;
-    private final ExecutorService pool;
-    private final Map<String, ClientHandler> clients;
-    private final Set<String> connectedUsers;
-    private final AtomicBoolean isRunning;
-    private ServerSocket serverSocket;
+    // Configuración del servidor
+    private static final int PORT = 5000;                    // Puerto del servidor
+    
+    // Componentes del servidor
+    private final ExecutorService pool;                      // Pool de hilos para manejar clientes
+    private final Map<String, ClientHandler> clients;        // Mapa de clientes conectados
+    private final Set<String> connectedUsers;               // Conjunto de usuarios conectados
+    private final AtomicBoolean isRunning;                  // Estado del servidor
+    private ServerSocket serverSocket;                      // Socket del servidor
 
+    /**
+     * Constructor del servidor
+     * Inicializa los componentes necesarios para el funcionamiento
+     */
     public ChatServer() {
         this.pool = Executors.newCachedThreadPool();
         this.clients = new ConcurrentHashMap<>();
@@ -29,6 +40,9 @@ public class ChatServer {
         this.isRunning = new AtomicBoolean(true);
     }
 
+    /**
+     * Inicia el servidor y comienza a aceptar conexiones
+     */
     public void start() {
         Logger.log("Iniciando servidor de chat...");
         
@@ -60,6 +74,10 @@ public class ChatServer {
         }
     }
 
+    /**
+     * Inicia el hilo que maneja los comandos del servidor
+     * Permite apagar el servidor (q) o listar clientes (l)
+     */
     private void startServerCommandThread() {
         new Thread(() -> {
             while (isRunning.get()) {
@@ -78,12 +96,19 @@ public class ChatServer {
         }).start();
     }
 
+    /**
+     * Lista los clientes conectados en el log
+     */
     private void listConnectedClients() {
         Logger.log("Clientes conectados:");
         clients.forEach((username, handler) -> 
             Logger.log("- " + username + " (" + handler.getClientAddress() + ")"));
     }
 
+    /**
+     * Apaga el servidor de forma segura
+     * Cierra todas las conexiones y libera recursos
+     */
     public void shutdown() {
         isRunning.set(false);
         try {
@@ -107,6 +132,12 @@ public class ChatServer {
         Logger.log("Servidor detenido");
     }
 
+    /**
+     * Añade un nuevo cliente al servidor
+     * @param username Nombre del usuario
+     * @param handler Manejador del cliente
+     * @return true si se añadió correctamente
+     */
     public boolean addClient(String username, ClientHandler handler) {
         if (connectedUsers.contains(username)) {
             return false;
@@ -117,12 +148,21 @@ public class ChatServer {
         return true;
     }
 
+    /**
+     * Elimina un cliente del servidor
+     * @param username Nombre del usuario a eliminar
+     */
     public void removeClient(String username) {
         connectedUsers.remove(username);
         clients.remove(username);
         broadcastUserList();
     }
 
+    /**
+     * Envía un mensaje a todos los clientes excepto al remitente
+     * @param message Mensaje a enviar
+     * @param sender Remitente del mensaje
+     */
     public void broadcast(String message, String sender) {
         clients.forEach((username, handler) -> {
             if (!username.equals(sender)) {
@@ -131,6 +171,12 @@ public class ChatServer {
         });
     }
 
+    /**
+     * Envía un mensaje privado entre dos usuarios
+     * @param sender Remitente del mensaje
+     * @param recipient Destinatario del mensaje
+     * @param message Contenido del mensaje
+     */
     public void sendPrivateMessage(String sender, String recipient, String message) {
         ClientHandler handler = clients.get(recipient);
         if (handler != null) {
@@ -138,15 +184,25 @@ public class ChatServer {
         }
     }
 
+    /**
+     * Envía la lista actualizada de usuarios a todos los clientes
+     */
     private void broadcastUserList() {
         String userList = "USERLIST:" + String.join(",", connectedUsers);
         clients.forEach((username, handler) -> handler.sendMessage(userList));
     }
 
+    /**
+     * Obtiene la lista de todos los usuarios registrados
+     * @return Lista de usuarios
+     */
     public java.util.List<String> getAllRegisteredUsers() {
         return server.DatabaseConfig.getAllUsers();
     }
 
+    /**
+     * Punto de entrada principal del servidor
+     */
     public static void main(String[] args) {
         new ChatServer().start();
     }

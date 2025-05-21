@@ -7,7 +7,17 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Gestor de mensajes del chat.
+ * Maneja el almacenamiento, recuperación y gestión de mensajes en la base de datos.
+ */
 public class MessageManager {
+    /**
+     * Guarda un mensaje en la base de datos
+     * @param sender Remitente del mensaje
+     * @param recipient Destinatario (vacío para mensaje general)
+     * @param message Contenido del mensaje
+     */
     public static void saveMessage(String sender, String recipient, String message) {
         if (recipient == null || recipient.isEmpty()) {
             DatabaseConfig.saveGeneralMessage(sender, message);
@@ -16,6 +26,12 @@ public class MessageManager {
         }
     }
 
+    /**
+     * Obtiene el historial completo de mensajes de un usuario
+     * Incluye mensajes generales y privados
+     * @param username Nombre del usuario
+     * @return Lista de mensajes formateados
+     */
     public static List<String> getMessageHistory(String username) {
         List<String> messages = new ArrayList<>();
         
@@ -78,6 +94,11 @@ public class MessageManager {
         return messages;
     }
 
+    /**
+     * Obtiene los mensajes no leídos de un usuario
+     * @param username Nombre del usuario
+     * @return Lista de mensajes no leídos
+     */
     public static List<String> getUnreadMessages(String username) {
         List<String> messages = new ArrayList<>();
         String sql = "SELECT sender, message, timestamp FROM mensajes " +
@@ -106,6 +127,10 @@ public class MessageManager {
         return messages;
     }
 
+    /**
+     * Marca los mensajes de un usuario como leídos
+     * @param username Nombre del usuario
+     */
     private static void markMessagesAsRead(String username) {
         String sql = "UPDATE mensajes SET is_read = 1 WHERE recipient = ? AND is_read = 0";
         try (Connection conn = DatabaseConfig.getConnection();
@@ -117,6 +142,10 @@ public class MessageManager {
         }
     }
 
+    /**
+     * Limpia todo el historial de mensajes
+     * Borra mensajes generales y privados
+     */
     public static void clearMessageHistory() {
         String[] tables = {"mensajes", "mensajes_generales"};
         for (String table : tables) {
@@ -131,6 +160,12 @@ public class MessageManager {
         }
     }
 
+    /**
+     * Obtiene el historial de mensajes privados entre dos usuarios
+     * @param user1 Primer usuario
+     * @param user2 Segundo usuario
+     * @return Lista de mensajes privados
+     */
     public static List<String> getPrivateHistory(String user1, String user2) {
         List<String> messages = new ArrayList<>();
         String sql = "SELECT sender, recipient, message, timestamp FROM mensajes " +
@@ -162,6 +197,10 @@ public class MessageManager {
         return messages;
     }
 
+    /**
+     * Obtiene el historial de mensajes generales
+     * @return Lista de mensajes generales
+     */
     public static List<String> getGeneralHistory() {
         List<String> messages = new ArrayList<>();
         String sql = "SELECT sender, message, timestamp FROM mensajes_generales ORDER BY timestamp ASC";
@@ -180,6 +219,9 @@ public class MessageManager {
         return messages;
     }
 
+    /**
+     * Limpia todos los mensajes generales
+     */
     public static void clearGeneralMessages() {
         try (Connection conn = DatabaseConfig.getConnection()) {
             String sql = "DELETE FROM mensajes_generales";
@@ -191,6 +233,11 @@ public class MessageManager {
         }
     }
 
+    /**
+     * Limpia todos los mensajes de un usuario específico
+     * Incluye mensajes generales y privados
+     * @param username Nombre del usuario
+     */
     public static void clearUserMessages(String username) {
         try (Connection conn = DatabaseConfig.getConnection()) {
             // Limpiar mensajes privados donde el usuario es remitente o destinatario

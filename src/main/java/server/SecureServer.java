@@ -6,19 +6,33 @@ import java.security.KeyStore;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
+/**
+ * Servidor seguro con soporte SSL/TLS.
+ * Proporciona una capa de seguridad adicional para las comunicaciones del chat.
+ */
 public class SecureServer {
-    private static final int PORT = 12345;
-    private final ChatServer chatServer;
-    private final ExecutorService pool;
-    private SSLServerSocket serverSocket;
-    private volatile boolean isRunning;
+    // Configuración del servidor
+    private static final int PORT = 12345;                // Puerto para conexiones seguras
+    
+    // Componentes del servidor
+    private final ChatServer chatServer;                  // Instancia del servidor de chat
+    private final ExecutorService pool;                   // Pool de hilos para manejar clientes
+    private SSLServerSocket serverSocket;                 // Socket del servidor SSL
+    private volatile boolean isRunning;                   // Estado del servidor
 
+    /**
+     * Constructor del servidor seguro
+     * Inicializa los componentes necesarios
+     */
     public SecureServer() {
         this.chatServer = new ChatServer();
         this.pool = Executors.newCachedThreadPool();
         this.isRunning = true;
     }
 
+    /**
+     * Inicia el servidor seguro y comienza a aceptar conexiones SSL
+     */
     public void start() {
         try {
             SSLServerSocketFactory factory = getSSLContext().getServerSocketFactory();
@@ -53,12 +67,21 @@ public class SecureServer {
         }
     }
 
+    /**
+     * Obtiene el contexto SSL configurado
+     * @return Contexto SSL
+     * @throws Exception Si hay error en la configuración SSL
+     */
     private SSLContext getSSLContext() throws Exception {
         SSLContext sslContext = SSLContext.getInstance("TLS");
         sslContext.init(null, null, null);
         return sslContext;
     }
 
+    /**
+     * Apaga el servidor de forma segura
+     * Cierra todas las conexiones y libera recursos
+     */
     public void shutdown() {
         isRunning = false;
         try {
@@ -73,6 +96,9 @@ public class SecureServer {
         Logger.log("Servidor seguro detenido");
     }
 
+    /**
+     * Punto de entrada principal del servidor seguro
+     */
     public static void main(String[] args) {
         new SecureServer().start();
     }

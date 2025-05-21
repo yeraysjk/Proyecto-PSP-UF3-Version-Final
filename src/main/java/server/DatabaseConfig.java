@@ -4,6 +4,10 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Clase que maneja la configuración y operaciones de la base de datos PostgreSQL.
+ * Gestiona la conexión, inicialización de tablas y operaciones CRUD para mensajes y usuarios.
+ */
 public class DatabaseConfig {
     // Configuración para PostgreSQL remota
     private static final String DB_URL = "jdbc:postgresql://cicles.ies-eugeni.cat:5432/grupf_db";
@@ -23,10 +27,20 @@ public class DatabaseConfig {
         }
     }
 
+    /**
+     * Obtiene una conexión a la base de datos PostgreSQL.
+     * @return Connection objeto de conexión a la base de datos
+     * @throws SQLException si hay error al conectar
+     */
     public static Connection getConnection() throws SQLException {
         return DriverManager.getConnection(DB_URL, USER, PASSWORD);
     }
 
+    /**
+     * Inicializa la base de datos creando las tablas necesarias si no existen.
+     * Crea tablas para usuarios, mensajes privados y mensajes generales.
+     * También crea un usuario de prueba por defecto.
+     */
     private static void initDatabase() throws SQLException {
         try (Connection conn = getConnection()) {
             Logger.log("Conexión a la base de datos establecida correctamente");
@@ -86,6 +100,12 @@ public class DatabaseConfig {
         }
     }
 
+    /**
+     * Guarda un mensaje privado en la base de datos.
+     * @param sender Remitente del mensaje
+     * @param recipient Destinatario del mensaje
+     * @param message Contenido del mensaje
+     */
     public static void saveMessage(String sender, String recipient, String message) {
         String sql = "INSERT INTO mensajes (sender, recipient, message, is_read) VALUES (?, ?, ?, ?)";
         try (Connection conn = getConnection();
@@ -101,6 +121,11 @@ public class DatabaseConfig {
         }
     }
 
+    /**
+     * Obtiene los mensajes no leídos para un usuario específico.
+     * @param recipient Usuario destinatario
+     * @return Lista de mensajes no leídos
+     */
     public static List<String> getUnreadMessages(String recipient) {
         List<String> messages = new ArrayList<>();
         String sql = "SELECT sender, message, timestamp FROM mensajes WHERE recipient = ? AND is_read = 0 ORDER BY timestamp";
@@ -127,6 +152,10 @@ public class DatabaseConfig {
         return messages;
     }
 
+    /**
+     * Obtiene la lista de todos los usuarios registrados.
+     * @return Lista de nombres de usuario
+     */
     public static List<String> getAllUsers() {
         List<String> users = new ArrayList<>();
         String sql = "SELECT username FROM usuarios WHERE username != 'admin' ORDER BY username";
@@ -142,6 +171,11 @@ public class DatabaseConfig {
         return users;
     }
 
+    /**
+     * Guarda un mensaje general en la base de datos.
+     * @param sender Remitente del mensaje
+     * @param message Contenido del mensaje
+     */
     public static void saveGeneralMessage(String sender, String message) {
         String sql = "INSERT INTO mensajes_generales (sender, message) VALUES (?, ?)";
         try (Connection conn = getConnection();
@@ -155,6 +189,12 @@ public class DatabaseConfig {
         }
     }
 
+    /**
+     * Obtiene el historial completo de mensajes para un usuario.
+     * Incluye mensajes privados y generales.
+     * @param username Nombre del usuario
+     * @return Lista de mensajes ordenados por fecha
+     */
     public static List<String> getMessageHistory(String username) {
         List<String> messages = new ArrayList<>();
         // Obtener mensajes privados
@@ -222,6 +262,10 @@ public class DatabaseConfig {
         return messages;
     }
 
+    /**
+     * Guarda un mensaje en la tabla de mensajes.
+     * @param message Contenido del mensaje
+     */
     public static void saveMessage(String message) {
         try (Connection conn = getConnection()) {
             String sql = "INSERT INTO messages (message) VALUES (?)";
@@ -234,6 +278,10 @@ public class DatabaseConfig {
         }
     }
 
+    /**
+     * Limpia todo el historial de mensajes de la base de datos.
+     * Borra tanto mensajes privados como generales.
+     */
     public static void clearMessageHistory() {
         try (Connection conn = getConnection()) {
             // Borrar mensajes privados
@@ -247,13 +295,15 @@ public class DatabaseConfig {
             try (PreparedStatement pstmt = conn.prepareStatement(generalSql)) {
                 pstmt.executeUpdate();
             }
-
-            Logger.debug("Historial de mensajes limpiado correctamente");
         } catch (SQLException e) {
-            Logger.error("Error al limpiar el historial de mensajes: " + e.getMessage(), e);
+            Logger.error("Error limpiando historial de mensajes: " + e.getMessage(), e);
         }
     }
 
+    /**
+     * Limpia todos los mensajes de un usuario específico.
+     * @param username Nombre del usuario
+     */
     public static void clearUserMessages(String username) {
         try (Connection conn = getConnection()) {
             // Borrar mensajes privados del usuario
@@ -263,31 +313,22 @@ public class DatabaseConfig {
                 pstmt.setString(2, username);
                 pstmt.executeUpdate();
             }
-
-            // Borrar mensajes generales del usuario
-            String generalSql = "DELETE FROM mensajes_generales WHERE sender = ?";
-            try (PreparedStatement pstmt = conn.prepareStatement(generalSql)) {
-                pstmt.setString(1, username);
-                pstmt.executeUpdate();
-            }
-
-            Logger.debug("Mensajes del usuario " + username + " limpiados correctamente");
         } catch (SQLException e) {
-            Logger.error("Error al limpiar los mensajes del usuario: " + e.getMessage(), e);
+            Logger.error("Error limpiando mensajes del usuario: " + e.getMessage(), e);
         }
     }
 
+    /**
+     * Limpia todos los mensajes generales de la base de datos.
+     */
     public static void clearGeneralMessages() {
         try (Connection conn = getConnection()) {
-            // Borrar solo mensajes generales
-            String generalSql = "DELETE FROM mensajes_generales";
-            try (PreparedStatement pstmt = conn.prepareStatement(generalSql)) {
+            String sql = "DELETE FROM mensajes_generales";
+            try (PreparedStatement pstmt = conn.prepareStatement(sql)) {
                 pstmt.executeUpdate();
             }
-
-            Logger.debug("Mensajes generales limpiados correctamente");
         } catch (SQLException e) {
-            Logger.error("Error al limpiar los mensajes generales: " + e.getMessage(), e);
+            Logger.error("Error limpiando mensajes generales: " + e.getMessage(), e);
         }
     }
 } 

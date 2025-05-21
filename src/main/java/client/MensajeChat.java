@@ -3,14 +3,26 @@ package client;
 import java.time.LocalDate;
 import java.time.LocalTime;
 
+/**
+ * Clase que representa un mensaje en el chat.
+ * Almacena toda la información relacionada con un mensaje individual.
+ */
 public class MensajeChat {
-    private String texto;
-    private String emisor;
-    private boolean enviado; // true si lo envía el usuario actual
-    private LocalDate fecha;
-    private LocalTime hora;
-    private boolean imagen; // true si el mensaje contiene una imagen
+    private String texto;        // Contenido del mensaje
+    private String emisor;       // Usuario que envía el mensaje
+    private boolean enviado;     // Indica si el mensaje fue enviado por el usuario actual
+    private LocalDate fecha;     // Fecha del mensaje
+    private LocalTime hora;      // Hora del mensaje
+    private boolean imagen;      // Indica si el mensaje contiene una imagen
 
+    /**
+     * Constructor para crear un nuevo mensaje de chat
+     * @param texto Contenido del mensaje
+     * @param emisor Usuario que envía el mensaje
+     * @param enviado Indica si el mensaje fue enviado por el usuario actual
+     * @param fecha Fecha del mensaje
+     * @param hora Hora del mensaje
+     */
     public MensajeChat(String texto, String emisor, boolean enviado, LocalDate fecha, LocalTime hora) {
         this.texto = texto;
         this.emisor = emisor;
@@ -20,6 +32,7 @@ public class MensajeChat {
         this.imagen = false;
     }
 
+    // Getters y setters para acceder y modificar los atributos del mensaje
     public String getTexto() { return texto; }
     public void setTexto(String texto) { this.texto = texto; }
     public String getEmisor() { return emisor; }

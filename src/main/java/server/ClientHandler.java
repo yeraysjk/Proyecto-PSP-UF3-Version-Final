@@ -8,15 +8,27 @@ import server.UserManager;
 import server.MessageManager;
 import server.DatabaseConfig;
 
+/**
+ * Manejador de cliente individual.
+ * Gestiona la comunicación con un cliente específico, incluyendo autenticación,
+ * registro y procesamiento de mensajes.
+ */
 public class ClientHandler implements Runnable {
-    private final Socket socket;
-    private final PrintWriter out;
-    private final BufferedReader in;
-    private String username;
-    private final AtomicBoolean isRunning;
-    private final ChatServer server;
-    private final boolean isSecure;
+    // Componentes de conexión
+    private final Socket socket;              // Socket de conexión con el cliente
+    private final PrintWriter out;            // Escritor de salida al cliente
+    private final BufferedReader in;          // Lector de entrada del cliente
+    private String username;                  // Nombre de usuario del cliente
+    private final AtomicBoolean isRunning;    // Estado de la conexión
+    private final ChatServer server;          // Referencia al servidor
+    private final boolean isSecure;           // Indica si la conexión es segura (SSL)
 
+    /**
+     * Constructor del manejador de cliente
+     * @param socket Socket de conexión
+     * @param server Referencia al servidor
+     * @throws IOException Si hay error al crear los streams
+     */
     public ClientHandler(Socket socket, ChatServer server) throws IOException {
         this.socket = socket;
         this.server = server;
@@ -26,6 +38,9 @@ public class ClientHandler implements Runnable {
         this.isRunning = new AtomicBoolean(true);
     }
 
+    /**
+     * Método principal que maneja la conexión del cliente
+     */
     @Override
     public void run() {
         try {
@@ -37,6 +52,10 @@ public class ClientHandler implements Runnable {
         }
     }
 
+    /**
+     * Maneja la conexión inicial del cliente y el proceso de autenticación
+     * @throws IOException Si hay error en la comunicación
+     */
     private void handleClient() throws IOException {
         // Esperar login o registro
         String initialMessage = in.readLine();
@@ -95,6 +114,10 @@ public class ClientHandler implements Runnable {
         }
     }
 
+    /**
+     * Procesa los mensajes recibidos del cliente
+     * @param message Mensaje recibido
+     */
     private void handleMessage(String message) {
         try {
             if (message.startsWith("REGISTER:")) {
@@ -139,6 +162,10 @@ public class ClientHandler implements Runnable {
         }
     }
 
+    /**
+     * Maneja el registro de nuevos usuarios
+     * @param data Datos de registro (usuario:contraseña)
+     */
     private void handleRegister(String data) {
         String[] parts = data.split(":", 2);
         if (parts.length != 2) {
@@ -155,6 +182,10 @@ public class ClientHandler implements Runnable {
         }
     }
 
+    /**
+     * Procesa y distribuye mensajes generales
+     * @param message Contenido del mensaje
+     */
     private void handleGeneralMessage(String message) {
         // Guardar el mensaje en la base de datos
         MessageManager.saveMessage(username, "", message);
@@ -163,6 +194,10 @@ public class ClientHandler implements Runnable {
         server.broadcast(username + ": " + message, username);
     }
 
+    /**
+     * Procesa y envía mensajes privados
+     * @param message Mensaje en formato destinatario:contenido
+     */
     private void handlePrivateMessage(String message) {
         String[] parts = message.split(":", 2);
         if (parts.length != 2) {
@@ -184,6 +219,9 @@ public class ClientHandler implements Runnable {
         }
     }
 
+    /**
+     * Maneja la solicitud de lista de usuarios
+     */
     private void handleGetUsers() {
         // Obtener todos los usuarios menos el actual y admin
         java.util.List<String> users = server.getAllRegisteredUsers();
@@ -192,10 +230,17 @@ public class ClientHandler implements Runnable {
         sendMessage("USERLIST:" + String.join(",", users));
     }
 
+    /**
+     * Envía un mensaje al cliente
+     * @param message Mensaje a enviar
+     */
     public void sendMessage(String message) {
         out.println(message);
     }
 
+    /**
+     * Desconecta al cliente y limpia recursos
+     */
     public void disconnect() {
         if (isRunning.compareAndSet(true, false)) {
             try {
@@ -210,10 +255,18 @@ public class ClientHandler implements Runnable {
         }
     }
 
+    /**
+     * Obtiene el nombre de usuario del cliente
+     * @return Nombre de usuario
+     */
     public String getUsername() {
         return username;
     }
 
+    /**
+     * Obtiene la dirección del cliente
+     * @return Dirección IP y estado SSL
+     */
     public String getClientAddress() {
         return socket.getInetAddress().getHostAddress() + (isSecure ? " (SSL)" : "");
     }

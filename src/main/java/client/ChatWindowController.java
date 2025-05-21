@@ -19,27 +19,30 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class ChatWindowController {
-    @FXML private ListView<String> userListView;
-    @FXML private ListView<MensajeChat> chatListView;
-    @FXML private TextField messageField;
-    @FXML private TextField recipientField;
-    @FXML private Button sendButton;
-    @FXML private Button clearButton;
-    @FXML private Label statusLabel;
-    @FXML private BorderPane mainContainer;
+    // Componentes de la interfaz gráfica
+    @FXML private ListView<String> userListView;      // Lista de usuarios conectados
+    @FXML private ListView<MensajeChat> chatListView; // Lista de mensajes del chat
+    @FXML private TextField messageField;             // Campo para escribir mensajes
+    @FXML private TextField recipientField;           // Campo para seleccionar destinatario
+    @FXML private Button sendButton;                  // Botón para enviar mensajes
+    @FXML private Button clearButton;                 // Botón para limpiar el chat
+    @FXML private Label statusLabel;                  // Etiqueta para mostrar estado
+    @FXML private BorderPane mainContainer;           // Contenedor principal
 
-    private ChatClient chatClient;
-    private String username;
-    private Stage stage;
-    private ObservableList<String> userList = FXCollections.observableArrayList();
-    private ObservableList<MensajeChat> mensajes = FXCollections.observableArrayList();
-    private String currentSelectedUser = null;
-    private java.util.Timer historyTimer = null;
-    private LocalDate lastDateHeader = null;
-    private Set<String> mensajeIds = new HashSet<>();
+    // Variables de control
+    private ChatClient chatClient;                    // Cliente de chat
+    private String username;                          // Nombre de usuario actual
+    private Stage stage;                              // Ventana principal
+    private ObservableList<String> userList = FXCollections.observableArrayList();  // Lista observable de usuarios
+    private ObservableList<MensajeChat> mensajes = FXCollections.observableArrayList(); // Lista observable de mensajes
+    private String currentSelectedUser = null;        // Usuario seleccionado actualmente
+    private java.util.Timer historyTimer = null;      // Timer para actualizar historial
+    private LocalDate lastDateHeader = null;          // Última fecha mostrada en encabezado
+    private Set<String> mensajeIds = new HashSet<>(); // Conjunto para evitar mensajes duplicados
 
     @FXML
     public void initialize() {
+        // Inicialización de la interfaz y configuración de eventos
         // Añadir usuario especial 'General'
         userList.add("General");
         userListView.setItems(userList);
@@ -124,20 +127,24 @@ public class ChatWindowController {
         recipientField.setPromptText("Todos (dejar vacío para mensaje general)");
     }
 
+    // Método para establecer el cliente de chat
     public void setChatClient(ChatClient chatClient) {
         this.chatClient = chatClient;
         stopHistoryTimer();
     }
 
+    // Método para establecer el nombre de usuario
     public void setUsername(String username) {
         this.username = username;
         updateStatus("Conectado como: " + username);
     }
 
+    // Método para establecer la ventana principal
     public void setStage(Stage stage) {
         this.stage = stage;
     }
 
+    // Actualiza la lista de usuarios conectados
     public void updateUserList(ObservableList<String> users) {
         userList.clear();
         userList.add("General"); // Siempre primero
@@ -146,6 +153,7 @@ public class ChatWindowController {
         updateStatus("Usuarios conectados: " + users.size());
     }
 
+    // Añade un mensaje al chat desde una cadena de texto
     public void appendMessage(String message) {
         MensajeChat msg = parseMensaje(message);
         if (msg != null) {
@@ -153,6 +161,7 @@ public class ChatWindowController {
         }
     }
 
+    // Añade un mensaje al chat desde un objeto MensajeChat
     public void appendMessage(MensajeChat msg) {
         if (msg != null) {
             String id = msg.getFecha() + "_" + msg.getHora() + "_" + msg.getTexto();
@@ -172,6 +181,7 @@ public class ChatWindowController {
         }
     }
 
+    // Parsea un mensaje desde una cadena de texto a un objeto MensajeChat
     private MensajeChat parseMensaje(String message) {
         try {
             if (!message.startsWith("[")) return null;
@@ -209,6 +219,7 @@ public class ChatWindowController {
         }
     }
 
+    // Muestra un mensaje de error en una ventana emergente
     public void showError(String error) {
         Alert alert = new Alert(Alert.AlertType.ERROR);
         alert.setTitle("Error");
@@ -217,6 +228,7 @@ public class ChatWindowController {
         alert.showAndWait();
     }
 
+    // Envía un mensaje al chat
     private void sendMessage() {
         String message = messageField.getText().trim();
         if (!message.isEmpty()) {
@@ -241,6 +253,7 @@ public class ChatWindowController {
         }
     }
 
+    // Limpia el chat actual
     public void clearChat() {
         if (chatClient != null) {
             if (currentSelectedUser != null && currentSelectedUser.equals("General")) {
@@ -254,12 +267,14 @@ public class ChatWindowController {
         lastDateHeader = null;
     }
     
+    // Actualiza el texto del estado
     private void updateStatus(String status) {
         if (statusLabel != null) {
             statusLabel.setText(status);
         }
     }
 
+    // Inicia el timer para actualizar el historial periódicamente
     private void startHistoryTimer() {
         stopHistoryTimer();
         if (currentSelectedUser != null && chatClient != null) {
@@ -279,6 +294,7 @@ public class ChatWindowController {
         }
     }
 
+    // Detiene el timer de actualización del historial
     private void stopHistoryTimer() {
         if (historyTimer != null) {
             historyTimer.cancel();
@@ -286,6 +302,7 @@ public class ChatWindowController {
         }
     }
 
+    // Establece el historial de mensajes
     public void setHistorial(String historial) {
         if (historial == null || historial.trim().isEmpty()) {
             return;

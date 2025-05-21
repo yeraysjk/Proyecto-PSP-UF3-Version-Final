@@ -6,11 +6,18 @@ import java.io.PrintWriter;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+/**
+ * Sistema de registro (logging) del servidor.
+ * Maneja el registro de eventos, errores y depuración tanto en consola como en archivo.
+ */
 public class Logger {
-    private static final String LOG_FILE = "server.log";
-    private static final SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+    // Configuración del logger
+    private static final String LOG_FILE = "server.log";                    // Archivo de log
+    private static final SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");  // Formato de fecha
     
-    // Niveles de log
+    /**
+     * Niveles de severidad para los mensajes de log
+     */
     public enum Level {
         DEBUG(0),      // Información detallada, útil para depuración
         INFO(1),       // Información general sobre el funcionamiento normal
@@ -29,21 +36,22 @@ public class Logger {
         }
     }
     
-    // Nivel mínimo que se mostrará en consola (se puede cambiar según necesidades)
-    private static Level consoleLevel = Level.ERROR;
-    
-    // Nivel mínimo que se guardará en archivo (se guardarán todos los logs)
-    private static Level fileLevel = Level.DEBUG;
+    // Configuración de niveles de log
+    private static Level consoleLevel = Level.ERROR;    // Nivel mínimo para mostrar en consola
+    private static Level fileLevel = Level.DEBUG;       // Nivel mínimo para guardar en archivo
     
     /**
      * Configura el nivel mínimo de log para la consola
+     * @param level Nuevo nivel mínimo
      */
     public static void setConsoleLevel(Level level) {
         consoleLevel = level;
     }
     
     /**
-     * Log genérico con nivel especificado
+     * Registra un mensaje con el nivel especificado
+     * @param level Nivel de severidad del mensaje
+     * @param message Mensaje a registrar
      */
     public static void log(Level level, String message) {
         String timestamp = dateFormat.format(new Date());
@@ -67,28 +75,33 @@ public class Logger {
     }
     
     /**
-     * Log de nivel INFO (compatibilidad con código existente)
+     * Registra un mensaje de nivel INFO
+     * @param message Mensaje a registrar
      */
     public static void log(String message) {
         log(Level.INFO, message);
     }
     
     /**
-     * Log para información importante (registro, conexiones nuevas)
+     * Registra un mensaje importante
+     * @param message Mensaje a registrar
      */
     public static void important(String message) {
         log(Level.IMPORTANT, message);
     }
     
     /**
-     * Log para depuración
+     * Registra un mensaje de depuración
+     * @param message Mensaje a registrar
      */
     public static void debug(String message) {
         log(Level.DEBUG, message);
     }
     
     /**
-     * Log para errores
+     * Registra un error y su stack trace
+     * @param message Mensaje de error
+     * @param e Excepción que causó el error
      */
     public static void error(String message, Exception e) {
         log(Level.ERROR, "ERROR: " + message);

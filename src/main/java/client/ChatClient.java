@@ -17,24 +17,32 @@ import javafx.scene.control.Alert;
 import server.ChatServer;
 import server.Logger;
 
+/**
+ * Clase principal del cliente de chat.
+ * Maneja la conexión con el servidor y la interfaz de usuario.
+ */
 public class ChatClient extends Application {
-    // Cambiar a la IP del servidor cuando se conecte desde otro ordenador
+    // Configuración de conexión
     private static final String SERVER_ADDRESS = "localhost";
     private static final int SERVER_PORT = 5000;
     
-    private Socket socket;
-    private BufferedReader in;
-    private PrintWriter out;
-    private String username;
-    private String password;
-    private ExecutorService executorService;
-    private ChatWindowController chatController;
-    private ObservableList<String> userList = FXCollections.observableArrayList();
-    private Stage primaryStage;
-    private boolean isConnected = false;
-    private ChatServer server;
-    private Thread serverThread;
+    // Componentes de conexión
+    private Socket socket;                    // Socket para la conexión con el servidor
+    private BufferedReader in;                // Lector de entrada del servidor
+    private PrintWriter out;                  // Escritor de salida al servidor
+    private String username;                  // Nombre de usuario actual
+    private String password;                  // Contraseña del usuario
+    private ExecutorService executorService;  // Servicio para manejar hilos
+    private ChatWindowController chatController; // Controlador de la ventana de chat
+    private ObservableList<String> userList = FXCollections.observableArrayList(); // Lista de usuarios
+    private Stage primaryStage;               // Ventana principal
+    private boolean isConnected = false;      // Estado de la conexión
+    private ChatServer server;                // Instancia del servidor
+    private Thread serverThread;              // Hilo del servidor
 
+    /**
+     * Inicializa la aplicación y el servidor
+     */
     @Override
     public void init() throws Exception {
         // Iniciar el servidor en un hilo separado
@@ -53,6 +61,9 @@ public class ChatClient extends Application {
         Thread.sleep(1000);
     }
 
+    /**
+     * Inicia la aplicación y muestra la ventana de login
+     */
     @Override
     public void start(Stage primaryStage) throws Exception {
         try {
@@ -76,6 +87,9 @@ public class ChatClient extends Application {
         }
     }
 
+    /**
+     * Cierra la aplicación y desconecta del servidor
+     */
     @Override
     public void stop() {
         try {
@@ -88,6 +102,10 @@ public class ChatClient extends Application {
         }
     }
 
+    /**
+     * Muestra el diálogo de inicio de sesión
+     * @return true si el login fue exitoso
+     */
     private boolean showLoginDialog() {
         try {
             FXMLLoader loginLoader = new FXMLLoader(ChatClient.class.getResource("/fxml/LoginDialog.fxml"));
@@ -115,6 +133,12 @@ public class ChatClient extends Application {
         return false;
     }
 
+    /**
+     * Registra un nuevo usuario en el servidor
+     * @param username Nombre de usuario
+     * @param password Contraseña
+     * @return true si el registro fue exitoso
+     */
     public boolean registerUser(String username, String password) {
         try (Socket regSocket = new Socket(SERVER_ADDRESS, SERVER_PORT);
              PrintWriter regOut = new PrintWriter(regSocket.getOutputStream(), true);
@@ -128,6 +152,9 @@ public class ChatClient extends Application {
         }
     }
 
+    /**
+     * Muestra un mensaje informativo
+     */
     private void showInfo(String message) {
         Platform.runLater(() -> {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
@@ -138,6 +165,9 @@ public class ChatClient extends Application {
         });
     }
 
+    /**
+     * Establece la conexión con el servidor
+     */
     private void connectToServer() {
         try {
             socket = new Socket(SERVER_ADDRESS, SERVER_PORT);
@@ -160,6 +190,9 @@ public class ChatClient extends Application {
         }
     }
 
+    /**
+     * Muestra la ventana principal del chat
+     */
     private void showChatWindow() {
         try {
             java.net.URL fxmlUrl = ChatClient.class.getResource("/fxml/ChatWindow.fxml");
@@ -187,6 +220,9 @@ public class ChatClient extends Application {
         }
     }
     
+    /**
+     * Inicia el hilo que escucha mensajes del servidor
+     */
     private void startMessageListener() {
         executorService.execute(() -> {
             try {
@@ -208,6 +244,10 @@ public class ChatClient extends Application {
         });
     }
     
+    /**
+     * Procesa los mensajes recibidos del servidor
+     * @param message Mensaje recibido
+     */
     private void handleServerMessage(String message) {
         Platform.runLater(() -> {
             try {
@@ -245,6 +285,11 @@ public class ChatClient extends Application {
         });
     }
     
+    /**
+     * Envía un mensaje al servidor
+     * @param message Contenido del mensaje
+     * @param recipient Destinatario (vacío para mensaje general)
+     */
     public void sendMessage(String message, String recipient) {
         if (!isConnected) {
             showError("No estás conectado al servidor");
@@ -265,6 +310,9 @@ public class ChatClient extends Application {
         }
     }
     
+    /**
+     * Desconecta del servidor y limpia recursos
+     */
     public void disconnect() {
         isConnected = false;
         try {
@@ -282,6 +330,9 @@ public class ChatClient extends Application {
         }
     }
     
+    /**
+     * Muestra un mensaje de error
+     */
     private void showError(String message) {
         Platform.runLater(() -> {
             try {
@@ -303,18 +354,27 @@ public class ChatClient extends Application {
         });
     }
     
+    /**
+     * Solicita el historial de mensajes privados
+     */
     public void requestPrivateHistory(String otherUser) {
         if (out != null) {
             out.println("GET_PRIVATE_HISTORY:" + otherUser);
         }
     }
     
+    /**
+     * Solicita el historial de mensajes generales
+     */
     public void requestGeneralHistory() {
         if (out != null) {
             out.println("GET_GENERAL_HISTORY");
         }
     }
     
+    /**
+     * Limpia el chat general
+     */
     public void clearGeneralChat() {
         if (!isConnected) {
             showError("No estás conectado al servidor");
@@ -323,6 +383,9 @@ public class ChatClient extends Application {
         out.println("CLEAR_GENERAL");
     }
 
+    /**
+     * Limpia el chat privado con un usuario
+     */
     public void clearPrivateChat(String username) {
         if (!isConnected) {
             showError("No estás conectado al servidor");
@@ -331,6 +394,9 @@ public class ChatClient extends Application {
         out.println("CLEAR_PRIVATE:" + username);
     }
     
+    /**
+     * Punto de entrada principal de la aplicación
+     */
     public static void main(String[] args) {
         launch(args);
     }

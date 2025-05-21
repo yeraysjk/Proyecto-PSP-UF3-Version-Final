@@ -11,17 +11,27 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 
+/**
+ * Controlador para la ventana de inicio de sesión.
+ * Maneja la autenticación de usuarios y el registro de nuevos usuarios.
+ */
 public class LoginDialogController {
-    @FXML private TextField usernameField;
-    @FXML private PasswordField passwordField;
-    @FXML private Button loginButton;
-    @FXML private Button registerButton;
-    @FXML private Label errorLabel;
+    // Componentes de la interfaz gráfica
+    @FXML private TextField usernameField;     // Campo para el nombre de usuario
+    @FXML private PasswordField passwordField; // Campo para la contraseña
+    @FXML private Button loginButton;          // Botón de inicio de sesión
+    @FXML private Button registerButton;       // Botón de registro
+    @FXML private Label errorLabel;            // Etiqueta para mensajes de error
 
-    private String username = null;
-    private String password = null;
-    private Stage dialogStage;
+    // Variables de control
+    private String username = null;            // Nombre de usuario ingresado
+    private String password = null;            // Contraseña ingresada
+    private Stage dialogStage;                 // Ventana del diálogo
 
+    /**
+     * Establece la ventana del diálogo y configura el evento de cierre
+     * @param dialogStage Ventana del diálogo
+     */
     public void setDialogStage(Stage dialogStage) {
         this.dialogStage = dialogStage;
         dialogStage.setOnCloseRequest(event -> {
@@ -32,6 +42,9 @@ public class LoginDialogController {
         });
     }
 
+    /**
+     * Inicializa los componentes de la interfaz y configura los eventos
+     */
     @FXML
     private void initialize() {
         errorLabel.setVisible(false);
@@ -41,6 +54,9 @@ public class LoginDialogController {
         passwordField.setPromptText("Contraseña");
     }
 
+    /**
+     * Maneja el evento de inicio de sesión
+     */
     private void handleLogin() {
         username = usernameField.getText().trim();
         password = passwordField.getText();
@@ -49,6 +65,9 @@ public class LoginDialogController {
         }
     }
 
+    /**
+     * Abre la ventana de registro de nuevos usuarios
+     */
     private void openRegisterDialog() {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/RegisterDialog.fxml"));
@@ -76,6 +95,15 @@ public class LoginDialogController {
         }
     }
 
+    /**
+     * Obtiene el nombre de usuario ingresado
+     * @return Nombre de usuario
+     */
     public String getUsername() { return username; }
+
+    /**
+     * Obtiene la contraseña ingresada
+     * @return Contraseña
+     */
     public String getPassword() { return password; }
 } 
